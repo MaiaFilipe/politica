@@ -20,7 +20,6 @@
         Usuarioc usuario = new Usuarioc();
         String nome = "";
         String senha = "";
-        String cpf = "";
         //Captura id (se alteração)
         String idUsuario = request.getParameter("pid");
         
@@ -41,7 +40,6 @@
             </div>
             Nome<input type="text" name="nome" value="<%=nome%>">
             Senha<input type="password" name="senha" value="<%=senha%>">
-            Cpf<input type="password" name="senha" value="<%=cpf%>">
             <input type="submit">
         </form>
     </body>
