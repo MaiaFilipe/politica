@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.7
 -- Dumped by pg_dump version 9.5.7
 
--- Started on 2019-10-02 12:07:59 BRT
+-- Started on 2019-10-02 12:14:23 BRT
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -90,7 +90,6 @@ SELECT pg_catalog.setval('sq_usuario', 1, true);
 --
 
 COPY usuarioc (cpfc, cellc, senhac, posicaoc, emailc, descricaoc, nomec, nascimentoc, estadoc, id) FROM stdin;
-\N	\N	123123	\N	\N	\N	uhasyu@GMAIL.COM	\N	\N	52
 \.
 
 
@@ -115,7 +114,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2019-10-02 12:08:00 BRT
+-- Completed on 2019-10-02 12:14:23 BRT
 
 --
 -- PostgreSQL database dump complete
