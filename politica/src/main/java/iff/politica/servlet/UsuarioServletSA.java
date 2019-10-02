@@ -15,6 +15,7 @@ public class UsuarioServletSA extends HttpServlet {
         String idtext = request.getParameter("pid");
         String nome = request.getParameter("nome");
         String senha = request.getParameter("senha");
+        String email = request.getParameter("email");
 
         //Cria instancia do usuario
         Usuarioc usuario = new Usuarioc();        
@@ -26,6 +27,7 @@ public class UsuarioServletSA extends HttpServlet {
         //Insere informações no objeto
         usuario.setNomec(nome);
         usuario.setSenhac(senha);
+        usuario.setEmailc(email);
 
         //Chama de funcao para salvar ou atualizar usuario
         UsuarioControle.salvar(usuario);
