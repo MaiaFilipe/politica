@@ -7,26 +7,27 @@
 <jsp:directive.page import="iff.politica.utilidades.*" />
 <jsp:directive.page import="iff.politica.servlet.*" />
 
-        <%
-        //Criar variaveis
-        Usuarioc usuario = new Usuarioc();
-        String nome = "";
-        String senha = "";
-        String email = "";
-        //Captura id (se alteração)
-        String idUsuario = request.getParameter("pid");
-        
-        //Localiza usuario (se alteração)
-        if(!idUsuario.isEmpty()){
-            usuario = UsuarioControle.buscar(Integer.parseInt(idUsuario));
-            nome = usuario.getNomec();
-            senha = usuario.getSenhac();
-            email = usuario.getEmailc();
-        }
-        else{
-            idUsuario = "";
-        }
-        %>
+<%
+    //Criar variaveis
+    Usuarioc usuario = new Usuarioc();
+    String nome = "";
+    String senha = "";
+    String email = "";
+    Integer cpf = 0;
+    //Captura id (se alteração)
+    String idUsuario = request.getParameter("pid");
+
+    //Localiza usuario (se alteração)
+    if (!idUsuario.isEmpty()) {
+        usuario = UsuarioControle.buscar(Integer.parseInt(idUsuario));
+        nome = usuario.getNomec();
+        senha = usuario.getSenhac();
+        email = usuario.getEmailc();
+        cpf = usuario.getCpfc();
+    } else {
+        idUsuario = "";
+    }
+%>
 
 <!DOCTYPE html>
 <html>
@@ -60,7 +61,7 @@
                 <div hidden>
                     ID<input type="text" name="pid" value="<%=idUsuario%>">
                 </div>
-                
+
                 Email:<br>
                 <input type="text" name="email" value="<%=email%>"><br><br>
 
@@ -68,7 +69,7 @@
                 <input type="password" name="senha" value="<%=senha%>"><br><br>
 
                 Cpf:<br>
-                <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="14"><br><br>
+                <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="14" value="<%=cpf%>"><br><br>
 
                 Número:<br>
                 <input type="text" name="cell" maxlength="13"><br><br>

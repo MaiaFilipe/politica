@@ -22,6 +22,7 @@
             <display:column property="id" title="ID" paramProperty="checkbox"/>
             <display:column property="nomec" title="Nome Completo"/>
             <display:column property="senhac" title="Senha"/>
+            <display:column property="cpfc" title="Cpf"/>
             <display:column value="alterar" title="Alterar" href="alterar.jsp" paramId="pid" paramProperty="id" />             
             <display:column value="deletar" title="Deletar" autolink="true"  paramId="pid" paramProperty="id" href="${pageContext.request.contextPath}/UsuarioServletD"/>
             <display:setProperty name="basic.msg.empty_list" value="Sem usuarios" />

@@ -16,6 +16,12 @@ public class UsuarioServletSA extends HttpServlet {
         String nome = request.getParameter("nome");
         String senha = request.getParameter("senha");
         String email = request.getParameter("email");
+        
+        String cpfXaBlau = request.getParameter("cpf");
+        cpfXaBlau = cpfXaBlau.replaceAll("-", ""); cpfXaBlau = cpfXaBlau.replaceAll("\\.", "");
+        Integer cpf = Integer.parseInt(cpfXaBlau);
+        
+        Integer cell = Integer.parseInt("cell");
 
         //Cria instancia do usuario
         Usuarioc usuario = new Usuarioc();        
@@ -28,6 +34,8 @@ public class UsuarioServletSA extends HttpServlet {
         usuario.setNomec(nome);
         usuario.setSenhac(senha);
         usuario.setEmailc(email);
+        usuario.setCpfc(cpf);
+        usuario.setCellc(cell);
 
         //Chama de funcao para salvar ou atualizar usuario
         UsuarioControle.salvar(usuario);
