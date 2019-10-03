@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.7
 -- Dumped by pg_dump version 9.5.7
 
--- Started on 2019-10-02 12:14:23 BRT
+-- Started on 2019-10-03 10:58:00 BRT
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -68,7 +68,8 @@ CREATE TABLE usuarioc (
     nomec character varying,
     nascimentoc character varying,
     estadoc character varying,
-    id integer NOT NULL
+    id integer NOT NULL,
+    usuarioc character varying
 );
 
 
@@ -80,7 +81,7 @@ ALTER TABLE usuarioc OWNER TO postgres;
 -- Name: sq_usuario; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('sq_usuario', 1, true);
+SELECT pg_catalog.setval('sq_usuario', 16, true);
 
 
 --
@@ -89,7 +90,10 @@ SELECT pg_catalog.setval('sq_usuario', 1, true);
 -- Data for Name: usuarioc; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY usuarioc (cpfc, cellc, senhac, posicaoc, emailc, descricaoc, nomec, nascimentoc, estadoc, id) FROM stdin;
+COPY usuarioc (cpfc, cellc, senhac, posicaoc, emailc, descricaoc, nomec, nascimentoc, estadoc, id, usuarioc) FROM stdin;
+123	123	123	esquerda	aviao	aviao	aviao	0001-01-01	RJ	700	aviao
+123	123	123	direita	luisa	asd	luisa	2002-11-01	AC	751	luisa
+123	123	123	direita	daniel	desc	daniel	0001-01-01	AC	800	daniel
 \.
 
 
@@ -114,7 +118,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2019-10-02 12:14:23 BRT
+-- Completed on 2019-10-03 10:58:01 BRT
 
 --
 -- PostgreSQL database dump complete

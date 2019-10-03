@@ -76,11 +76,11 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         
         String idtext = request.getParameter("pid");
-        String email = request.getParameter("email");
-        String senha = request.getParameter("senha");
+        String email = request.getParameter("emailc");
+        String senha = request.getParameter("senhac");
         
         Session session = HibernateUtil.getSession();
-        Usuarioc usuario = (Usuarioc) session.createQuery("from Usuarioc where email=? and senha=?").setString(0, email).setString(1, senha).uniqueResult();
+        Usuarioc usuario = (Usuarioc) session.createQuery("from Usuarioc where emailc=? and senhac=?").setString(0, email).setString(1, senha).uniqueResult();
         session.close();
 
         if (usuario == null) {
