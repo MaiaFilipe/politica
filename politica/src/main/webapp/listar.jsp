@@ -21,8 +21,15 @@
         <display:table name="usuarios">
             <display:column property="id" title="ID" paramProperty="checkbox"/>
             <display:column property="nomec" title="Nome Completo"/>
+            <display:column property="emailc" title="Email"/>
             <display:column property="senhac" title="Senha"/>
             <display:column property="cpfc" title="Cpf"/>
+            <display:column property="cellc" title="Telefone"/>
+            <display:column property="usuarioc" title="Usuário"/>
+            <display:column property="posicaoc" title="Posição"/>
+            <display:column property="descricaoc" title="Descrição"/>
+            <display:column property="nascimentoc" title="Nascimento"/>
+            <display:column property="estadoc" title="Estado"/>
             <display:column value="alterar" title="Alterar" href="alterar.jsp" paramId="pid" paramProperty="id" />             
             <display:column value="deletar" title="Deletar" autolink="true"  paramId="pid" paramProperty="id" href="${pageContext.request.contextPath}/UsuarioServletD"/>
             <display:setProperty name="basic.msg.empty_list" value="Sem usuarios" />

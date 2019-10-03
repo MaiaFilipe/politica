@@ -38,41 +38,35 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Usuarioc.findByNomec", query = "SELECT u FROM Usuarioc u WHERE u.nomec = :nomec")
     , @NamedQuery(name = "Usuarioc.findByNascimentoc", query = "SELECT u FROM Usuarioc u WHERE u.nascimentoc = :nascimentoc")
     , @NamedQuery(name = "Usuarioc.findByEstadoc", query = "SELECT u FROM Usuarioc u WHERE u.estadoc = :estadoc")
-    , @NamedQuery(name = "Usuarioc.findById", query = "SELECT u FROM Usuarioc u WHERE u.id = :id")})
+    , @NamedQuery(name = "Usuarioc.findById", query = "SELECT u FROM Usuarioc u WHERE u.id = :id")
+    , @NamedQuery(name = "Usuarioc.findByUsuarioc", query = "SELECT u FROM Usuarioc u WHERE u.usuarioc = :usuarioc")})
 public class Usuarioc implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Column(name = "cpfc")
-    private Integer cpfc;
+    private Long cpfc;
     
     @Column(name = "cellc")
-    private Integer cellc;
+    private Long cellc;
     
-    @Size(max = 2147483647)
     @Column(name = "senhac")
     private String senhac;
     
-    @Size(max = 2147483647)
     @Column(name = "posicaoc")
     private String posicaoc;
     
-    @Size(max = 2147483647)
     @Column(name = "emailc")
     private String emailc;
     
-    @Size(max = 2147483647)
     @Column(name = "descricaoc")
     private String descricaoc;
     
-    @Size(max = 2147483647)
     @Column(name = "nomec")
     private String nomec;
     
-    @Size(max = 2147483647)
     @Column(name = "nascimentoc")
     private String nascimentoc;
     
-    @Size(max = 2147483647)
     @Column(name = "estadoc")
     private String estadoc;
     
@@ -83,6 +77,9 @@ public class Usuarioc implements Serializable {
     @SequenceGenerator(name="meugerador", sequenceName = "sq_usuario")
     @Column(name = "id")
     private Integer id;
+    
+    @Column(name = "usuarioc")
+    private String usuarioc;
 
     public Usuarioc() {
     }
@@ -91,19 +88,19 @@ public class Usuarioc implements Serializable {
         this.id = id;
     }
 
-    public Integer getCpfc() {
+    public Long getCpfc() {
         return cpfc;
     }
 
-    public void setCpfc(Integer cpfc) {
+    public void setCpfc(Long cpfc) {
         this.cpfc = cpfc;
     }
 
-    public Integer getCellc() {
+    public Long getCellc() {
         return cellc;
     }
 
-    public void setCellc(Integer cellc) {
+    public void setCellc(Long cellc) {
         this.cellc = cellc;
     }
 
@@ -169,6 +166,14 @@ public class Usuarioc implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getUsuarioc() {
+        return usuarioc;
+    }
+
+    public void setUsuarioc(String usuarioc) {
+        this.usuarioc = usuarioc;
     }
 
     @Override

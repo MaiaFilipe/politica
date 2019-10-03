@@ -13,8 +13,13 @@
     String nome = "";
     String senha = "";
     String email = "";
-    Integer cpf = 0;
-    Integer cell = 0;
+    String user = "";
+    String posicao = "";
+    String descricao = "";
+    String nascimento = "";
+    String estado = "";
+    Long cpf = Long.MIN_VALUE;
+    Long cell = Long.MIN_VALUE;
     //Captura id (se alteração)
     String idUsuario = request.getParameter("pid");
 
@@ -26,6 +31,11 @@
         email = usuario.getEmailc();
         cpf = usuario.getCpfc();
         cell = usuario.getCellc();
+        user = usuario.getUsuarioc();
+        posicao = usuario.getPosicaoc();
+        descricao = usuario.getDescricaoc();
+        nascimento = usuario.getNascimentoc();
+        estado = usuario.getEstadoc();
     } else {
         idUsuario = "";
     }
@@ -55,7 +65,7 @@
         <div class="left">
             <form method = "POST" action = "UsuarioServletSA">
                 Usuário:<br>
-                <input type="text" name="usuario"><br><br>
+                <input type="text" name="usuario" value="<%=user%>"><br><br>
 
                 Nome:<br>
                 <input type="text" name="nome" value="<%=nome%>"><br><br>
@@ -71,19 +81,19 @@
                 <input type="password" name="senha" value="<%=senha%>"><br><br>
 
                 Cpf:<br>
-                <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="14" value="<%=cpf%>"><br><br>
+                <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="12" value="<%=cpf%>"><br><br>
 
                 Número:<br>
                 <input type="text" name="cell" maxlength="13" value="<%=cell%>"><br><br>
 
                 Descrição:<br>
-                <input type="text" name="descricao"><br><br>
+                <input type="text" name="descricao" value="<%=descricao%>"><br><br>
 
                 </div>
-                Data de nascimento: <input type="date" name="nascimento"><br><br>
+                Data de nascimento: <input type="date" name="nascimento" value="<%=nascimento%>"><br><br>
 
                 Estado:<br>
-                <select name="estado">
+                <select name="estado" value="<%=estado%>">
                     <option value="AC">Acre (AC)</option>
                     <option value="AL">Alagoas (AL)</option>
                     <option value="AP">Amapá (AP)</option>
@@ -114,7 +124,7 @@
                 </select><br><br>
 
                 Posição política:<br>
-                <select name="posicao">
+                <select name="posicao" value="<%=posicao%>">
                     <option value="direita">Direita</option>
                     <option value="esquerda">Esquerda</option>
                     <option value="centro">Centro</option>
