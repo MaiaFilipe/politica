@@ -21,7 +21,8 @@ public class UsuarioServletSA extends HttpServlet {
         cpfXaBlau = cpfXaBlau.replaceAll("-", ""); cpfXaBlau = cpfXaBlau.replaceAll("\\.", "");
         Integer cpf = Integer.parseInt(cpfXaBlau);
         
-        Integer cell = Integer.parseInt("cell");
+        String telefone = request.getParameter("cell");
+        Integer cell = Integer.parseInt(telefone);
 
         //Cria instancia do usuario
         Usuarioc usuario = new Usuarioc();        

@@ -14,6 +14,7 @@
     String senha = "";
     String email = "";
     Integer cpf = 0;
+    Integer cell = 0;
     //Captura id (se alteração)
     String idUsuario = request.getParameter("pid");
 
@@ -24,6 +25,7 @@
         senha = usuario.getSenhac();
         email = usuario.getEmailc();
         cpf = usuario.getCpfc();
+        cell = usuario.getCellc();
     } else {
         idUsuario = "";
     }
@@ -72,7 +74,7 @@
                 <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="14" value="<%=cpf%>"><br><br>
 
                 Número:<br>
-                <input type="text" name="cell" maxlength="13"><br><br>
+                <input type="text" name="cell" maxlength="13" value="<%=cell%>"><br><br>
 
                 Descrição:<br>
                 <input type="text" name="descricao"><br><br>
