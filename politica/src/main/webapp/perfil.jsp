@@ -12,38 +12,25 @@
         <link rel="stylesheet" href="assets/css/main.css" />
     </head>
     <body class="is-preload">
-
-        <!-- Wrapper -->
         <div id="wrapper">
-
-            <!-- Main -->
             <div id="main">
                 <div class="inner">
-
-                    <!-- Header -->
                     <header id="header">
                         <a href="cadastro_comum.html" class="logo"><strong>Perfil</strong> </a>
                         <ul class="icons">
-
                             <li><a href="perfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
                             <li><a href="login.html" class="icon fa fa-user-circle-o"><span class="label">Perfil</span></a></li>
                             <li><a href="Notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
                         </ul>
                     </header>
-
-                    <!-- Content -->
                     <section>
                         <div id="block" style="padding-left: 20px;">
+                            
                             <div id="left">
                                 <img src="pp.png" width="90%" style="border-radius: 10000px;">
-                            </div>
+                            </div>                            
 
-                            <div hidden>
-                                ID<input name="pid" value="<%=usuario.getId()%>">
-                            </div>
-                            
-                            
                             Nome: <%=usuario.getNomec()%>
                             <a href="alterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
 
@@ -55,20 +42,11 @@
 
                             Bio: <%=usuario.getDescricaoc()%><br><br>
 
-                            Seguidores:</b>&ensp; X  &emsp;/ &emsp; <b>Seguindo:</b>&ensp; Y <br>
+                            Seguidores: X<b>Seguindo:</b>&ensp; Y <br>
 
                         </div>
                     </section>
-
-
-
-
                     <h2>Publicações</h2>
-
-
-
-
-
                 </div>
             </div>
 
@@ -134,18 +112,12 @@
                                 RJ, Brasil</li>
                         </ul>
                     </section>
-
-                    <!-- Footer -->
                     <footer id="footer">
                         <p class="copyright"> <a href="https://unsplash.com">Unsplash</a>. Design: <a href="#"></a>.</p>
                     </footer>
-
                 </div>
             </div>
-
         </div>
-
-        <!-- Scripts -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/browser.min.js"></script>
         <script src="assets/js/breakpoints.min.js"></script>
