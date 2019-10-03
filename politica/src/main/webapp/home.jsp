@@ -19,7 +19,7 @@
 
                     <!-- Header -->
                     <header id="header">
-                        <a href="index.html" class="logo"><strong>Homepage</strong> </a>
+                        <a href="home.html" class="logo"><strong>Homepage</strong> </a>
                         <ul class="icons">
 
                             <%
