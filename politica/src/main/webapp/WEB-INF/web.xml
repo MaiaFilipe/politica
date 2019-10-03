@@ -8,6 +8,10 @@
         <servlet-name>UsuarioServletD</servlet-name>
         <servlet-class>iff.politica.servlet.UsuarioServletD</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>iff.politica.servlet.Login</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UsuarioSA</servlet-name>
         <url-pattern>/UsuarioSA</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>UsuarioServletD</servlet-name>
         <url-pattern>/UsuarioServletD</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
