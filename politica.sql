@@ -90,11 +90,6 @@ SELECT pg_catalog.setval('sq_usuario', 16, true);
 -- Data for Name: usuarioc; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY usuarioc (cpfc, cellc, senhac, posicaoc, emailc, descricaoc, nomec, nascimentoc, estadoc, id, usuarioc) FROM stdin;
-123	123	123	esquerda	aviao	aviao	aviao	0001-01-01	RJ	700	aviao
-123	123	123	direita	luisa	asd	luisa	2002-11-01	AC	751	luisa
-123	123	123	direita	daniel	desc	daniel	0001-01-01	AC	800	daniel
-\.
 
 
 --
