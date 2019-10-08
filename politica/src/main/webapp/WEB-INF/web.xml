@@ -12,6 +12,10 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>iff.politica.servlet.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PublicacaoServletSA</servlet-name>
+        <servlet-class>iff.politica.servlet.PublicacaoServletSA</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UsuarioSA</servlet-name>
         <url-pattern>/UsuarioSA</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PublicacaoServletSA</servlet-name>
+        <url-pattern>/PublicacaoServletSA</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

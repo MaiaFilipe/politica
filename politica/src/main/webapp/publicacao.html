@@ -1,12 +1,8 @@
-<%@page import="iff.politica.usuarios.Usuarioc"%>
 <!DOCTYPE HTML>
 
 <html>
     <head>
-        <%
-            Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
-        %>
-        <title><%=usuario.getUsuarioc()%></title>
+        <title>PublicaÃ§Ã£o</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -16,58 +12,51 @@
             <div id="main">
                 <div class="inner">
                     <header id="header">
-                        <a href="cadastro_comum.html" class="logo"><strong>Perfil</strong> </a>
+                        <a href="index.html" class="logo"><strong>PublicaÃ§Ã£o completa</strong></a>
                         <ul class="icons">
-                            <li><a href="perfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
-                            <li><a href="login.html" class="icon fa fa-user-circle-o"><span class="label">Perfil</span></a></li>
-                            <li><a href="Notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
+                            <li><a href="PÃ¡gina UsuÃ¡rio.html" class="icon fa fa-user-circle-o"><span class="label">Perfil</span></a></li>
+                            <li><a href="#" class="icon fa fa-bell-o"><span class="label">NotificaÃ§Ãµes</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
                         </ul>
                     </header>
                     <section>
-                        <div id="block" style="padding-left: 20px;">
-                            
-                            <div id="left">
-                                <img src="pp.png" width="90%" style="border-radius: 10000px;">
-                            </div>                            
-
-                            Nome: <%=usuario.getNomec()%>
-                            <a href="alterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
-
-                            User: <%=usuario.getUsuarioc()%><br><br>
-
-                            E-mail: <%=usuario.getEmailc()%><br><br>
-
-                            Posição política: <%=usuario.getPosicaoc()%><br><br>
-
-                            Bio: <%=usuario.getDescricaoc()%><br><br>
-
-                            Seguidores: X<br>Seguindo: Y<br>
-
-                        </div>
-                    </section>
-                    <h2>Publicações</h2>
+                        <section>
+                            <form method="POST" action="PublicacaoServletSA">
+                                <div hidden>
+                                    ID<input type="text" name="pidp" value="">
+                                </div>
+                                <h2> TÃ­tulo: </h2>
+                                <input type="text" name="titulo">
+                                <br><br>
+                                <div class="left">
+                                    <h2>Escolher imagem:</h2>
+                                    <input type="file" id="" name="imaegm" accept="image/png, image/jpeg" >
+                                </div>
+                                <br><br>
+                                <div class="left">
+                                    <h2> Texto: </h2>
+                                    <input type="text" name="conteudo"><br><br>
+                                </div>
+                                <input type="submit" value="Enviar">
+                                <header id="header">
+                                </header>
+                            </form>
+                        </section>
                 </div>
             </div>
-
-            <!-- Sidebar -->
             <div id="sidebar">
                 <div class="inner">
-
-                    <!-- Search -->
                     <section id="search" class="alt">
                         <form method="post" action="#">
                             <input type="text" name="query" id="query" placeholder="Search" />
                         </form>
                     </section>
-
-                    <!-- Menu -->
                     <nav id="menu">
                         <header class="major">
                             <h2>Menu</h2>
                         </header>
                         <ul>
-                            <li><a href="home.jsp">Página inicial</a></li>
+                            <li><a href="home.jsp">Homepage</a></li>
                             <li><a href="generic.html">Generic</a></li>
                             <li><a href="elements.html">Elements</a></li>
                             <li>
@@ -95,25 +84,41 @@
                             <li><a href="#">Amet Lacinia</a></li>
                         </ul>
                     </nav>
-
-                    <!-- Section -->
-
-
-                    <!-- Section -->
+                    <section>
+                        <header class="major">
+                            <h2>Ante interdum</h2>
+                        </header>
+                        <div class="mini-posts">
+                            <article>
+                                <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                            </article>
+                            <article>
+                                <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                            </article>
+                            <article>
+                                <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                            </article>
+                        </div>
+                        <ul class="actions">
+                            <li><a href="#" class="button">More</a></li>
+                        </ul>
+                    </section>
                     <section>
                         <header class="major">
                             <h2>Fale conosco!</h2>
                         </header>
-                        <p>Em caso de surgimento de dúvidas, críticas ou interesse na nossa proposta aqui apresentada, entre em contato.</p>
+                        <p>Em caso de surgimento de dÃºvidas, crÃ­ticas ou interesse na nossa proposta aqui apresentada, entre em contato.</p>
                         <ul class="contact">
                             <li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
                             <li class="fa-phone">(+5522)00000-0000</li>
-                            <li class="fa-home">s/n Quissamã #0000<br />
+                            <li class="fa-home">s/n QuissamÃ£ #0000<br />
                                 RJ, Brasil</li>
                         </ul>
                     </section>
                     <footer id="footer">
-                        <p class="copyright"> <a href="https://unsplash.com">Unsplash</a>. Design: <a href="#"></a>.</p>
                     </footer>
                 </div>
             </div>
@@ -123,6 +128,5 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
     </body>
 </html>
