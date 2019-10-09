@@ -14,19 +14,26 @@ public class PublicacaoServletSA extends HttpServlet {
             throws ServletException, IOException {
         //Captura parametros da tela
         String idtext = request.getParameter("pidp");
-        String idusuario = request.getParameter("pid");
+        
+        String idUser = request.getParameter("pid");
+        Integer idUsuario = Integer.parseInt(idUser);
+        
         String conteudo = request.getParameter("conteudo");
         String titulo = request.getParameter("titulo");
         
         Publicacao publicacao = new Publicacao();        
         //Detecta se é usuario novo ou antigo
-        if(!idtext.isEmpty()){
+        if(idtext == null){
             Integer id = Integer.parseInt(idtext);
             publicacao.setIdp(id);
         }
         //Insere informações no objeto
+        Usuarioc usuario = new Usuarioc();
+        usuario.setId(idUsuario);
+        
         publicacao.setConteudo(conteudo);
         publicacao.setTitulo(titulo);
+        publicacao.setIdUsuario(usuario);
 
         //Chama de funcao para salvar ou atualizar publicacao
         PublicacaoControle.salvar(publicacao);

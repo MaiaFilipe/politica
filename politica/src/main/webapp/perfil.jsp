@@ -16,12 +16,12 @@
             <div id="main">
                 <div class="inner">
                     <header id="header">
-                        <a href="cadastro_comum.html" class="logo"><strong>Perfil</strong> </a>
+                        <a class="logo"><strong>Perfil</strong> </a>
                         <ul class="icons">
                             <li><a href="perfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
-                            <li><a href="login.html" class="icon fa fa-user-circle-o"><span class="label">Perfil</span></a></li>
                             <li><a href="Notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
+                            <li><a href="home.html" class="label">Sair</a></li>
                         </ul>
                     </header>
                     <section>
@@ -68,7 +68,7 @@
                         </header>
                         <ul>
                             <li><a href="home.jsp">Página inicial</a></li>
-                            <li><a href="generic.html">Generic</a></li>
+                            <li><a href="publicacaoinserir.jsp">Publicação</a></li>
                             <li><a href="elements.html">Elements</a></li>
                             <li>
                                 <span class="opener">Submenu</span>

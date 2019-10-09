@@ -27,7 +27,6 @@
                             %>
 
                             <li><a href="perfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
-                            <li><a href="login.html" class="icon fa fa-user-circle-o"><span class="label">Perfil</span></a></li>
                             <li><a href="Notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
                         </ul>
@@ -168,7 +167,7 @@
                         </header>
                         <ul>
                             <li><a href="index.html">Página Inicial</a></li>
-                            <li><a href="generic.html">Generic</a></li>
+                            <li><a href="publicacaoinserir.jsp">Publicação</a></li>
                             <li><a href="elements.html">Elements</a></li>
                             <li>
                                 <span class="opener">Submenu</span>

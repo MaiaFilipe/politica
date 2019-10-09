@@ -6,7 +6,7 @@
 package controle;
 
 import entidades.*;
-import iff.politica.utilidades.HibernateUtil;
+import util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

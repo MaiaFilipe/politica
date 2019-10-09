@@ -6,7 +6,7 @@
 package servlet;
 
 import entidades.Usuarioc;
-import iff.politica.utilidades.HibernateUtil;
+import util.HibernateUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
