@@ -5,7 +5,7 @@
  */
 package iff.politica.utilidades;
 
-import iff.politica.usuarios.Usuarioc;
+import entidades.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -34,6 +34,7 @@ public class HibernateUtil {
         AnnotationConfiguration cfg = new AnnotationConfiguration();
         cfg.configure();
         cfg.addAnnotatedClass(Usuarioc.class);
+        cfg.addAnnotatedClass(Publicacao.class);
         factory = cfg.buildSessionFactory();
     }
 

@@ -1,6 +1,7 @@
-package iff.politica.servlet;
+package servlet;
 
-import iff.politica.usuarios.Usuarioc;
+import controle.UsuarioControle;
+import entidades.Usuarioc;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

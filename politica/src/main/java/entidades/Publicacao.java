@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iff.politica.usuarios;
+package entidades;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
@@ -29,19 +31,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Publicacao.findAll", query = "SELECT p FROM Publicacao p")
-    , @NamedQuery(name = "Publicacao.findByTitulo", query = "SELECT p FROM Publicacao p WHERE p.titulo = :titulo")
     , @NamedQuery(name = "Publicacao.findByConteudo", query = "SELECT p FROM Publicacao p WHERE p.conteudo = :conteudo")
+    , @NamedQuery(name = "Publicacao.findByTitulo", query = "SELECT p FROM Publicacao p WHERE p.titulo = :titulo")
     , @NamedQuery(name = "Publicacao.findByIdp", query = "SELECT p FROM Publicacao p WHERE p.idp = :idp")})
 public class Publicacao implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Size(max = 2147483647)
-    @Column(name = "titulo")
-    private String titulo;
-    
-    @Size(max = 2147483647)
     @Column(name = "conteudo")
     private String conteudo;
+    
+    @Size(max = 2147483647)
+    @Column(name = "titulo")
+    private String titulo;
     
     @Id
     @Basic(optional = false)
@@ -50,20 +52,16 @@ public class Publicacao implements Serializable {
     @SequenceGenerator(name="meugerador", sequenceName = "sq_publicacao")
     @Column(name = "idp")
     private Integer idp;
+    
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id")
+    @ManyToOne
+    private Usuarioc idUsuario;
 
     public Publicacao() {
     }
 
     public Publicacao(Integer idp) {
         this.idp = idp;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
     }
 
     public String getConteudo() {
@@ -74,12 +72,28 @@ public class Publicacao implements Serializable {
         this.conteudo = conteudo;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
     public Integer getIdp() {
         return idp;
     }
 
     public void setIdp(Integer idp) {
         this.idp = idp;
+    }
+
+    public Usuarioc getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Usuarioc idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     @Override
@@ -104,7 +118,7 @@ public class Publicacao implements Serializable {
 
     @Override
     public String toString() {
-        return "iff.politica.usuarios.Publicacao[ idp=" + idp + " ]";
+        return "entidades.Publicacao[ idp=" + idp + " ]";
     }
     
 }

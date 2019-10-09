@@ -1,3 +1,11 @@
+<%-- 
+    Document   : publicacaoinserir
+    Created on : 09/10/2019, 11:19:21
+    Author     : aluno
+--%>
+
+<%@page import="entidades.Usuarioc"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 
 <html>
@@ -13,8 +21,11 @@
                 <div class="inner">
                     <header id="header">
                         <a href="index.html" class="logo"><strong>Publicação completa</strong></a>
+                        <%
+                                Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
+                            %>
                         <ul class="icons">
-                            <li><a href="Página Usuário.html" class="icon fa fa-user-circle-o"><span class="label">Perfil</span></a></li>
+                            <li><a href="perfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
                             <li><a href="#" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
                         </ul>
@@ -25,13 +36,18 @@
                                 <div hidden>
                                     ID<input type="text" name="pidp" value="">
                                 </div>
+                                <div hidden>
+                                    ID Usuário <input type="text" name="pid" value="<%=usuario.getId()%>">
+                                </div>
                                 <h2> Título: </h2>
                                 <input type="text" name="titulo">
                                 <br><br>
+                                <!--
                                 <div class="left">
                                     <h2>Escolher imagem:</h2>
                                     <input type="file" id="" name="imaegm" accept="image/png, image/jpeg" >
                                 </div>
+                                -->
                                 <br><br>
                                 <div class="left">
                                     <h2> Texto: </h2>

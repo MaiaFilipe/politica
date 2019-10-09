@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iff.politica.servlet;
+package servlet;
 
-import iff.politica.usuarios.Usuarioc;
+import entidades.Usuarioc;
 import iff.politica.utilidades.HibernateUtil;
 import java.io.IOException;
 import java.io.PrintWriter;

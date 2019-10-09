@@ -1,7 +1,7 @@
-package iff.politica.servlet;
+package controle;
 
-import iff.politica.usuarios.Publicacao;
-import iff.politica.usuarios.Usuarioc;
+import entidades.*;
+import entidades.Usuarioc;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -16,20 +16,6 @@ public class UsuarioControle {
             sessionRecheio = HibernateUtil.getSession();
             Transaction tr = sessionRecheio.beginTransaction();
             sessionRecheio.saveOrUpdate(usuario);
-            tr.commit();
-            return true;
-        }
-        catch(Exception ex){
-            return false;
-        }        
-    }
-    
-    public static boolean salvarPublicacao(Publicacao publicacao){
-        try{
-            Session sessionRecheio;
-            sessionRecheio = HibernateUtil.getSession();
-            Transaction tr = sessionRecheio.beginTransaction();
-            sessionRecheio.saveOrUpdate(publicacao);
             tr.commit();
             return true;
         }

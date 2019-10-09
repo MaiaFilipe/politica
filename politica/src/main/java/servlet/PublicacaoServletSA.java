@@ -1,7 +1,7 @@
-package iff.politica.servlet;
+package servlet;
 
-import iff.politica.usuarios.Publicacao;
-import iff.politica.usuarios.Usuarioc;
+import entidades.*;
+import controle.*;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +14,7 @@ public class PublicacaoServletSA extends HttpServlet {
             throws ServletException, IOException {
         //Captura parametros da tela
         String idtext = request.getParameter("pidp");
+        String idusuario = request.getParameter("pid");
         String conteudo = request.getParameter("conteudo");
         String titulo = request.getParameter("titulo");
         
@@ -27,8 +28,8 @@ public class PublicacaoServletSA extends HttpServlet {
         publicacao.setConteudo(conteudo);
         publicacao.setTitulo(titulo);
 
-        //Chama de funcao para salvar ou atualizar usuario
-        UsuarioControle.salvarPublicacao(publicacao);
+        //Chama de funcao para salvar ou atualizar publicacao
+        PublicacaoControle.salvar(publicacao);
         
         //Redireciona pagina
         response.sendRedirect("home.jsp");

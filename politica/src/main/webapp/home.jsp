@@ -1,4 +1,4 @@
-<%@page import="iff.politica.usuarios.Usuarioc"%>
+<%@page import="entidades.Usuarioc"%>
 <!DOCTYPE HTML>
 
 <html>
@@ -27,7 +27,7 @@
                             %>
 
                             <li><a href="perfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
-                            <li><a href="Pagina_login.html" class="icon fa fa-user-circle-o"><span class="label">Perfil</span></a></li>
+                            <li><a href="login.html" class="icon fa fa-user-circle-o"><span class="label">Perfil</span></a></li>
                             <li><a href="Notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
                         </ul>
