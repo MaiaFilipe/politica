@@ -1,11 +1,10 @@
-<%@page import="iff.politica.servlet.UsuarioControle"%>
-<%@page import="iff.politica.servlet.UsuarioServletSA"%>
+<%@page import="servlet.*"%>
 <%@page import="org.hibernate.Session"%>
 <%@page import="org.hibernate.Transaction"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:directive.page import="iff.politica.usuarios.*" />
-<jsp:directive.page import="iff.politica.utilidades.*" />
-<jsp:directive.page import="iff.politica.servlet.*" />
+<jsp:directive.page import="entidades.*" />
+<jsp:directive.page import="controle.*" />
+<jsp:directive.page import="servlet.*" />
 
 <%
     //Criar variaveis

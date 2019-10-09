@@ -1,4 +1,4 @@
-<%@page import="iff.politica.usuarios.Usuarioc"%>
+<%@page import="entidades.*"%>
 <!DOCTYPE HTML>
 
 <html>
