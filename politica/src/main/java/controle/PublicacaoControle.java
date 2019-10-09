@@ -6,6 +6,7 @@
 package controle;
 
 import entidades.*;
+import java.util.List;
 import util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -28,6 +29,17 @@ public class PublicacaoControle {
         } catch (Exception ex) {
             return false;
         }
+    }
+    
+    public static List<Publicacao> listar(Publicacao publicacao)
+    {
+        Session sessionRecheio;
+        sessionRecheio = HibernateUtil.getSession();
+        Transaction tr = sessionRecheio.beginTransaction();
+        String hql = "from Publicacao";
+        List<Publicacao> lista = (List)sessionRecheio.createQuery(hql).list();
+        tr.commit();
+        return lista;
     }
 
 }

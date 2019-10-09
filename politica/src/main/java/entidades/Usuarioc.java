@@ -192,6 +192,16 @@ public class Usuarioc implements Serializable {
         return "iff.politica.usuarios.Usuarioc[ id=" + id + " ]";
     }
 
+
+    @XmlTransient
+    public Collection<Publicacao> getPublicacaoCollection() {
+        return publicacaoCollection;
+    }
+
+    public void setPublicacaoCollection(Collection<Publicacao> publicacaoCollection) {
+        this.publicacaoCollection = publicacaoCollection;
+    }
+
     public Long getCpfc() {
         return cpfc;
     }
@@ -206,15 +216,6 @@ public class Usuarioc implements Serializable {
 
     public void setCellc(Long cellc) {
         this.cellc = cellc;
-    }
-
-    @XmlTransient
-    public Collection<Publicacao> getPublicacaoCollection() {
-        return publicacaoCollection;
-    }
-
-    public void setPublicacaoCollection(Collection<Publicacao> publicacaoCollection) {
-        this.publicacaoCollection = publicacaoCollection;
     }
     
 }

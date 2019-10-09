@@ -13,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -33,7 +34,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Publicacao.findAll", query = "SELECT p FROM Publicacao p")
     , @NamedQuery(name = "Publicacao.findByConteudo", query = "SELECT p FROM Publicacao p WHERE p.conteudo = :conteudo")
     , @NamedQuery(name = "Publicacao.findByTitulo", query = "SELECT p FROM Publicacao p WHERE p.titulo = :titulo")
-    , @NamedQuery(name = "Publicacao.findByIdp", query = "SELECT p FROM Publicacao p WHERE p.idp = :idp")})
+    , @NamedQuery(name = "Publicacao.findByIdp", query = "SELECT p FROM Publicacao p WHERE p.idp = :idp")
+    , @NamedQuery(name = "Publicacao.findByExtensao", query = "SELECT p FROM Publicacao p WHERE p.extensao = :extensao")})
 public class Publicacao implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -52,6 +54,14 @@ public class Publicacao implements Serializable {
     @SequenceGenerator(name="meugerador", sequenceName = "sq_publicacao")
     @Column(name = "idp")
     private Integer idp;
+    
+    //@Lob
+    @Column(name = "foto")
+    private byte[] foto;
+    
+    @Size(max = 2147483647)
+    @Column(name = "extensao")
+    private String extensao;
     
     @JoinColumn(name = "id_usuario", referencedColumnName = "id")
     @ManyToOne
@@ -86,6 +96,22 @@ public class Publicacao implements Serializable {
 
     public void setIdp(Integer idp) {
         this.idp = idp;
+    }
+
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
+    }
+
+    public String getExtensao() {
+        return extensao;
+    }
+
+    public void setExtensao(String extensao) {
+        this.extensao = extensao;
     }
 
     public Usuarioc getIdUsuario() {

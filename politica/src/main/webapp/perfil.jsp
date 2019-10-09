@@ -1,11 +1,24 @@
 <%@page import="entidades.*"%>
+
+<%@page import="java.util.Base64"%>
+<%@page import="java.io.IOException"%>
+<%@page import="java.io.ByteArrayInputStream"%>
+<%@page import="java.io.BufferedOutputStream"%>
+<%@page import="java.util.List"%>
+<%@page import="controle.*"%>
 <!DOCTYPE HTML>
 
 <html>
     <head>
         <%
             Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
+            Publicacao publicacao = new Publicacao();
+
+            byte[] imagem = publicacao.getFoto();
+            String encodedImage = Base64.getEncoder().encodeToString(imagem);
+
         %>
+
         <title><%=usuario.getUsuarioc()%></title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -26,9 +39,9 @@
                     </header>
                     <section>
                         <div id="block" style="padding-left: 20px;">
-                            
+
                             <div id="left">
-                                <img src="pp.png" width="90%" style="border-radius: 10000px;">
+                                <img src="data:image/png;base64,<%=encodedImage%>" width="90%" style="border-radius: 10000px;">
                             </div>                            
 
                             Nome: <%=usuario.getNomec()%>
@@ -106,7 +119,8 @@
                         </header>
                         <p>Em caso de surgimento de dúvidas, críticas ou interesse na nossa proposta aqui apresentada, entre em contato.</p>
                         <ul class="contact">
-                            <li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
+                            <li class="fa-envelope-o"><a href="#">lfilipesmaia@gmail.com</a></li>
+                            <li class="fa-envelope-o"><a href="#">luisagomes@gmail.com</a></li>
                             <li class="fa-phone">(+5522)00000-0000</li>
                             <li class="fa-home">s/n Quissamã #0000<br />
                                 RJ, Brasil</li>

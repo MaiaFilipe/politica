@@ -33,7 +33,7 @@
                     </header>
                     <section>
                         <section>
-                            <form method="POST" action="PublicacaoServletSA">
+                            <form method="POST" action="PublicacaoServletSA" enctype="multipart/form-data">
                                 <div hidden>
                                     ID<input type="text" name="pidp" value="">
                                 </div>
@@ -43,12 +43,12 @@
                                 <h2> Título: </h2>
                                 <input type="text" name="titulo">
                                 <br><br>
-                                <!--
+                                
                                 <div class="left">
                                     <h2>Escolher imagem:</h2>
-                                    <input type="file" id="" name="imaegm" accept="image/png, image/jpeg" >
+                                    <input type="file" id="" name="foto" accept="image/png, image/jpeg">
                                 </div>
-                                -->
+                                
                                 <br><br>
                                 <div class="left">
                                     <h2> Texto: </h2>

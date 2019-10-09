@@ -19,7 +19,7 @@
 
                     <!-- Header -->
                     <header id="header">
-                        <a href="home.html" class="logo"><strong>Homepage</strong> </a>
+                        <a href="home.jsp" class="logo"><strong>Homepage</strong> </a>
                         <ul class="icons">
 
                             <%
@@ -178,7 +178,6 @@
                                     <li><a href="#">Feugiat Veroeros</a></li>
                                 </ul>
                             </li>
-                            <li><a href="posts.html">Publicações</a></li>
                             <li><a href="#">Adipiscing</a></li>
                             <li>
                                 <span class="opener">Another Submenu</span>
@@ -202,15 +201,15 @@
                         </header>
                         <div class="mini-posts">
                             <article>
-                                <a href="https://g1.globo.com/politica/noticia/2018/12/09/ministro-do-supremo-tribunal-federal-nega-liberdade-a-pezao.ghtml"target="_blank" class="image"><img src="pezao.jpg" alt=""  /></a>
+                                <a href="https://g1.globo.com/politica/noticia/2018/12/09/ministro-do-supremo-tribunal-federal-nega-liberdade-a-pezao.ghtml"target="_blank" class="image"><img src="Imagens/pezao.jpg" alt=""  /></a>
                                 <p>O ministro do STF negou o pedido de habeas corpus apresentado pela defesa de Pezão.</p>
                             </article>
                             <article>
-                                <a href="https://g1.globo.com/politica/blog/valdo-cruz/noticia/2018/12/07/paulo-guedes-pode-ter-tucano-e-assessor-da-casa-civil-em-sua-equipe-no-ministerio-da-economia.ghtml" target="_blank" class="image"><img src="paulo_guedes.jpg" alt="" /></a>
+                                <a href="https://g1.globo.com/politica/blog/valdo-cruz/noticia/2018/12/07/paulo-guedes-pode-ter-tucano-e-assessor-da-casa-civil-em-sua-equipe-no-ministerio-da-economia.ghtml" target="_blank" class="image"><img src="Imagens/paulo_guedes.jpg" alt="" /></a>
                                 <p>Paulo Guedes pode ter tucano e assessor da Casa Civil em sua equipe no Ministério da Economia.</p>
                             </article>
                             <article>
-                                <a href="https://g1.globo.com/politica/noticia/2018/12/06/temer-afirma-que-tentaram-desgracar-a-vida-dele-e-diz-nao-se-preocupar-com-investigacoes.ghtml" target="_blank"  class="image"><img src="temer.jpg" alt="" /></a>
+                                <a href="https://g1.globo.com/politica/noticia/2018/12/06/temer-afirma-que-tentaram-desgracar-a-vida-dele-e-diz-nao-se-preocupar-com-investigacoes.ghtml" target="_blank"  class="image"><img src="Imagens/temer.jpg" alt="" /></a>
                                 <p>Temer afirma que tentaram 'desgraçar' a vida dele e diz não se preocupar com investigações.</p>
                             </article>
                         </div>

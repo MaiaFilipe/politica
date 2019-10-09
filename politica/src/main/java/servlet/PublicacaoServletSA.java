@@ -3,10 +3,15 @@ package servlet;
 import entidades.*;
 import controle.*;
 import java.io.IOException;
+import java.io.InputStream;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+import org.apache.commons.io.IOUtils;
+@MultipartConfig
 
 public class PublicacaoServletSA extends HttpServlet {
     @Override
@@ -14,12 +19,12 @@ public class PublicacaoServletSA extends HttpServlet {
             throws ServletException, IOException {
         //Captura parametros da tela
         String idtext = request.getParameter("pidp");
-        
-        String idUser = request.getParameter("pid");
-        Integer idUsuario = Integer.parseInt(idUser);
-        
         String conteudo = request.getParameter("conteudo");
         String titulo = request.getParameter("titulo");
+        
+        //Definição e conversão do id do usuário, usado como fk
+        String idUser = request.getParameter("pid");
+        Integer idUsuario = Integer.parseInt(idUser);
         
         Publicacao publicacao = new Publicacao();        
         //Detecta se é usuario novo ou antigo
@@ -34,6 +39,13 @@ public class PublicacaoServletSA extends HttpServlet {
         publicacao.setConteudo(conteudo);
         publicacao.setTitulo(titulo);
         publicacao.setIdUsuario(usuario);
+        
+        Part filePart = request.getPart("foto");
+        if (filePart != null) {
+            InputStream inputStream = filePart.getInputStream();  
+            publicacao.setFoto(IOUtils.toByteArray(inputStream));            
+            publicacao.setExtensao(filePart.getContentType());
+        }
 
         //Chama de funcao para salvar ou atualizar publicacao
         PublicacaoControle.salvar(publicacao);
