@@ -4,18 +4,20 @@
     Author     : aluno
 --%>
 
-<%@page import="java.util.Base64"%>
-<%@page import="java.io.IOException"%>
-<%@page import="java.io.ByteArrayInputStream"%>
-<%@page import="java.io.BufferedOutputStream"%>
-<%@page import="entidades.Publicacao"%>
+<jsp:directive.page import="java.util.*" />
+<jsp:directive.page import="entidades.*" />
+<%@page import="controle.PublicacaoControle"%>
+<%@taglib uri="http://displaytag.sf.net" prefix="display"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
         <%
-            Publicacao publicacao = new Publicacao();
+            List<Publicacao> lista = PublicacaoControle.listar();
+            request.setAttribute("publicacoes", lista);
 
+            Publicacao publicacao = lista.get(0);
             byte[] imagem = publicacao.getFoto();
             String encodedImage = Base64.getEncoder().encodeToString(imagem);
         %>
@@ -28,6 +30,8 @@
             <display:column property="idp" title="ID" paramProperty="checkbox"/>
             <display:column property="conteudo" title="Conteudo"/>
             <display:column property="titulo" title="Titulo"/>
+            <display:caption  />
+            
             <display:setProperty name="basic.msg.empty_list" value="Sem Publicações" />
         </display:table>
     </body>

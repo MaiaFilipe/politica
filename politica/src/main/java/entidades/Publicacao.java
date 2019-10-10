@@ -13,7 +13,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -101,6 +100,7 @@ public class Publicacao implements Serializable {
     public byte[] getFoto() {
         return foto;
     }
+    
 
     public void setFoto(byte[] foto) {
         this.foto = foto;

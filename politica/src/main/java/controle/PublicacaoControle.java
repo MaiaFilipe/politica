@@ -31,12 +31,12 @@ public class PublicacaoControle {
         }
     }
     
-    public static List<Publicacao> listar(Publicacao publicacao)
+    public static List<Publicacao> listar()
     {
         Session sessionRecheio;
         sessionRecheio = HibernateUtil.getSession();
         Transaction tr = sessionRecheio.beginTransaction();
-        String hql = "from Publicacao";
+        String hql = "from Publicacao u";
         List<Publicacao> lista = (List)sessionRecheio.createQuery(hql).list();
         tr.commit();
         return lista;

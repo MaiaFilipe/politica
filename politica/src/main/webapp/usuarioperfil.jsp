@@ -12,11 +12,6 @@
     <head>
         <%
             Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
-            Publicacao publicacao = new Publicacao();
-
-            byte[] imagem = publicacao.getFoto();
-            String encodedImage = Base64.getEncoder().encodeToString(imagem);
-
         %>
 
         <title><%=usuario.getUsuarioc()%></title>
@@ -32,7 +27,7 @@
                         <a class="logo"><strong>Perfil</strong> </a>
                         <ul class="icons">
                             <li><a href="perfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
-                            <li><a href="Notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
+                            <li><a href="notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
                             <li><a href="home.html" class="label">Sair</a></li>
                         </ul>
@@ -41,7 +36,7 @@
                         <div id="block" style="padding-left: 20px;">
 
                             <div id="left">
-                                <img src="data:image/png;base64,<%=encodedImage%>" width="90%" style="border-radius: 10000px;">
+                                <img src="" width="90%" style="border-radius: 10000px;">
                             </div>                            
 
                             Nome: <%=usuario.getNomec()%>
