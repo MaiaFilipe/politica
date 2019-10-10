@@ -25,10 +25,10 @@
     <body>
         <h1>Hello World!</h1>
         <display:table name="publicacoes">
-            <display:column property="id" title="ID" paramProperty="checkbox"/>
+            <display:column property="idp" title="ID" paramProperty="checkbox"/>
             <display:column property="conteudo" title="Conteudo"/>
             <display:column property="titulo" title="Titulo"/>
-            <display:setProperty name="basic.msg.empty_list" value="Sem usuarios" />
+            <display:setProperty name="basic.msg.empty_list" value="Sem Publicações" />
         </display:table>
     </body>
 </html>
