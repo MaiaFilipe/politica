@@ -50,7 +50,7 @@
 
                             Bio: <%=usuario.getDescricaoc()%><br><br>
 
-                            Seguidores: X<br>Seguindo: Y<br>
+                            Seguidores: X<br><br>Seguindo: Y<br>
 
                         </div>
                     </section>
