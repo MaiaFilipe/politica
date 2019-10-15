@@ -6,21 +6,17 @@
 package entidades;
 
 import java.io.Serializable;
-import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -31,8 +27,6 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Usuarioc.findAll", query = "SELECT u FROM Usuarioc u")
-    , @NamedQuery(name = "Usuarioc.findByCpfc", query = "SELECT u FROM Usuarioc u WHERE u.cpfc = :cpfc")
-    , @NamedQuery(name = "Usuarioc.findByCellc", query = "SELECT u FROM Usuarioc u WHERE u.cellc = :cellc")
     , @NamedQuery(name = "Usuarioc.findBySenhac", query = "SELECT u FROM Usuarioc u WHERE u.senhac = :senhac")
     , @NamedQuery(name = "Usuarioc.findByPosicaoc", query = "SELECT u FROM Usuarioc u WHERE u.posicaoc = :posicaoc")
     , @NamedQuery(name = "Usuarioc.findByEmailc", query = "SELECT u FROM Usuarioc u WHERE u.emailc = :emailc")
@@ -41,20 +35,13 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Usuarioc.findByNascimentoc", query = "SELECT u FROM Usuarioc u WHERE u.nascimentoc = :nascimentoc")
     , @NamedQuery(name = "Usuarioc.findByEstadoc", query = "SELECT u FROM Usuarioc u WHERE u.estadoc = :estadoc")
     , @NamedQuery(name = "Usuarioc.findById", query = "SELECT u FROM Usuarioc u WHERE u.id = :id")
-    , @NamedQuery(name = "Usuarioc.findByUsuarioc", query = "SELECT u FROM Usuarioc u WHERE u.usuarioc = :usuarioc")})
+    , @NamedQuery(name = "Usuarioc.findByUsuarioc", query = "SELECT u FROM Usuarioc u WHERE u.usuarioc = :usuarioc")
+    , @NamedQuery(name = "Usuarioc.findByExtensao", query = "SELECT u FROM Usuarioc u WHERE u.extensao = :extensao")
+    , @NamedQuery(name = "Usuarioc.findByTelefonec", query = "SELECT u FROM Usuarioc u WHERE u.telefonec = :telefonec")
+    , @NamedQuery(name = "Usuarioc.findByCpfc", query = "SELECT u FROM Usuarioc u WHERE u.cpfc = :cpfc")})
 public class Usuarioc implements Serializable {
 
-    @Column(name = "cpfc")
-    private Long cpfc;
-    
-    @Column(name = "cellc")
-    private Long cellc;
-    
-    @OneToMany(mappedBy = "idUsuario")
-    private Collection<Publicacao> publicacaoCollection;
-
     private static final long serialVersionUID = 1L;
-    
     @Column(name = "senhac")
     private String senhac;
     
@@ -79,13 +66,25 @@ public class Usuarioc implements Serializable {
     @Id
     @Basic(optional = false)
     @NotNull
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "meugerador")
-    @SequenceGenerator(name="meugerador", sequenceName = "sq_usuario")
     @Column(name = "id")
     private Integer id;
     
     @Column(name = "usuarioc")
     private String usuarioc;
+    
+    @Lob
+    @Column(name = "foto")
+    private byte[] foto;
+    
+    @Size(max = 2147483647)
+    @Column(name = "extensao")
+    private String extensao;
+    
+    @Column(name = "telefonec")
+    private Long telefonec;
+    
+    @Column(name = "cpfc")
+    private Long cpfc;
 
     public Usuarioc() {
     }
@@ -93,7 +92,6 @@ public class Usuarioc implements Serializable {
     public Usuarioc(Integer id) {
         this.id = id;
     }
-
 
     public String getSenhac() {
         return senhac;
@@ -167,6 +165,38 @@ public class Usuarioc implements Serializable {
         this.usuarioc = usuarioc;
     }
 
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
+    }
+
+    public String getExtensao() {
+        return extensao;
+    }
+
+    public void setExtensao(String extensao) {
+        this.extensao = extensao;
+    }
+
+    public Long getTelefonec() {
+        return telefonec;
+    }
+
+    public void setTelefonec(Long telefonec) {
+        this.telefonec = telefonec;
+    }
+
+    public Long getCpfc() {
+        return cpfc;
+    }
+
+    public void setCpfc(Long cpfc) {
+        this.cpfc = cpfc;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -189,33 +219,7 @@ public class Usuarioc implements Serializable {
 
     @Override
     public String toString() {
-        return "iff.politica.usuarios.Usuarioc[ id=" + id + " ]";
-    }
-
-
-    @XmlTransient
-    public Collection<Publicacao> getPublicacaoCollection() {
-        return publicacaoCollection;
-    }
-
-    public void setPublicacaoCollection(Collection<Publicacao> publicacaoCollection) {
-        this.publicacaoCollection = publicacaoCollection;
-    }
-
-    public Long getCpfc() {
-        return cpfc;
-    }
-
-    public void setCpfc(Long cpfc) {
-        this.cpfc = cpfc;
-    }
-
-    public Long getCellc() {
-        return cellc;
-    }
-
-    public void setCellc(Long cellc) {
-        this.cellc = cellc;
+        return "entidades.Usuarioc[ id=" + id + " ]";
     }
     
 }

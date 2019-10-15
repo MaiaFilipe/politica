@@ -18,7 +18,7 @@
     String nascimento = "";
     String estado = "";
     Long cpf = Long.MIN_VALUE;
-    Long cell = Long.MIN_VALUE;
+    Long telefone = Long.MIN_VALUE;
     //Captura id (se alteração)
     String idUsuario = request.getParameter("pid");
 
@@ -29,7 +29,7 @@
         senha = usuario.getSenhac();
         email = usuario.getEmailc();
         cpf = usuario.getCpfc();
-        cell = usuario.getCellc();
+        telefone = usuario.getTelefonec();
         user = usuario.getUsuarioc();
         posicao = usuario.getPosicaoc();
         descricao = usuario.getDescricaoc();
@@ -62,7 +62,7 @@
         <center><h1>Cadastro usuário Comum</h1></center>
 
         <div class="left">
-            <form method = "POST" action = "UsuarioServletSA">
+            <form method = "POST" action = "UsuarioServletSA" enctype="multipart/form-data">
                 Usuário:<br>
                 <input type="text" name="usuario" value="<%=user%>"><br><br>
 
@@ -83,7 +83,7 @@
                 <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="12" value="<%=cpf%>"><br><br>
 
                 Número:<br>
-                <input type="text" name="cell" maxlength="13" value="<%=cell%>"><br><br>
+                <input type="text" name="telefone" maxlength="13" value="<%=telefone%>"><br><br>
 
                 Descrição:<br>
                 <input type="text" name="descricao" value="<%=descricao%>"><br><br>
@@ -129,6 +129,9 @@
                     <option value="centro">Centro</option>
                     <option value="semResposta">Prefiro não responder</option>
                 </select><br><br>
+                
+                <h2>Escolher imagem:</h2>
+                <input type="file" id="" name="foto" accept="image/png, image/jpeg"><br><br>
 
                 <input type="submit" value="Confirmar">
             </form>

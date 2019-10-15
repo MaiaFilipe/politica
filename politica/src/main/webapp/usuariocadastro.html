@@ -20,7 +20,7 @@
         <center><h1>Cadastro usuário Comum</h1></center>
 
         <div class="left">
-            <form method = "POST" action = "UsuarioServletSA">
+            <form method = "POST" action = "UsuarioServletSA" enctype="multipart/form-data">
                 Usuário:<br>
                 <input type="text" name="usuario"><br><br>
 
@@ -41,7 +41,7 @@
                 <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="12"><br><br>
 
                 Telefone:<br>
-                <input type="text" name="cell" maxlength="13"><br><br>
+                <input type="text" name="telefone" maxlength="13"><br><br>
 
                 Bio:<br>
                 <input type="text" name="descricao" ><br><br>
@@ -87,6 +87,9 @@
                     <option value="centro">Centro</option>
                     <option value="semResposta">Prefiro não responder</option>
                 </select><br><br>
+
+                <h2>Escolher imagem:</h2>
+                <input type="file" id="" name="foto" accept="image/png, image/jpeg"><br><br>
 
                 <input type="submit" value="Confirmar">
             </form>

@@ -26,7 +26,7 @@
                     <header id="header">
                         <a class="logo"><strong>Perfil</strong> </a>
                         <ul class="icons">
-                            <li><a href="perfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
+                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
                             <li><a href="notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
                             <li><a href="UsuarioServletLogout" class="label">Sair</a></li>
@@ -40,7 +40,7 @@
                             </div>                            
 
                             Nome: <%=usuario.getNomec()%>
-                            <a href="alterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
+                            <a href="usuarioalterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
 
                             User: <%=usuario.getUsuarioc()%><br><br>
 

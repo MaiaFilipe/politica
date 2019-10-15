@@ -3,6 +3,11 @@
     <servlet>
         <servlet-name>UsuarioServletSA</servlet-name>
         <servlet-class>servlet.UsuarioServletSA</servlet-class>
+        <multipart-config>
+            <max-file-size>418018841</max-file-size>
+            <max-request-size>418018841</max-request-size>
+            <file-size-threshold>418018841</file-size-threshold>
+        </multipart-config>
     </servlet>
     <servlet>
         <servlet-name>Login</servlet-name>
@@ -11,6 +16,11 @@
     <servlet>
         <servlet-name>PublicacaoServletSA</servlet-name>
         <servlet-class>servlet.PublicacaoServletSA</servlet-class>
+        <multipart-config>
+            <max-file-size>418018841</max-file-size>
+            <max-request-size>418018841</max-request-size>
+            <file-size-threshold>418018841</file-size-threshold>
+        </multipart-config>
     </servlet>
     <servlet>
         <servlet-name>UsuarioServletD</servlet-name>
