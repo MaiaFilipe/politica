@@ -74,6 +74,7 @@
                         </header>
                         <ul>
                             <li><a href="home.jsp">Homepage</a></li>
+                            <li><a href="publicacaomostrar.jsp">Publicações</a></li>
                             <li><a href="generic.html">Generic</a></li>
                             <li><a href="elements.html">Elements</a></li>
                             <li>

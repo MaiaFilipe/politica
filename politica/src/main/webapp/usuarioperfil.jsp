@@ -29,7 +29,7 @@
                             <li><a href="perfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
                             <li><a href="notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
-                            <li><a href="home.html" class="label">Sair</a></li>
+                            <li><a href="UsuarioServletLogout" class="label">Sair</a></li>
                         </ul>
                     </header>
                     <section>

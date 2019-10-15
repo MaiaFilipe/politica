@@ -16,6 +16,10 @@
         <servlet-name>UsuarioServletD</servlet-name>
         <servlet-class>servlet.UsuarioServletD</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UsuarioServletLogout</servlet-name>
+        <servlet-class>servlet.UsuarioServletLogout</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>UsuarioServletSA</servlet-name>
         <url-pattern>/UsuarioServletSA</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsuarioServletLogout</servlet-name>
+        <url-pattern>/UsuarioServletLogout</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
