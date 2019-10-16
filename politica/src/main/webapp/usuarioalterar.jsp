@@ -145,7 +145,7 @@
                     <option value="direita">Direita</option>
                     <option value="esquerda">Esquerda</option>
                     <option value="centro">Centro</option>
-                    <option value="semResposta">Prefiro não responder</option>
+                    <option value="nulo">Prefiro não responder</option>
                 </select><br><br>
 
                 <h2>Escolher imagem:</h2>
