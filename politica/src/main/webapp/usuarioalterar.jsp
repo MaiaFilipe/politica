@@ -17,8 +17,10 @@
     String descricao = "";
     String nascimento = "";
     String estado = "";
-    Double cpf = Double.MAX_VALUE;
-    Double cell = Double.MIN_VALUE;
+    String cpf = "";
+    String cell = "";
+    Double cpfD = Double.MAX_VALUE;
+    Double cellD = Double.MIN_VALUE;
     //Captura id (se alteração)
     String idUsuario = request.getParameter("pid");
 
@@ -29,8 +31,11 @@
         senha = usuario.getSenha();
         email = usuario.getEmail();
         
-        cpf = usuario.getCpf();
-        cell = usuario.getCell();
+        cpfD = usuario.getCpf();
+        cpf = Double.toString(cpfD);
+        
+        cellD = usuario.getCell();
+        cell = Double.toString(cellD);
         
         user = usuario.getUsuario();
         posicao = usuario.getPosicao();

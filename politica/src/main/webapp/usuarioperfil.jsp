@@ -44,7 +44,9 @@
                                 <img src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" style="height: 250px; border-radius: 10px;" alt="Foto publicação"/>
                             </div>                            
                             <div style="padding: 10px 10px 10px 10px;">
-                                Nome: <%=usuario.getNome()%>
+                                
+                                Nome: <%=usuario.getNome()%> 
+                                
                                 <a href="usuarioalterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
 
                                 User: <%=usuario.getUsuario()%><br><br>
