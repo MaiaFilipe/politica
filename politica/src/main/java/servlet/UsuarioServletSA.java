@@ -29,10 +29,11 @@ public class UsuarioServletSA extends HttpServlet {
         Part filePart = request.getPart("foto");
         
         String cpfXaBlau = request.getParameter("cpf");
-        Long cpf = Long.parseLong(cpfXaBlau);
+        cpfXaBlau = cpfXaBlau.replaceAll("-", ""); cpfXaBlau = cpfXaBlau.replaceAll("\\.", "");
+        Double cpf = Double.parseDouble(cpfXaBlau);
         
         String cell = request.getParameter("telefone");
-        Long telefone = Long.parseLong(cell);
+        Double telefone = Double.parseDouble(cell);
          
         //Cria instancia do usuario
         Usuarioc usuario = new Usuarioc();

@@ -44,12 +44,11 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Usuarioc.findByExtensaoc", query = "SELECT u FROM Usuarioc u WHERE u.extensaoc = :extensaoc")})
 public class Usuarioc implements Serializable {
 
-    private static final long serialVersionUID = 1L;
     @Column(name = "cpfc")
-    private Long cpfc;
+    private Double cpfc;
     
     @Column(name = "cellc")
-    private Long cellc;
+    private Double cellc;
     
     @Column(name = "senhac")
     private String senhac;
@@ -98,19 +97,19 @@ public class Usuarioc implements Serializable {
         this.id = id;
     }
 
-    public Long getCpfc() {
+    public Double getCpfc() {
         return cpfc;
     }
 
-    public void setCpfc(Long cpfc) {
+    public void setCpfc(Double cpfc) {
         this.cpfc = cpfc;
     }
 
-    public Long getCellc() {
+    public Double getCellc() {
         return cellc;
     }
 
-    public void setCellc(Long cellc) {
+    public void setCellc(Double cellc) {
         this.cellc = cellc;
     }
 

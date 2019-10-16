@@ -17,8 +17,8 @@
     String descricao = "";
     String nascimento = "";
     String estado = "";
-    Long cpf = Long.MIN_VALUE;
-    Long cell = Long.MIN_VALUE;
+    Double cpf = Double.MAX_VALUE;
+    Double cell = Double.MIN_VALUE;
     //Captura id (se alteração)
     String idUsuario = request.getParameter("pid");
 
@@ -45,9 +45,12 @@
     <head>
         <script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
         <script type="text/javascript" src="js/jquery.maskedinput-1.1.4.pack.js"/></script>
-    <script type="text/javascript">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+    <script>
         $(document).ready(function () {
-            $("#cpf").mask("999.999.999-99");
+            var $seuCampoCpf = $("#CPF");
+            $seuCampoCpf.mask('000.000.000-00', {reverse: true});
         });
     </script>
     <meta charset="utf-8">
@@ -80,7 +83,7 @@
                 <input type="password" name="senha" value="<%=senha%>"><br><br>
 
                 Cpf:<br>
-                <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="12" value="<%=cpf%>"><br><br>
+                <input type="text" name="cpf" id="CPF" placeholder="Ex.: 000.000.000-00" maxlength="15" value="<%=cpf%>"><br><br>
 
                 Número:<br>
                 <input type="text" name="telefone" maxlength="13" value="<%=cell%>"><br><br>
@@ -129,7 +132,7 @@
                     <option value="centro">Centro</option>
                     <option value="semResposta">Prefiro não responder</option>
                 </select><br><br>
-                
+
                 <h2>Escolher imagem:</h2>
                 <input type="file" name="foto" accept="image/png, image/jpeg"><br><br>
 

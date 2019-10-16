@@ -1,3 +1,4 @@
+<%@page import="java.util.Iterator"%>
 <%@page import="entidades.*"%>
 
 <%@page import="java.util.Base64"%>
@@ -35,28 +36,28 @@
                         </ul>
                     </header>
                     <section>
-                        <div id="block">
+                        <div style="height: 100%;maxwidth: 100%; background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px;">
 
                             <div id="left">
-                                <img src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" style="max-width: 250px;" alt="Foto publicação"/>
+                                <img src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" style="height: 250px; border-radius: 10px;" alt="Foto publicação"/>
                             </div>                            
+                            <div style="position: relative">
+                                Nome: <%=usuario.getNomec()%>
+                                <a href="usuarioalterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
 
-                            Nome: <%=usuario.getNomec()%>
-                            <a href="usuarioalterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
+                                User: <%=usuario.getUsuarioc()%><br><br>
 
-                            User: <%=usuario.getUsuarioc()%><br><br>
+                                E-mail: <%=usuario.getEmailc()%><br><br>
 
-                            E-mail: <%=usuario.getEmailc()%><br><br>
+                                Posição política: <%=usuario.getPosicaoc()%><br><br>
 
-                            Posição política: <%=usuario.getPosicaoc()%><br><br>
+                                Bio: <%=usuario.getDescricaoc()%><br><br>
 
-                            Bio: <%=usuario.getDescricaoc()%><br><br>
-
-                            Seguidores: X<br><br>Seguindo: Y<br>
-
+                                Seguidores: X   Seguindo: Y<br>
+                            </div>
                         </div>
                     </section>
-                    <h2>Publicações</h2>
+                    <h1>Publicações</h1>
                 </div>
             </div>
 

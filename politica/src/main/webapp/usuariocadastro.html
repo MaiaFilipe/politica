@@ -3,10 +3,14 @@
     <head>
         <script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
         <script type="text/javascript" src="js/jquery.maskedinput-1.1.4.pack.js"/></script>
-    <script type="text/javascript">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+    <script>
         $(document).ready(function () {
-            $("#cpf").mask("999.999.999-99");
+            var $seuCampoCpf = $("#CPF");
+            $seuCampoCpf.mask('000.000.000-00', {reverse: true});
         });
+        
     </script>
     <meta charset="utf-8">
     <style>
@@ -38,7 +42,7 @@
                 <input type="password" name="senha"><br><br>
 
                 Cpf:<br>
-                <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="12"><br><br>
+                <input type="text" name="cpf" id="CPF" placeholder="Ex.: 000.000.000-00" maxlength="15"><br><br>
 
                 Telefone:<br>
                 <input type="text" name="telefone" maxlength="13"><br><br>
@@ -47,7 +51,7 @@
                 <input type="text" name="descricao" ><br><br>
 
                 </div>
-                Data de nascimento: <input type="date" name="nascimento"><br><br>
+                Data de nascimento: <input type="date" name="nascimento" ><br><br>
 
                 Estado:<br>
                 <select name="estado">
