@@ -1,3 +1,4 @@
+<%@page import="java.util.Base64"%>
 <%@page import="servlet.*"%>
 <%@page import="org.hibernate.Session"%>
 <%@page import="org.hibernate.Transaction"%>
@@ -24,19 +25,20 @@
     //Captura id (se alteração)
     String idUsuario = request.getParameter("pid");
 
+
     //Localiza usuario (se alteração)
     if (!idUsuario.isEmpty()) {
         usuario = UsuarioControle.buscar(Integer.parseInt(idUsuario));
         nome = usuario.getNome();
         senha = usuario.getSenha();
         email = usuario.getEmail();
-        
+
         cpfD = usuario.getCpf();
         cpf = Double.toString(cpfD);
-        
+
         cellD = usuario.getCell();
         cell = Double.toString(cellD);
-        
+
         user = usuario.getUsuario();
         posicao = usuario.getPosicao();
         descricao = usuario.getDescricao();
@@ -131,6 +133,12 @@
                     <option value="SE">Sergipe (SE)</option>
                     <option value="TO">Tocantins (TO)</option>
                 </select><br><br>
+                
+                Tipo de usuário:<br>
+                <select name="tipo">
+                    <option value="Eleitor">Eleitor</option>
+                    <option value="Político">Político</option>
+                </select><br><br>
 
                 Posição política:<br>
                 <select name="posicao" value="<%=posicao%>">
@@ -141,7 +149,7 @@
                 </select><br><br>
 
                 <h2>Escolher imagem:</h2>
-                <input type="file" name="foto" accept="image/png, image/jpeg"><br><br>
+                <input type="file" name="foto" accept="image/png, image/jpeg" value=""><br><br>
 
                 <input type="submit" value="Confirmar">
             </form>

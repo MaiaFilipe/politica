@@ -77,8 +77,8 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         
         String idtext = request.getParameter("pid");
-        String email = request.getParameter("emailc");
-        String senha = request.getParameter("senhac");
+        String email = request.getParameter("email");
+        String senha = request.getParameter("senha");
         
         Session session = HibernateUtil.getSession();
         Usuario usuario = (Usuario) session.createQuery("from Usuario where email=? and senha=?").setString(0, email).setString(1, senha).uniqueResult();
@@ -90,7 +90,6 @@ public class Login extends HttpServlet {
             HttpSession httpSession = request.getSession();
             httpSession.setAttribute("UsuarioLogado", usuario);
             response.sendRedirect("home.jsp");
-
         }
         
         processRequest(request, response);

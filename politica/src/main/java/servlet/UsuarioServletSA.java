@@ -48,7 +48,7 @@ public class UsuarioServletSA extends HttpServlet {
             InputStream inputStream = filePart.getInputStream();
             usuario.setFoto(IOUtils.toByteArray(inputStream));
             usuario.setExtensao(filePart.getContentType());
-        }
+        } 
         //Insere informações no objeto
         usuario.setNome(nome);
         usuario.setSenha(senha);

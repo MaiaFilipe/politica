@@ -1,6 +1,5 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="entidades.*"%>
-
 <%@page import="java.util.Base64"%>
 <%@page import="java.io.IOException"%>
 <%@page import="java.io.ByteArrayInputStream"%>
@@ -15,8 +14,6 @@
             Usuario usuario = (Usuario) session.getAttribute("UsuarioLogado");
             byte[] imagem = usuario.getFoto();
             String usuarioFoto = Base64.getEncoder().encodeToString(imagem);
-            
-
         %>
 
         <title><%=usuario.getUsuario()%></title>
@@ -41,7 +38,7 @@
                         <div style="height: 100%;maxwidth: 100%; background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px;">
 
                             <div id="left" style="padding: 10px 10px 10px 10px;  width: 300px;">
-                                <img src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" style="height: 250px; border-radius: 10px;" alt="Foto publicação"/>
+                                <img src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" style="max-width: 250px; border-radius: 10px;" alt="Foto publicação"/>
                             </div>                            
                             <div style="padding: 10px 10px 10px 10px;">
                                 
