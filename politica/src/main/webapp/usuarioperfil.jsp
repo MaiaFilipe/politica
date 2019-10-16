@@ -15,6 +15,8 @@
             Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
             byte[] imagem = usuario.getFotoc();
             String usuarioFoto = Base64.getEncoder().encodeToString(imagem);
+            
+
         %>
 
         <title><%=usuario.getUsuarioc()%></title>
