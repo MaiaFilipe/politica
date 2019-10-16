@@ -4,6 +4,7 @@ import entidades.*;
 import controle.*;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
@@ -39,6 +40,8 @@ public class PublicacaoServletSA extends HttpServlet {
         publicacao.setConteudo(conteudo);
         publicacao.setTitulo(titulo);
         publicacao.setIdUsuario(usuario);
+        Date agora = new Date();
+        publicacao.setHorario(agora);
         
         Part filePart = request.getPart("foto");
         if (filePart != null) {

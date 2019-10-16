@@ -6,6 +6,7 @@
 package entidades;
 
 import java.io.Serializable;
+import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,11 +16,13 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -49,6 +52,13 @@ public class Usuarioc implements Serializable {
     
     @Column(name = "cellc")
     private Double cellc;
+    
+    //@Lob
+    @Column(name = "fotoc")
+    private byte[] fotoc;
+    
+    @OneToMany(mappedBy = "idUsuario")
+    private Collection<Publicacao> publicacaoCollection;
     
     @Column(name = "senhac")
     private String senhac;
@@ -85,9 +95,6 @@ public class Usuarioc implements Serializable {
     @Column(name = "extensaoc")
     private String extensaoc;
     
-    //@Lob
-    @Column(name = "fotoc")
-    private byte[] fotoc;
     
 
     public Usuarioc() {
@@ -97,21 +104,6 @@ public class Usuarioc implements Serializable {
         this.id = id;
     }
 
-    public Double getCpfc() {
-        return cpfc;
-    }
-
-    public void setCpfc(Double cpfc) {
-        this.cpfc = cpfc;
-    }
-
-    public Double getCellc() {
-        return cellc;
-    }
-
-    public void setCellc(Double cellc) {
-        this.cellc = cellc;
-    }
 
     public String getSenhac() {
         return senhac;
@@ -193,13 +185,6 @@ public class Usuarioc implements Serializable {
         this.extensaoc = extensaoc;
     }
 
-    public byte[] getFotoc() {
-        return fotoc;
-    }
-
-    public void setFotoc(byte[] fotoc) {
-        this.fotoc = fotoc;
-    }
 
     @Override
     public int hashCode() {
@@ -224,6 +209,39 @@ public class Usuarioc implements Serializable {
     @Override
     public String toString() {
         return "entidades.Usuarioc[ id=" + id + " ]";
+    }
+
+    public Double getCpfc() {
+        return cpfc;
+    }
+
+    public void setCpfc(Double cpfc) {
+        this.cpfc = cpfc;
+    }
+
+    public Double getCellc() {
+        return cellc;
+    }
+
+    public void setCellc(Double cellc) {
+        this.cellc = cellc;
+    }
+
+    public byte[] getFotoc() {
+        return fotoc;
+    }
+
+    public void setFotoc(byte[] fotoc) {
+        this.fotoc = fotoc;
+    }
+
+    @XmlTransient
+    public Collection<Publicacao> getPublicacaoCollection() {
+        return publicacaoCollection;
+    }
+
+    public void setPublicacaoCollection(Collection<Publicacao> publicacaoCollection) {
+        this.publicacaoCollection = publicacaoCollection;
     }
     
 }
