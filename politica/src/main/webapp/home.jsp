@@ -1,4 +1,4 @@
-<%@page import="entidades.Usuarioc"%>
+<%@page import="entidades.Usuario"%>
 <!DOCTYPE HTML>
 
 <html>
@@ -23,10 +23,10 @@
                         <ul class="icons">
 
                             <%
-                                Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
+                                Usuario usuario = (Usuario) session.getAttribute("UsuarioLogado");
                             %>
 
-                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
+                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNome()%></span></a></li>
                             <li><a href="Notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
                         </ul>

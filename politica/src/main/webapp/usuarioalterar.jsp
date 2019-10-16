@@ -8,7 +8,7 @@
 
 <%
     //Criar variaveis
-    Usuarioc usuario = new Usuarioc();
+    Usuario usuario = new Usuario();
     String nome = "";
     String senha = "";
     String email = "";
@@ -25,16 +25,18 @@
     //Localiza usuario (se alteração)
     if (!idUsuario.isEmpty()) {
         usuario = UsuarioControle.buscar(Integer.parseInt(idUsuario));
-        nome = usuario.getNomec();
-        senha = usuario.getSenhac();
-        email = usuario.getEmailc();
-        cpf = usuario.getCpfc();
-        cell = usuario.getCellc();
-        user = usuario.getUsuarioc();
-        posicao = usuario.getPosicaoc();
-        descricao = usuario.getDescricaoc();
-        nascimento = usuario.getNascimentoc();
-        estado = usuario.getEstadoc();
+        nome = usuario.getNome();
+        senha = usuario.getSenha();
+        email = usuario.getEmail();
+        
+        cpf = usuario.getCpf();
+        cell = usuario.getCell();
+        
+        user = usuario.getUsuario();
+        posicao = usuario.getPosicao();
+        descricao = usuario.getDescricao();
+        nascimento = usuario.getNascimento();
+        estado = usuario.getEstado();
     } else {
         idUsuario = "";
     }

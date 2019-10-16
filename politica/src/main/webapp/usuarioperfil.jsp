@@ -12,14 +12,14 @@
 <html>
     <head>
         <%
-            Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
-            byte[] imagem = usuario.getFotoc();
+            Usuario usuario = (Usuario) session.getAttribute("UsuarioLogado");
+            byte[] imagem = usuario.getFoto();
             String usuarioFoto = Base64.getEncoder().encodeToString(imagem);
             
 
         %>
 
-        <title><%=usuario.getUsuarioc()%></title>
+        <title><%=usuario.getUsuario()%></title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -31,7 +31,7 @@
                     <header id="header">
                         <a class="logo"><strong>Perfil</strong> </a>
                         <ul class="icons">
-                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
+                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNome()%></span></a></li>
                             <li><a href="notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
                             <li><a href="UsuarioServletLogout" class="label">Sair</a></li>
@@ -40,20 +40,20 @@
                     <section>
                         <div style="height: 100%;maxwidth: 100%; background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px;">
 
-                            <div id="left">
+                            <div id="left" style="padding: 10px 10px 10px 10px;  width: 300px;">
                                 <img src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" style="height: 250px; border-radius: 10px;" alt="Foto publicação"/>
                             </div>                            
-                            <div style="position: relative">
-                                Nome: <%=usuario.getNomec()%>
+                            <div style="padding: 10px 10px 10px 10px;">
+                                Nome: <%=usuario.getNome()%>
                                 <a href="usuarioalterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
 
-                                User: <%=usuario.getUsuarioc()%><br><br>
+                                User: <%=usuario.getUsuario()%><br><br>
 
-                                E-mail: <%=usuario.getEmailc()%><br><br>
+                                E-mail: <%=usuario.getEmail()%><br><br>
 
-                                Posição política: <%=usuario.getPosicaoc()%><br><br>
+                                Posição política: <%=usuario.getPosicao()%><br><br>
 
-                                Bio: <%=usuario.getDescricaoc()%><br><br>
+                                Bio: <%=usuario.getDescricao()%><br><br>
 
                                 Seguidores: X   Seguindo: Y<br>
                             </div>

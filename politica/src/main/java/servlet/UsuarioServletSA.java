@@ -1,13 +1,14 @@
 package servlet;
 
 import controle.UsuarioControle;
-import entidades.Usuarioc;
+import entidades.Usuario;
 import java.io.IOException;
 import java.io.InputStream;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import org.apache.commons.io.IOUtils;
 
@@ -26,6 +27,7 @@ public class UsuarioServletSA extends HttpServlet {
         String descricao = request.getParameter("descricao");
         String nascimento = request.getParameter("nascimento");
         String estado = request.getParameter("estado");
+        String tipo = request.getParameter("tipo");
         Part filePart = request.getPart("foto");
         
         String cpfXaBlau = request.getParameter("cpf");
@@ -36,7 +38,7 @@ public class UsuarioServletSA extends HttpServlet {
         Double telefone = Double.parseDouble(cell);
          
         //Cria instancia do usuario
-        Usuarioc usuario = new Usuarioc();
+        Usuario usuario = new Usuario();
         //Detecta se é usuario novo ou antigo
         if (!idtext.isEmpty()) {
             Integer id = Integer.parseInt(idtext);
@@ -44,25 +46,32 @@ public class UsuarioServletSA extends HttpServlet {
         }
         if (filePart != null) {
             InputStream inputStream = filePart.getInputStream();
-            usuario.setFotoc(IOUtils.toByteArray(inputStream));
-            usuario.setExtensaoc(filePart.getContentType());
+            usuario.setFoto(IOUtils.toByteArray(inputStream));
+            usuario.setExtensao(filePart.getContentType());
         }
         //Insere informações no objeto
-        usuario.setNomec(nome);
-        usuario.setSenhac(senha);
-        usuario.setEmailc(email);
-        usuario.setCpfc(cpf);
-        usuario.setCellc(telefone);
-        usuario.setUsuarioc(user);
-        usuario.setPosicaoc(posicao);
-        usuario.setDescricaoc(descricao);
-        usuario.setNascimentoc(nascimento);
-        usuario.setEstadoc(estado);
+        usuario.setNome(nome);
+        usuario.setSenha(senha);
+        usuario.setEmail(email);
+        usuario.setCpf(cpf);
+        usuario.setCell(telefone);
+        usuario.setUsuario(user);
+        usuario.setPosicao(posicao);
+        usuario.setDescricao(descricao);
+        usuario.setNascimento(nascimento);
+        usuario.setEstado(estado);
+        usuario.setTipo(tipo);
 
         //Chama de funcao para salvar ou atualizar usuario
         UsuarioControle.salvar(usuario);
 
         //Redireciona pagina
-        response.sendRedirect("home.html");
+        if (usuario == null) {
+            response.sendRedirect("home.html");
+        } else {
+            HttpSession httpSession = request.getSession();
+            httpSession.setAttribute("UsuarioLogado", usuario);
+            response.sendRedirect("home.jsp");
+        }
     }
 }

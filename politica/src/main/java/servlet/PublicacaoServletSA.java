@@ -34,7 +34,7 @@ public class PublicacaoServletSA extends HttpServlet {
             publicacao.setIdp(id);
         }
         //Insere informações no objeto
-        Usuarioc usuario = new Usuarioc();
+        Usuario usuario = new Usuario();
         usuario.setId(idUsuario);
         
         publicacao.setConteudo(conteudo);

@@ -6,7 +6,7 @@
  */
 package servlet;
 
-import entidades.Usuarioc;
+import entidades.Usuario;
 import util.HibernateUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -81,7 +81,7 @@ public class Login extends HttpServlet {
         String senha = request.getParameter("senhac");
         
         Session session = HibernateUtil.getSession();
-        Usuarioc usuario = (Usuarioc) session.createQuery("from Usuarioc where emailc=? and senhac=?").setString(0, email).setString(1, senha).uniqueResult();
+        Usuario usuario = (Usuario) session.createQuery("from Usuario where email=? and senha=?").setString(0, email).setString(1, senha).uniqueResult();
         session.close();
 
         if (usuario == null) {

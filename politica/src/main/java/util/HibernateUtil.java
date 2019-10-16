@@ -33,7 +33,7 @@ public class HibernateUtil {
     static {
         AnnotationConfiguration cfg = new AnnotationConfiguration();
         cfg.configure();
-        cfg.addAnnotatedClass(Usuarioc.class);
+        cfg.addAnnotatedClass(Usuario.class);
         cfg.addAnnotatedClass(Publicacao.class);
         factory = cfg.buildSessionFactory();
     }

@@ -1,7 +1,7 @@
 package controle;
 
 import entidades.*;
-import entidades.Usuarioc;
+import entidades.Usuario;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -10,7 +10,7 @@ import util.HibernateUtil;
 public class UsuarioControle {
 
     //Função de salvar/atualizar um usuario
-    public static boolean salvar(Usuarioc usuario){
+    public static boolean salvar(Usuario usuario){
         try{
             Session sessionRecheio;
             sessionRecheio = HibernateUtil.getSession();
@@ -25,32 +25,32 @@ public class UsuarioControle {
     }
     
     //Localiza um usuario pelo id
-    public static Usuarioc buscar(Integer id)
+    public static Usuario buscar(Integer id)
     {
-        String idUsuarioc = id.toString();
+        String idUsuario = id.toString();
         Session sessionRecheio;
         sessionRecheio = HibernateUtil.getSession();
         Transaction tr = sessionRecheio.beginTransaction();
-        String hql = "from Usuarioc u where u.id='"+idUsuarioc+"'";
-        Usuarioc usuario = (Usuarioc)sessionRecheio.createQuery(hql).uniqueResult();
+        String hql = "from Usuario u where u.id='"+idUsuario+"'";
+        Usuario usuario = (Usuario)sessionRecheio.createQuery(hql).uniqueResult();
         tr.commit();
         return usuario;
     }
     
     //Retorna todos os usuario do sistema
-    public static List<Usuarioc> listar()
+    public static List<Usuario> listar()
     {
         Session sessionRecheio;
         sessionRecheio = HibernateUtil.getSession();
         Transaction tr = sessionRecheio.beginTransaction();
-        String hql = "from Usuarioc u";
-        List<Usuarioc> lista = (List)sessionRecheio.createQuery(hql).list();
+        String hql = "from Usuario u";
+        List<Usuario> lista = (List)sessionRecheio.createQuery(hql).list();
         tr.commit();
         return lista;
     }
     
     //Função de apagar um usuario
-    public static boolean deletar(Usuarioc usuario){
+    public static boolean deletar(Usuario usuario){
         try{
             Session sessionRecheio;
             sessionRecheio = HibernateUtil.getSession();

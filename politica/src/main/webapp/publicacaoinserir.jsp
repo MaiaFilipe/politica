@@ -22,10 +22,10 @@
                     <header id="header">
                         <a  class="logo"><strong>Publicação completa</strong></a>
                         <%
-                            Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
+                            Usuario usuario = (Usuario) session.getAttribute("UsuarioLogado");
                         %>
                         <ul class="icons">
-                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
+                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNome()%></span></a></li>
                             <li><a href="#" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
                             <li><a href="UsuarioServletLogout" class="icon fa fa-ellipsis-v">Sair</a></li>

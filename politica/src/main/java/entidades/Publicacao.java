@@ -71,7 +71,7 @@ public class Publicacao implements Serializable {
     
     @JoinColumn(name = "id_usuario", referencedColumnName = "id")
     @ManyToOne
-    private Usuarioc idUsuario;
+    private Usuario idUsuario;
 
     public Publicacao() {
     }
@@ -128,11 +128,11 @@ public class Publicacao implements Serializable {
         this.horario = horario;
     }
 
-    public Usuarioc getIdUsuario() {
+    public Usuario getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuarioc idUsuario) {
+    public void setIdUsuario(Usuario idUsuario) {
         this.idUsuario = idUsuario;
     }
 
