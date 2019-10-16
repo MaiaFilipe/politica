@@ -9,10 +9,13 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -27,6 +30,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Usuarioc.findAll", query = "SELECT u FROM Usuarioc u")
+    , @NamedQuery(name = "Usuarioc.findByCpfc", query = "SELECT u FROM Usuarioc u WHERE u.cpfc = :cpfc")
+    , @NamedQuery(name = "Usuarioc.findByCellc", query = "SELECT u FROM Usuarioc u WHERE u.cellc = :cellc")
     , @NamedQuery(name = "Usuarioc.findBySenhac", query = "SELECT u FROM Usuarioc u WHERE u.senhac = :senhac")
     , @NamedQuery(name = "Usuarioc.findByPosicaoc", query = "SELECT u FROM Usuarioc u WHERE u.posicaoc = :posicaoc")
     , @NamedQuery(name = "Usuarioc.findByEmailc", query = "SELECT u FROM Usuarioc u WHERE u.emailc = :emailc")
@@ -36,12 +41,16 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Usuarioc.findByEstadoc", query = "SELECT u FROM Usuarioc u WHERE u.estadoc = :estadoc")
     , @NamedQuery(name = "Usuarioc.findById", query = "SELECT u FROM Usuarioc u WHERE u.id = :id")
     , @NamedQuery(name = "Usuarioc.findByUsuarioc", query = "SELECT u FROM Usuarioc u WHERE u.usuarioc = :usuarioc")
-    , @NamedQuery(name = "Usuarioc.findByExtensao", query = "SELECT u FROM Usuarioc u WHERE u.extensao = :extensao")
-    , @NamedQuery(name = "Usuarioc.findByTelefonec", query = "SELECT u FROM Usuarioc u WHERE u.telefonec = :telefonec")
-    , @NamedQuery(name = "Usuarioc.findByCpfc", query = "SELECT u FROM Usuarioc u WHERE u.cpfc = :cpfc")})
+    , @NamedQuery(name = "Usuarioc.findByExtensaoc", query = "SELECT u FROM Usuarioc u WHERE u.extensaoc = :extensaoc")})
 public class Usuarioc implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    @Column(name = "cpfc")
+    private Long cpfc;
+    
+    @Column(name = "cellc")
+    private Long cellc;
+    
     @Column(name = "senhac")
     private String senhac;
     
@@ -66,31 +75,43 @@ public class Usuarioc implements Serializable {
     @Id
     @Basic(optional = false)
     @NotNull
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "meugerador")
+    @SequenceGenerator(name="meugerador", sequenceName = "sq_publicacao")
     @Column(name = "id")
     private Integer id;
     
     @Column(name = "usuarioc")
     private String usuarioc;
     
-    @Lob
-    @Column(name = "foto")
-    private byte[] foto;
+    @Column(name = "extensaoc")
+    private String extensaoc;
     
-    @Size(max = 2147483647)
-    @Column(name = "extensao")
-    private String extensao;
+    //@Lob
+    @Column(name = "fotoc")
+    private byte[] fotoc;
     
-    @Column(name = "telefonec")
-    private Long telefonec;
-    
-    @Column(name = "cpfc")
-    private Long cpfc;
 
     public Usuarioc() {
     }
 
     public Usuarioc(Integer id) {
         this.id = id;
+    }
+
+    public Long getCpfc() {
+        return cpfc;
+    }
+
+    public void setCpfc(Long cpfc) {
+        this.cpfc = cpfc;
+    }
+
+    public Long getCellc() {
+        return cellc;
+    }
+
+    public void setCellc(Long cellc) {
+        this.cellc = cellc;
     }
 
     public String getSenhac() {
@@ -165,36 +186,20 @@ public class Usuarioc implements Serializable {
         this.usuarioc = usuarioc;
     }
 
-    public byte[] getFoto() {
-        return foto;
+    public String getExtensaoc() {
+        return extensaoc;
     }
 
-    public void setFoto(byte[] foto) {
-        this.foto = foto;
+    public void setExtensaoc(String extensaoc) {
+        this.extensaoc = extensaoc;
     }
 
-    public String getExtensao() {
-        return extensao;
+    public byte[] getFotoc() {
+        return fotoc;
     }
 
-    public void setExtensao(String extensao) {
-        this.extensao = extensao;
-    }
-
-    public Long getTelefonec() {
-        return telefonec;
-    }
-
-    public void setTelefonec(Long telefonec) {
-        this.telefonec = telefonec;
-    }
-
-    public Long getCpfc() {
-        return cpfc;
-    }
-
-    public void setCpfc(Long cpfc) {
-        this.cpfc = cpfc;
+    public void setFotoc(byte[] fotoc) {
+        this.fotoc = fotoc;
     }
 
     @Override

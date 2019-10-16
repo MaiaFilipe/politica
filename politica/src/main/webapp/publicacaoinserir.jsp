@@ -20,7 +20,7 @@
             <div id="main">
                 <div class="inner">
                     <header id="header">
-                        <a href="index.html" class="logo"><strong>Publicação completa</strong></a>
+                        <a  class="logo"><strong>Publicação completa</strong></a>
                         <%
                             Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
                         %>
@@ -73,7 +73,7 @@
                             <h2>Menu</h2>
                         </header>
                         <ul>
-                            <li><a href="home.jsp">Homepage</a></li>
+                            <li><a href="home.jsp">Página inicial</a></li>
                             <li><a href="publicacaomostrar.jsp">Publicações</a></li>
                             <li><a href="generic.html">Generic</a></li>
                             <li><a href="elements.html">Elements</a></li>

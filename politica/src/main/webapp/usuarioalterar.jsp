@@ -18,7 +18,7 @@
     String nascimento = "";
     String estado = "";
     Long cpf = Long.MIN_VALUE;
-    Long telefone = Long.MIN_VALUE;
+    Long cell = Long.MIN_VALUE;
     //Captura id (se alteração)
     String idUsuario = request.getParameter("pid");
 
@@ -29,7 +29,7 @@
         senha = usuario.getSenhac();
         email = usuario.getEmailc();
         cpf = usuario.getCpfc();
-        telefone = usuario.getTelefonec();
+        cell = usuario.getCellc();
         user = usuario.getUsuarioc();
         posicao = usuario.getPosicaoc();
         descricao = usuario.getDescricaoc();
@@ -83,7 +83,7 @@
                 <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="12" value="<%=cpf%>"><br><br>
 
                 Número:<br>
-                <input type="text" name="telefone" maxlength="13" value="<%=telefone%>"><br><br>
+                <input type="text" name="telefone" maxlength="13" value="<%=cell%>"><br><br>
 
                 Descrição:<br>
                 <input type="text" name="descricao" value="<%=descricao%>"><br><br>
@@ -131,7 +131,7 @@
                 </select><br><br>
                 
                 <h2>Escolher imagem:</h2>
-                <input type="file" id="" name="foto" accept="image/png, image/jpeg"><br><br>
+                <input type="file" name="foto" accept="image/png, image/jpeg"><br><br>
 
                 <input type="submit" value="Confirmar">
             </form>

@@ -12,6 +12,8 @@
     <head>
         <%
             Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
+            byte[] imagem = usuario.getFotoc();
+            String usuarioFoto = Base64.getEncoder().encodeToString(imagem);
         %>
 
         <title><%=usuario.getUsuarioc()%></title>
@@ -33,10 +35,10 @@
                         </ul>
                     </header>
                     <section>
-                        <div id="block" style="padding-left: 20px;">
+                        <div id="block">
 
                             <div id="left">
-                                <img src="" width="90%" style="border-radius: 10000px;">
+                                <img src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" style="max-width: 250px;" alt="Foto publicação"/>
                             </div>                            
 
                             Nome: <%=usuario.getNomec()%>
@@ -76,7 +78,8 @@
                         </header>
                         <ul>
                             <li><a href="home.jsp">Página inicial</a></li>
-                            <li><a href="publicacaoinserir.jsp">Publicação</a></li>
+                            <li><a href="publicacaoinserir.jsp">Publicar</a></li>
+                            <li><a href="publicacaomostrar.jsp">Publicações</a></li>
                             <li><a href="elements.html">Elements</a></li>
                             <li>
                                 <span class="opener">Submenu</span>

@@ -166,7 +166,7 @@
                             <h2>Menu</h2>
                         </header>
                         <ul>
-                            <li><a href="index.html">Página Inicial</a></li>
+                            <li><a href="home.jsp">Página Inicial</a></li>
                             <li><a href="publicacaoinserir.jsp">Publicar</a></li>
                             <li><a href="publicacaomostrar.jsp">Publicações</a></li>
                             <li><a href="elements.html">Elements</a></li>

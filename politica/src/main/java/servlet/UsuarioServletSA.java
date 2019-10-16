@@ -26,6 +26,7 @@ public class UsuarioServletSA extends HttpServlet {
         String descricao = request.getParameter("descricao");
         String nascimento = request.getParameter("nascimento");
         String estado = request.getParameter("estado");
+        Part filePart = request.getPart("foto");
         
         String cpfXaBlau = request.getParameter("cpf");
         Long cpf = Long.parseLong(cpfXaBlau);
@@ -40,18 +41,17 @@ public class UsuarioServletSA extends HttpServlet {
             Integer id = Integer.parseInt(idtext);
             usuario.setId(id);
         }
-        Part filePart = request.getPart("foto");
         if (filePart != null) {
             InputStream inputStream = filePart.getInputStream();
-            usuario.setFoto(IOUtils.toByteArray(inputStream));
-            usuario.setExtensao(filePart.getContentType());
+            usuario.setFotoc(IOUtils.toByteArray(inputStream));
+            usuario.setExtensaoc(filePart.getContentType());
         }
         //Insere informações no objeto
         usuario.setNomec(nome);
         usuario.setSenhac(senha);
         usuario.setEmailc(email);
         usuario.setCpfc(cpf);
-        usuario.setTelefonec(telefone);
+        usuario.setCellc(telefone);
         usuario.setUsuarioc(user);
         usuario.setPosicaoc(posicao);
         usuario.setDescricaoc(descricao);
@@ -62,6 +62,6 @@ public class UsuarioServletSA extends HttpServlet {
         UsuarioControle.salvar(usuario);
 
         //Redireciona pagina
-        response.sendRedirect("home.jsp");
+        response.sendRedirect("home.html");
     }
 }
