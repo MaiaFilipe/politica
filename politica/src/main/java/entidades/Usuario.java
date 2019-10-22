@@ -6,6 +6,7 @@
 package entidades;
 
 import java.io.Serializable;
+import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,11 +16,13 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -45,11 +48,20 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Usuario.findByTipo", query = "SELECT u FROM Usuario u WHERE u.tipo = :tipo")})
 public class Usuario implements Serializable {
 
-    private static final long serialVersionUID = 1L;
     @Column(name = "cpf")
     private Double cpf;
     
+    @Column(name = "cell")
     private Double cell;
+    
+    //@Lob
+    @Column(name = "foto")
+    private byte[] foto;
+    
+    @OneToMany(mappedBy = "idUsuario")
+    private Collection<Publicacao> publicacaoCollection;
+
+    private static final long serialVersionUID = 1L;
     
     @Column(name = "senha")
     private String senha;
@@ -87,9 +99,6 @@ public class Usuario implements Serializable {
     @Column(name = "extensao")
     private String extensao;
     
-    //@Lob
-    @Column(name = "foto")
-    private byte[] foto;
     
     @Column(name = "tipo")
     private String tipo;
@@ -101,13 +110,6 @@ public class Usuario implements Serializable {
         this.id = id;
     }
 
-    public Double getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(Double cpf) {
-        this.cpf = cpf;
-    }
 
     public Double getCell() {
         return cell;
@@ -197,13 +199,6 @@ public class Usuario implements Serializable {
         this.extensao = extensao;
     }
 
-    public byte[] getFoto() {
-        return foto;
-    }
-
-    public void setFoto(byte[] foto) {
-        this.foto = foto;
-    }
 
     public String getTipo() {
         return tipo;
@@ -236,6 +231,31 @@ public class Usuario implements Serializable {
     @Override
     public String toString() {
         return "entidades.Usuario[ id=" + id + " ]";
+    }
+
+    public Double getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(Double cpf) {
+        this.cpf = cpf;
+    }
+
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
+    }
+
+    @XmlTransient
+    public Collection<Publicacao> getPublicacaoCollection() {
+        return publicacaoCollection;
+    }
+
+    public void setPublicacaoCollection(Collection<Publicacao> publicacaoCollection) {
+        this.publicacaoCollection = publicacaoCollection;
     }
     
 }

@@ -40,6 +40,9 @@
                                 <div hidden>
                                     ID Usuário <input type="text" name="pid" value="<%=usuario.getId()%>">
                                 </div>
+                                <div hidden>
+                                    ID Usuário <input type="text" name="autor" value="<%=usuario.getNome()%>">
+                                </div>
                                 <h2> Título: </h2>
                                 <input type="text" name="titulo">
                                 <br><br>

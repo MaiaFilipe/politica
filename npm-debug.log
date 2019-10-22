@@ -1,0 +1,1460 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'sass' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData sass
+8 silly fetchNamedPackageData sass
+9 silly mapToRegistry name sass
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/sass
+13 verbose request uri https://registry.npmjs.org/sass
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 12:28:27
+16 verbose request id a6570b8930edbe6f
+17 verbose etag W/"2c27ee335f00c6273861fd9d6923c112"
+18 verbose lastModified Wed, 02 Oct 2019 01:29:47 GMT
+19 http request GET https://registry.npmjs.org/sass
+20 http 304 https://registry.npmjs.org/sass
+21 verbose headers { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'set-cookie': [ '__cfduid=d6a54c56b7da0dd08cb5371c86cfb72371571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+21 verbose headers   'cf-cache-status': 'HIT',
+21 verbose headers   'cache-control': 'max-age=300',
+21 verbose headers   'cf-ray': '529c28679b17dbb4-GIG',
+21 verbose headers   age: '1633',
+21 verbose headers   etag: '"2c27ee335f00c6273861fd9d6923c112"',
+21 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+21 verbose headers   'last-modified': 'Wed, 02 Oct 2019 01:29:47 GMT',
+21 verbose headers   vary: 'accept-encoding, accept',
+21 verbose headers   'x-amz-meta-rev': '135-4c985c11e1622382ad1b88d11040b7b5',
+21 verbose headers   server: 'cloudflare' }
+22 silly get cb [ 304,
+22 silly get   { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+22 silly get     connection: 'keep-alive',
+22 silly get     'set-cookie': [ '__cfduid=d6a54c56b7da0dd08cb5371c86cfb72371571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+22 silly get     'cf-cache-status': 'HIT',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     'cf-ray': '529c28679b17dbb4-GIG',
+22 silly get     age: '1633',
+22 silly get     etag: '"2c27ee335f00c6273861fd9d6923c112"',
+22 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+22 silly get     'last-modified': 'Wed, 02 Oct 2019 01:29:47 GMT',
+22 silly get     vary: 'accept-encoding, accept',
+22 silly get     'x-amz-meta-rev': '135-4c985c11e1622382ad1b88d11040b7b5',
+22 silly get     server: 'cloudflare' } ]
+23 verbose etag https://registry.npmjs.org/sass from cache
+24 verbose get saving sass to /home/aluno/.npm/registry.npmjs.org/sass/.cache.json
+25 silly install normalizeTree
+26 silly loadCurrentTree Finishing
+27 silly loadIdealTree Starting
+28 silly install loadIdealTree
+29 silly cloneCurrentTree Starting
+30 silly install cloneCurrentTreeToIdealTree
+31 silly cloneCurrentTree Finishing
+32 silly loadShrinkwrap Starting
+33 silly install loadShrinkwrap
+34 silly loadShrinkwrap Finishing
+35 silly loadAllDepsIntoIdealTree Starting
+36 silly install loadAllDepsIntoIdealTree
+37 silly resolveWithNewModule sass@1.23.0 checking installable status
+38 silly cache add args [ 'sass', null ]
+39 verbose cache add spec sass
+40 silly cache add parsed spec Result {
+40 silly cache add   raw: 'sass',
+40 silly cache add   scope: null,
+40 silly cache add   name: 'sass',
+40 silly cache add   rawSpec: '',
+40 silly cache add   spec: 'latest',
+40 silly cache add   type: 'tag' }
+41 silly addNamed sass@latest
+42 verbose addNamed "latest" is being treated as a dist-tag for sass
+43 info addNameTag [ 'sass', 'latest' ]
+44 silly mapToRegistry name sass
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry uri https://registry.npmjs.org/sass
+48 verbose addNameTag registry:https://registry.npmjs.org/sass not in flight; fetching
+49 verbose get https://registry.npmjs.org/sass not expired, no request
+50 silly addNameTag next cb for sass with tag latest
+51 silly addNamed sass@1.23.0
+52 verbose addNamed "1.23.0" is a plain semver version for sass
+53 silly cache afterAdd sass@1.23.0
+54 verbose afterAdd /home/aluno/.npm/sass/1.23.0/package/package.json not in flight; writing
+55 verbose afterAdd /home/aluno/.npm/sass/1.23.0/package/package.json written
+56 silly fetchNamedPackageData chokidar
+57 silly mapToRegistry name chokidar
+58 silly mapToRegistry using default registry
+59 silly mapToRegistry registry https://registry.npmjs.org/
+60 silly mapToRegistry uri https://registry.npmjs.org/chokidar
+61 verbose request uri https://registry.npmjs.org/chokidar
+62 verbose request no auth needed
+63 info attempt registry request try #1 at 12:28:27
+64 verbose etag W/"3a96f695dee7f13419c4684098f44f9b"
+65 verbose lastModified Wed, 16 Oct 2019 02:43:03 GMT
+66 http request GET https://registry.npmjs.org/chokidar
+67 http 304 https://registry.npmjs.org/chokidar
+68 verbose headers { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+68 verbose headers   connection: 'keep-alive',
+68 verbose headers   'set-cookie': [ '__cfduid=d47bd80d9113a4af0edb7f34434fb39671571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+68 verbose headers   'cf-cache-status': 'HIT',
+68 verbose headers   'cache-control': 'max-age=300',
+68 verbose headers   'cf-ray': '529c28698ab2db90-GIG',
+68 verbose headers   age: '1658',
+68 verbose headers   etag: '"3a96f695dee7f13419c4684098f44f9b"',
+68 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+68 verbose headers   'last-modified': 'Wed, 16 Oct 2019 02:43:03 GMT',
+68 verbose headers   vary: 'accept-encoding, accept',
+68 verbose headers   'x-amz-meta-rev': '384-ca697e052f519a0d3b66652a0c8fcab2',
+68 verbose headers   server: 'cloudflare' }
+69 silly get cb [ 304,
+69 silly get   { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+69 silly get     connection: 'keep-alive',
+69 silly get     'set-cookie': [ '__cfduid=d47bd80d9113a4af0edb7f34434fb39671571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+69 silly get     'cf-cache-status': 'HIT',
+69 silly get     'cache-control': 'max-age=300',
+69 silly get     'cf-ray': '529c28698ab2db90-GIG',
+69 silly get     age: '1658',
+69 silly get     etag: '"3a96f695dee7f13419c4684098f44f9b"',
+69 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+69 silly get     'last-modified': 'Wed, 16 Oct 2019 02:43:03 GMT',
+69 silly get     vary: 'accept-encoding, accept',
+69 silly get     'x-amz-meta-rev': '384-ca697e052f519a0d3b66652a0c8fcab2',
+69 silly get     server: 'cloudflare' } ]
+70 verbose etag https://registry.npmjs.org/chokidar from cache
+71 verbose get saving chokidar to /home/aluno/.npm/registry.npmjs.org/chokidar/.cache.json
+72 silly resolveWithNewModule chokidar@3.2.2 checking installable status
+73 silly cache add args [ 'chokidar@>=2.0.0 <4.0.0', null ]
+74 verbose cache add spec chokidar@>=2.0.0 <4.0.0
+75 silly cache add parsed spec Result {
+75 silly cache add   raw: 'chokidar@>=2.0.0 <4.0.0',
+75 silly cache add   scope: null,
+75 silly cache add   name: 'chokidar',
+75 silly cache add   rawSpec: '>=2.0.0 <4.0.0',
+75 silly cache add   spec: '>=2.0.0 <4.0.0',
+75 silly cache add   type: 'range' }
+76 silly addNamed chokidar@>=2.0.0 <4.0.0
+77 verbose addNamed ">=2.0.0 <4.0.0" is a valid semver range for chokidar
+78 silly addNameRange { name: 'chokidar', range: '>=2.0.0 <4.0.0', hasData: false }
+79 silly mapToRegistry name chokidar
+80 silly mapToRegistry using default registry
+81 silly mapToRegistry registry https://registry.npmjs.org/
+82 silly mapToRegistry uri https://registry.npmjs.org/chokidar
+83 verbose addNameRange registry:https://registry.npmjs.org/chokidar not in flight; fetching
+84 verbose get https://registry.npmjs.org/chokidar not expired, no request
+85 silly addNameRange number 2 { name: 'chokidar', range: '>=2.0.0 <4.0.0', hasData: true }
+86 silly addNameRange versions [ 'chokidar',
+86 silly addNameRange   [ '0.1.1',
+86 silly addNameRange     '0.2.0',
+86 silly addNameRange     '0.2.1',
+86 silly addNameRange     '0.2.2',
+86 silly addNameRange     '0.2.3',
+86 silly addNameRange     '0.2.4',
+86 silly addNameRange     '0.2.5',
+86 silly addNameRange     '0.2.6',
+86 silly addNameRange     '0.3.0',
+86 silly addNameRange     '0.4.0',
+86 silly addNameRange     '0.5.0',
+86 silly addNameRange     '0.5.1',
+86 silly addNameRange     '0.5.2',
+86 silly addNameRange     '0.5.3',
+86 silly addNameRange     '0.6.0',
+86 silly addNameRange     '0.6.1',
+86 silly addNameRange     '0.6.2',
+86 silly addNameRange     '0.6.3',
+86 silly addNameRange     '0.7.0',
+86 silly addNameRange     '0.7.1',
+86 silly addNameRange     '0.8.0',
+86 silly addNameRange     '0.8.1',
+86 silly addNameRange     '0.8.2',
+86 silly addNameRange     '0.8.3',
+86 silly addNameRange     '0.8.4',
+86 silly addNameRange     '0.9.0',
+86 silly addNameRange     '0.10.0',
+86 silly addNameRange     '0.10.1',
+86 silly addNameRange     '0.10.2',
+86 silly addNameRange     '0.10.3',
+86 silly addNameRange     '0.10.4',
+86 silly addNameRange     '0.10.5',
+86 silly addNameRange     '0.10.6',
+86 silly addNameRange     '0.10.7',
+86 silly addNameRange     '0.10.8',
+86 silly addNameRange     '0.10.9',
+86 silly addNameRange     '0.11.0',
+86 silly addNameRange     '0.11.1',
+86 silly addNameRange     '0.12.0',
+86 silly addNameRange     '0.12.1',
+86 silly addNameRange     '0.12.2',
+86 silly addNameRange     '0.12.3',
+86 silly addNameRange     '0.12.4',
+86 silly addNameRange     '0.12.5',
+86 silly addNameRange     '0.12.6',
+86 silly addNameRange     '1.0.0-rc1',
+86 silly addNameRange     '1.0.0-rc1.1',
+86 silly addNameRange     '1.0.0-rc2',
+86 silly addNameRange     '1.0.0-rc3',
+86 silly addNameRange     '1.0.0-rc4',
+86 silly addNameRange     '1.0.0-rc5',
+86 silly addNameRange     '1.0.0',
+86 silly addNameRange     '1.0.1',
+86 silly addNameRange     '1.0.2',
+86 silly addNameRange     '1.0.3',
+86 silly addNameRange     '1.0.4',
+86 silly addNameRange     '1.0.5',
+86 silly addNameRange     '1.0.6',
+86 silly addNameRange     '1.1.0',
+86 silly addNameRange     '1.2.0',
+86 silly addNameRange     '1.3.0',
+86 silly addNameRange     '1.4.0',
+86 silly addNameRange     '1.4.1',
+86 silly addNameRange     '1.4.2',
+86 silly addNameRange     '1.4.3',
+86 silly addNameRange     '1.5.0',
+86 silly addNameRange     '1.5.1',
+86 silly addNameRange     '1.5.2',
+86 silly addNameRange     '1.6.0',
+86 silly addNameRange     '1.6.1',
+86 silly addNameRange     '1.7.0',
+86 silly addNameRange     '2.0.0',
+86 silly addNameRange     '2.0.1',
+86 silly addNameRange     '2.0.2',
+86 silly addNameRange     '2.0.3',
+86 silly addNameRange     '2.0.4',
+86 silly addNameRange     '2.1.0',
+86 silly addNameRange     '2.1.1',
+86 silly addNameRange     '2.1.2',
+86 silly addNameRange     '2.1.3',
+86 silly addNameRange     '2.1.4',
+86 silly addNameRange     '2.1.5',
+86 silly addNameRange     '3.0.0',
+86 silly addNameRange     '2.1.6',
+86 silly addNameRange     '3.0.1',
+86 silly addNameRange     '3.0.2',
+86 silly addNameRange     '2.1.8',
+86 silly addNameRange     '3.1.0',
+86 silly addNameRange     '3.1.1',
+86 silly addNameRange     '3.2.0',
+86 silly addNameRange     '3.2.1',
+86 silly addNameRange     '3.2.2' ] ]
+87 silly addNamed chokidar@3.2.2
+88 verbose addNamed "3.2.2" is a plain semver version for chokidar
+89 silly cache afterAdd chokidar@3.2.2
+90 verbose afterAdd /home/aluno/.npm/chokidar/3.2.2/package/package.json not in flight; writing
+91 verbose afterAdd /home/aluno/.npm/chokidar/3.2.2/package/package.json written
+92 silly fetchNamedPackageData anymatch
+93 silly mapToRegistry name anymatch
+94 silly mapToRegistry using default registry
+95 silly mapToRegistry registry https://registry.npmjs.org/
+96 silly mapToRegistry uri https://registry.npmjs.org/anymatch
+97 silly fetchNamedPackageData braces
+98 silly mapToRegistry name braces
+99 silly mapToRegistry using default registry
+100 silly mapToRegistry registry https://registry.npmjs.org/
+101 silly mapToRegistry uri https://registry.npmjs.org/braces
+102 silly fetchNamedPackageData glob-parent
+103 silly mapToRegistry name glob-parent
+104 silly mapToRegistry using default registry
+105 silly mapToRegistry registry https://registry.npmjs.org/
+106 silly mapToRegistry uri https://registry.npmjs.org/glob-parent
+107 silly fetchNamedPackageData is-binary-path
+108 silly mapToRegistry name is-binary-path
+109 silly mapToRegistry using default registry
+110 silly mapToRegistry registry https://registry.npmjs.org/
+111 silly mapToRegistry uri https://registry.npmjs.org/is-binary-path
+112 silly fetchNamedPackageData is-glob
+113 silly mapToRegistry name is-glob
+114 silly mapToRegistry using default registry
+115 silly mapToRegistry registry https://registry.npmjs.org/
+116 silly mapToRegistry uri https://registry.npmjs.org/is-glob
+117 silly fetchNamedPackageData normalize-path
+118 silly mapToRegistry name normalize-path
+119 silly mapToRegistry using default registry
+120 silly mapToRegistry registry https://registry.npmjs.org/
+121 silly mapToRegistry uri https://registry.npmjs.org/normalize-path
+122 silly fetchNamedPackageData readdirp
+123 silly mapToRegistry name readdirp
+124 silly mapToRegistry using default registry
+125 silly mapToRegistry registry https://registry.npmjs.org/
+126 silly mapToRegistry uri https://registry.npmjs.org/readdirp
+127 silly fetchNamedPackageData fsevents
+128 silly mapToRegistry name fsevents
+129 silly mapToRegistry using default registry
+130 silly mapToRegistry registry https://registry.npmjs.org/
+131 silly mapToRegistry uri https://registry.npmjs.org/fsevents
+132 verbose request uri https://registry.npmjs.org/anymatch
+133 verbose request no auth needed
+134 info attempt registry request try #1 at 12:28:27
+135 verbose etag W/"98fa5632ec0e527416f1335e40360ff2"
+136 verbose lastModified Tue, 01 Oct 2019 02:34:52 GMT
+137 http request GET https://registry.npmjs.org/anymatch
+138 verbose request uri https://registry.npmjs.org/glob-parent
+139 verbose request no auth needed
+140 info attempt registry request try #1 at 12:28:27
+141 verbose etag W/"10221a027bb5845589a8b7b486d7de64"
+142 verbose lastModified Sat, 21 Sep 2019 23:17:08 GMT
+143 http request GET https://registry.npmjs.org/glob-parent
+144 verbose request uri https://registry.npmjs.org/is-binary-path
+145 verbose request no auth needed
+146 info attempt registry request try #1 at 12:28:27
+147 verbose etag W/"8ed7a9479c3f5e194e9571992693ddc0"
+148 verbose lastModified Fri, 19 Apr 2019 04:42:49 GMT
+149 http request GET https://registry.npmjs.org/is-binary-path
+150 verbose request uri https://registry.npmjs.org/braces
+151 verbose request no auth needed
+152 info attempt registry request try #1 at 12:28:27
+153 verbose etag W/"53878de16015f7ab71c0a56f622f24f9"
+154 verbose lastModified Tue, 16 Apr 2019 19:51:16 GMT
+155 http request GET https://registry.npmjs.org/braces
+156 verbose request uri https://registry.npmjs.org/is-glob
+157 verbose request no auth needed
+158 info attempt registry request try #1 at 12:28:27
+159 verbose etag W/"d4c60158c6c0244bf96dd8e6749675aa"
+160 verbose lastModified Wed, 27 Mar 2019 22:26:41 GMT
+161 http request GET https://registry.npmjs.org/is-glob
+162 verbose request uri https://registry.npmjs.org/normalize-path
+163 verbose request no auth needed
+164 info attempt registry request try #1 at 12:28:27
+165 verbose etag W/"0a459c763ee9d4916c02d792a226cce9"
+166 verbose lastModified Sun, 27 May 2018 10:33:45 GMT
+167 http request GET https://registry.npmjs.org/normalize-path
+168 verbose request uri https://registry.npmjs.org/readdirp
+169 verbose request no auth needed
+170 info attempt registry request try #1 at 12:28:27
+171 verbose etag W/"f89f6a20eed5a47c578a281a99987812"
+172 verbose lastModified Mon, 14 Oct 2019 00:04:56 GMT
+173 http request GET https://registry.npmjs.org/readdirp
+174 verbose request uri https://registry.npmjs.org/fsevents
+175 verbose request no auth needed
+176 info attempt registry request try #1 at 12:28:27
+177 verbose etag W/"94b8ac82aeeda1585858ad06e751ee11"
+178 verbose lastModified Mon, 14 Oct 2019 00:14:45 GMT
+179 http request GET https://registry.npmjs.org/fsevents
+180 http 304 https://registry.npmjs.org/anymatch
+181 verbose headers { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+181 verbose headers   connection: 'keep-alive',
+181 verbose headers   'set-cookie': [ '__cfduid=d112919b9f6cc21414fbee40f71f5998b1571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+181 verbose headers   'cf-cache-status': 'HIT',
+181 verbose headers   'cache-control': 'max-age=300',
+181 verbose headers   'cf-ray': '529c286a5bb2dbc4-GIG',
+181 verbose headers   age: '1648',
+181 verbose headers   etag: '"98fa5632ec0e527416f1335e40360ff2"',
+181 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+181 verbose headers   'last-modified': 'Tue, 01 Oct 2019 02:34:52 GMT',
+181 verbose headers   vary: 'accept-encoding, accept',
+181 verbose headers   'x-amz-meta-rev': '49-97365389bc91f2b389e27e8b7c331de2',
+181 verbose headers   server: 'cloudflare' }
+182 silly get cb [ 304,
+182 silly get   { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+182 silly get     connection: 'keep-alive',
+182 silly get     'set-cookie': [ '__cfduid=d112919b9f6cc21414fbee40f71f5998b1571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+182 silly get     'cf-cache-status': 'HIT',
+182 silly get     'cache-control': 'max-age=300',
+182 silly get     'cf-ray': '529c286a5bb2dbc4-GIG',
+182 silly get     age: '1648',
+182 silly get     etag: '"98fa5632ec0e527416f1335e40360ff2"',
+182 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+182 silly get     'last-modified': 'Tue, 01 Oct 2019 02:34:52 GMT',
+182 silly get     vary: 'accept-encoding, accept',
+182 silly get     'x-amz-meta-rev': '49-97365389bc91f2b389e27e8b7c331de2',
+182 silly get     server: 'cloudflare' } ]
+183 verbose etag https://registry.npmjs.org/anymatch from cache
+184 verbose get saving anymatch to /home/aluno/.npm/registry.npmjs.org/anymatch/.cache.json
+185 silly resolveWithNewModule anymatch@3.1.1 checking installable status
+186 silly cache add args [ 'anymatch@~3.1.1', null ]
+187 verbose cache add spec anymatch@~3.1.1
+188 silly cache add parsed spec Result {
+188 silly cache add   raw: 'anymatch@~3.1.1',
+188 silly cache add   scope: null,
+188 silly cache add   name: 'anymatch',
+188 silly cache add   rawSpec: '~3.1.1',
+188 silly cache add   spec: '>=3.1.1 <3.2.0',
+188 silly cache add   type: 'range' }
+189 silly addNamed anymatch@>=3.1.1 <3.2.0
+190 verbose addNamed ">=3.1.1 <3.2.0" is a valid semver range for anymatch
+191 silly addNameRange { name: 'anymatch', range: '>=3.1.1 <3.2.0', hasData: false }
+192 silly mapToRegistry name anymatch
+193 silly mapToRegistry using default registry
+194 silly mapToRegistry registry https://registry.npmjs.org/
+195 silly mapToRegistry uri https://registry.npmjs.org/anymatch
+196 verbose addNameRange registry:https://registry.npmjs.org/anymatch not in flight; fetching
+197 http 304 https://registry.npmjs.org/is-binary-path
+198 verbose headers { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+198 verbose headers   connection: 'keep-alive',
+198 verbose headers   'set-cookie': [ '__cfduid=d4394e7b33cfbc2f75de3718e4c2071711571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+198 verbose headers   'cf-cache-status': 'HIT',
+198 verbose headers   'cache-control': 'max-age=300',
+198 verbose headers   'cf-ray': '529c286a6bbfdb8c-GIG',
+198 verbose headers   age: '1641',
+198 verbose headers   etag: '"8ed7a9479c3f5e194e9571992693ddc0"',
+198 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+198 verbose headers   'last-modified': 'Fri, 19 Apr 2019 04:42:49 GMT',
+198 verbose headers   vary: 'accept-encoding, accept',
+198 verbose headers   'x-amz-meta-rev': '11-d2b64a0bba511c152245d021730514d7',
+198 verbose headers   server: 'cloudflare' }
+199 silly get cb [ 304,
+199 silly get   { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+199 silly get     connection: 'keep-alive',
+199 silly get     'set-cookie': [ '__cfduid=d4394e7b33cfbc2f75de3718e4c2071711571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+199 silly get     'cf-cache-status': 'HIT',
+199 silly get     'cache-control': 'max-age=300',
+199 silly get     'cf-ray': '529c286a6bbfdb8c-GIG',
+199 silly get     age: '1641',
+199 silly get     etag: '"8ed7a9479c3f5e194e9571992693ddc0"',
+199 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+199 silly get     'last-modified': 'Fri, 19 Apr 2019 04:42:49 GMT',
+199 silly get     vary: 'accept-encoding, accept',
+199 silly get     'x-amz-meta-rev': '11-d2b64a0bba511c152245d021730514d7',
+199 silly get     server: 'cloudflare' } ]
+200 verbose etag https://registry.npmjs.org/is-binary-path from cache
+201 verbose get saving is-binary-path to /home/aluno/.npm/registry.npmjs.org/is-binary-path/.cache.json
+202 http 304 https://registry.npmjs.org/glob-parent
+203 verbose headers { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+203 verbose headers   connection: 'keep-alive',
+203 verbose headers   'set-cookie': [ '__cfduid=d1a869294ee001acb2e871278ec21c4511571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+203 verbose headers   'cf-cache-status': 'HIT',
+203 verbose headers   'cache-control': 'max-age=300',
+203 verbose headers   'cf-ray': '529c286a6995db98-GIG',
+203 verbose headers   age: '2700',
+203 verbose headers   etag: '"10221a027bb5845589a8b7b486d7de64"',
+203 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+203 verbose headers   'last-modified': 'Sat, 21 Sep 2019 23:17:08 GMT',
+203 verbose headers   vary: 'accept-encoding, accept',
+203 verbose headers   'x-amz-meta-rev': '20-495ef91e221a8718bf4aa7865b0537db',
+203 verbose headers   server: 'cloudflare' }
+204 silly get cb [ 304,
+204 silly get   { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+204 silly get     connection: 'keep-alive',
+204 silly get     'set-cookie': [ '__cfduid=d1a869294ee001acb2e871278ec21c4511571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+204 silly get     'cf-cache-status': 'HIT',
+204 silly get     'cache-control': 'max-age=300',
+204 silly get     'cf-ray': '529c286a6995db98-GIG',
+204 silly get     age: '2700',
+204 silly get     etag: '"10221a027bb5845589a8b7b486d7de64"',
+204 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+204 silly get     'last-modified': 'Sat, 21 Sep 2019 23:17:08 GMT',
+204 silly get     vary: 'accept-encoding, accept',
+204 silly get     'x-amz-meta-rev': '20-495ef91e221a8718bf4aa7865b0537db',
+204 silly get     server: 'cloudflare' } ]
+205 verbose etag https://registry.npmjs.org/glob-parent from cache
+206 verbose get saving glob-parent to /home/aluno/.npm/registry.npmjs.org/glob-parent/.cache.json
+207 http 304 https://registry.npmjs.org/braces
+208 verbose headers { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+208 verbose headers   connection: 'keep-alive',
+208 verbose headers   'set-cookie': [ '__cfduid=d3b6fb892fae7ca8790405d4945f8cff91571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+208 verbose headers   'cf-cache-status': 'HIT',
+208 verbose headers   'cache-control': 'max-age=300',
+208 verbose headers   'cf-ray': '529c286a6ed7dba8-GIG',
+208 verbose headers   age: '1607',
+208 verbose headers   etag: '"53878de16015f7ab71c0a56f622f24f9"',
+208 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+208 verbose headers   'last-modified': 'Tue, 16 Apr 2019 19:51:16 GMT',
+208 verbose headers   vary: 'accept-encoding, accept',
+208 verbose headers   'x-amz-meta-rev': '63-91389d6f36b210a5ab51f433333cbfa4',
+208 verbose headers   server: 'cloudflare' }
+209 silly get cb [ 304,
+209 silly get   { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+209 silly get     connection: 'keep-alive',
+209 silly get     'set-cookie': [ '__cfduid=d3b6fb892fae7ca8790405d4945f8cff91571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+209 silly get     'cf-cache-status': 'HIT',
+209 silly get     'cache-control': 'max-age=300',
+209 silly get     'cf-ray': '529c286a6ed7dba8-GIG',
+209 silly get     age: '1607',
+209 silly get     etag: '"53878de16015f7ab71c0a56f622f24f9"',
+209 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+209 silly get     'last-modified': 'Tue, 16 Apr 2019 19:51:16 GMT',
+209 silly get     vary: 'accept-encoding, accept',
+209 silly get     'x-amz-meta-rev': '63-91389d6f36b210a5ab51f433333cbfa4',
+209 silly get     server: 'cloudflare' } ]
+210 verbose etag https://registry.npmjs.org/braces from cache
+211 verbose get saving braces to /home/aluno/.npm/registry.npmjs.org/braces/.cache.json
+212 verbose get https://registry.npmjs.org/anymatch not expired, no request
+213 silly addNameRange number 2 { name: 'anymatch', range: '>=3.1.1 <3.2.0', hasData: true }
+214 silly addNameRange versions [ 'anymatch',
+214 silly addNameRange   [ '0.1.0',
+214 silly addNameRange     '0.1.1',
+214 silly addNameRange     '0.2.0',
+214 silly addNameRange     '1.0.0',
+214 silly addNameRange     '1.1.0',
+214 silly addNameRange     '1.2.0',
+214 silly addNameRange     '1.2.1',
+214 silly addNameRange     '1.3.0',
+214 silly addNameRange     '1.3.2',
+214 silly addNameRange     '2.0.0',
+214 silly addNameRange     '3.0.0',
+214 silly addNameRange     '3.0.1',
+214 silly addNameRange     '3.0.2',
+214 silly addNameRange     '3.0.3',
+214 silly addNameRange     '3.1.0',
+214 silly addNameRange     '3.1.1' ] ]
+215 silly addNamed anymatch@3.1.1
+216 verbose addNamed "3.1.1" is a plain semver version for anymatch
+217 silly resolveWithNewModule is-binary-path@2.1.0 checking installable status
+218 silly cache add args [ 'is-binary-path@~2.1.0', null ]
+219 verbose cache add spec is-binary-path@~2.1.0
+220 silly cache add parsed spec Result {
+220 silly cache add   raw: 'is-binary-path@~2.1.0',
+220 silly cache add   scope: null,
+220 silly cache add   name: 'is-binary-path',
+220 silly cache add   rawSpec: '~2.1.0',
+220 silly cache add   spec: '>=2.1.0 <2.2.0',
+220 silly cache add   type: 'range' }
+221 silly addNamed is-binary-path@>=2.1.0 <2.2.0
+222 verbose addNamed ">=2.1.0 <2.2.0" is a valid semver range for is-binary-path
+223 silly addNameRange { name: 'is-binary-path',
+223 silly addNameRange   range: '>=2.1.0 <2.2.0',
+223 silly addNameRange   hasData: false }
+224 silly mapToRegistry name is-binary-path
+225 silly mapToRegistry using default registry
+226 silly mapToRegistry registry https://registry.npmjs.org/
+227 silly mapToRegistry uri https://registry.npmjs.org/is-binary-path
+228 verbose addNameRange registry:https://registry.npmjs.org/is-binary-path not in flight; fetching
+229 silly resolveWithNewModule glob-parent@5.1.0 checking installable status
+230 silly cache add args [ 'glob-parent@~5.1.0', null ]
+231 verbose cache add spec glob-parent@~5.1.0
+232 silly cache add parsed spec Result {
+232 silly cache add   raw: 'glob-parent@~5.1.0',
+232 silly cache add   scope: null,
+232 silly cache add   name: 'glob-parent',
+232 silly cache add   rawSpec: '~5.1.0',
+232 silly cache add   spec: '>=5.1.0 <5.2.0',
+232 silly cache add   type: 'range' }
+233 silly addNamed glob-parent@>=5.1.0 <5.2.0
+234 verbose addNamed ">=5.1.0 <5.2.0" is a valid semver range for glob-parent
+235 silly addNameRange { name: 'glob-parent', range: '>=5.1.0 <5.2.0', hasData: false }
+236 silly mapToRegistry name glob-parent
+237 silly mapToRegistry using default registry
+238 silly mapToRegistry registry https://registry.npmjs.org/
+239 silly mapToRegistry uri https://registry.npmjs.org/glob-parent
+240 verbose addNameRange registry:https://registry.npmjs.org/glob-parent not in flight; fetching
+241 silly cache afterAdd anymatch@3.1.1
+242 verbose afterAdd /home/aluno/.npm/anymatch/3.1.1/package/package.json not in flight; writing
+243 http 304 https://registry.npmjs.org/is-glob
+244 verbose headers { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+244 verbose headers   connection: 'keep-alive',
+244 verbose headers   'set-cookie': [ '__cfduid=d47bd80d9113a4af0edb7f34434fb39671571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+244 verbose headers   'cf-cache-status': 'HIT',
+244 verbose headers   'cache-control': 'max-age=300',
+244 verbose headers   'cf-ray': '529c286a8d02db90-GIG',
+244 verbose headers   age: '2706',
+244 verbose headers   etag: '"d4c60158c6c0244bf96dd8e6749675aa"',
+244 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+244 verbose headers   'last-modified': 'Wed, 27 Mar 2019 22:26:41 GMT',
+244 verbose headers   vary: 'accept-encoding, accept',
+244 verbose headers   'x-amz-meta-rev': '35-faf2ec929249c01e0178e8e74350c153',
+244 verbose headers   server: 'cloudflare' }
+245 silly get cb [ 304,
+245 silly get   { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+245 silly get     connection: 'keep-alive',
+245 silly get     'set-cookie': [ '__cfduid=d47bd80d9113a4af0edb7f34434fb39671571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+245 silly get     'cf-cache-status': 'HIT',
+245 silly get     'cache-control': 'max-age=300',
+245 silly get     'cf-ray': '529c286a8d02db90-GIG',
+245 silly get     age: '2706',
+245 silly get     etag: '"d4c60158c6c0244bf96dd8e6749675aa"',
+245 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+245 silly get     'last-modified': 'Wed, 27 Mar 2019 22:26:41 GMT',
+245 silly get     vary: 'accept-encoding, accept',
+245 silly get     'x-amz-meta-rev': '35-faf2ec929249c01e0178e8e74350c153',
+245 silly get     server: 'cloudflare' } ]
+246 verbose etag https://registry.npmjs.org/is-glob from cache
+247 verbose get saving is-glob to /home/aluno/.npm/registry.npmjs.org/is-glob/.cache.json
+248 http 304 https://registry.npmjs.org/readdirp
+249 verbose headers { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+249 verbose headers   connection: 'keep-alive',
+249 verbose headers   'set-cookie': [ '__cfduid=d112919b9f6cc21414fbee40f71f5998b1571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+249 verbose headers   'cf-cache-status': 'HIT',
+249 verbose headers   'cache-control': 'max-age=300',
+249 verbose headers   'cf-ray': '529c286a8c1edbc4-GIG',
+249 verbose headers   age: '1641',
+249 verbose headers   etag: '"f89f6a20eed5a47c578a281a99987812"',
+249 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+249 verbose headers   'last-modified': 'Mon, 14 Oct 2019 00:04:56 GMT',
+249 verbose headers   vary: 'accept-encoding, accept',
+249 verbose headers   'x-amz-meta-rev': '106-4c9e0f5e11f219bc2f368febca669bb7',
+249 verbose headers   server: 'cloudflare' }
+250 silly get cb [ 304,
+250 silly get   { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+250 silly get     connection: 'keep-alive',
+250 silly get     'set-cookie': [ '__cfduid=d112919b9f6cc21414fbee40f71f5998b1571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+250 silly get     'cf-cache-status': 'HIT',
+250 silly get     'cache-control': 'max-age=300',
+250 silly get     'cf-ray': '529c286a8c1edbc4-GIG',
+250 silly get     age: '1641',
+250 silly get     etag: '"f89f6a20eed5a47c578a281a99987812"',
+250 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+250 silly get     'last-modified': 'Mon, 14 Oct 2019 00:04:56 GMT',
+250 silly get     vary: 'accept-encoding, accept',
+250 silly get     'x-amz-meta-rev': '106-4c9e0f5e11f219bc2f368febca669bb7',
+250 silly get     server: 'cloudflare' } ]
+251 verbose etag https://registry.npmjs.org/readdirp from cache
+252 verbose get saving readdirp to /home/aluno/.npm/registry.npmjs.org/readdirp/.cache.json
+253 silly resolveWithNewModule braces@3.0.2 checking installable status
+254 silly cache add args [ 'braces@~3.0.2', null ]
+255 verbose cache add spec braces@~3.0.2
+256 silly cache add parsed spec Result {
+256 silly cache add   raw: 'braces@~3.0.2',
+256 silly cache add   scope: null,
+256 silly cache add   name: 'braces',
+256 silly cache add   rawSpec: '~3.0.2',
+256 silly cache add   spec: '>=3.0.2 <3.1.0',
+256 silly cache add   type: 'range' }
+257 silly addNamed braces@>=3.0.2 <3.1.0
+258 verbose addNamed ">=3.0.2 <3.1.0" is a valid semver range for braces
+259 silly addNameRange { name: 'braces', range: '>=3.0.2 <3.1.0', hasData: false }
+260 silly mapToRegistry name braces
+261 silly mapToRegistry using default registry
+262 silly mapToRegistry registry https://registry.npmjs.org/
+263 silly mapToRegistry uri https://registry.npmjs.org/braces
+264 verbose addNameRange registry:https://registry.npmjs.org/braces not in flight; fetching
+265 http 304 https://registry.npmjs.org/normalize-path
+266 verbose headers { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+266 verbose headers   connection: 'keep-alive',
+266 verbose headers   'set-cookie': [ '__cfduid=d4fd03a813980cf65f6b5d3859ae659a21571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+266 verbose headers   'cf-cache-status': 'HIT',
+266 verbose headers   'cache-control': 'max-age=300',
+266 verbose headers   'cf-ray': '529c286a98e3db88-GIG',
+266 verbose headers   age: '1741',
+266 verbose headers   etag: '"0a459c763ee9d4916c02d792a226cce9"',
+266 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+266 verbose headers   'last-modified': 'Sun, 27 May 2018 10:33:45 GMT',
+266 verbose headers   vary: 'accept-encoding, accept',
+266 verbose headers   server: 'cloudflare' }
+267 silly get cb [ 304,
+267 silly get   { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+267 silly get     connection: 'keep-alive',
+267 silly get     'set-cookie': [ '__cfduid=d4fd03a813980cf65f6b5d3859ae659a21571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+267 silly get     'cf-cache-status': 'HIT',
+267 silly get     'cache-control': 'max-age=300',
+267 silly get     'cf-ray': '529c286a98e3db88-GIG',
+267 silly get     age: '1741',
+267 silly get     etag: '"0a459c763ee9d4916c02d792a226cce9"',
+267 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+267 silly get     'last-modified': 'Sun, 27 May 2018 10:33:45 GMT',
+267 silly get     vary: 'accept-encoding, accept',
+267 silly get     server: 'cloudflare' } ]
+268 verbose etag https://registry.npmjs.org/normalize-path from cache
+269 verbose get saving normalize-path to /home/aluno/.npm/registry.npmjs.org/normalize-path/.cache.json
+270 verbose get https://registry.npmjs.org/is-binary-path not expired, no request
+271 silly addNameRange number 2 { name: 'is-binary-path',
+271 silly addNameRange   range: '>=2.1.0 <2.2.0',
+271 silly addNameRange   hasData: true }
+272 silly addNameRange versions [ 'is-binary-path',
+272 silly addNameRange   [ '1.0.0', '1.0.1', '2.0.0', '2.0.1', '2.1.0' ] ]
+273 silly addNamed is-binary-path@2.1.0
+274 verbose addNamed "2.1.0" is a plain semver version for is-binary-path
+275 verbose get https://registry.npmjs.org/glob-parent not expired, no request
+276 silly addNameRange number 2 { name: 'glob-parent', range: '>=5.1.0 <5.2.0', hasData: true }
+277 silly addNameRange versions [ 'glob-parent',
+277 silly addNameRange   [ '1.0.0',
+277 silly addNameRange     '1.1.0',
+277 silly addNameRange     '1.2.0',
+277 silly addNameRange     '1.3.0',
+277 silly addNameRange     '2.0.0',
+277 silly addNameRange     '3.0.0',
+277 silly addNameRange     '3.0.1',
+277 silly addNameRange     '3.1.0',
+277 silly addNameRange     '4.0.0',
+277 silly addNameRange     '5.0.0',
+277 silly addNameRange     '5.1.0' ] ]
+278 silly addNamed glob-parent@5.1.0
+279 verbose addNamed "5.1.0" is a plain semver version for glob-parent
+280 verbose afterAdd /home/aluno/.npm/anymatch/3.1.1/package/package.json written
+281 verbose get https://registry.npmjs.org/braces not expired, no request
+282 silly addNameRange number 2 { name: 'braces', range: '>=3.0.2 <3.1.0', hasData: true }
+283 silly addNameRange versions [ 'braces',
+283 silly addNameRange   [ '0.1.0',
+283 silly addNameRange     '0.1.1',
+283 silly addNameRange     '0.1.2',
+283 silly addNameRange     '0.1.4',
+283 silly addNameRange     '0.1.5',
+283 silly addNameRange     '1.0.0',
+283 silly addNameRange     '1.1.0',
+283 silly addNameRange     '1.2.0',
+283 silly addNameRange     '1.3.0',
+283 silly addNameRange     '1.4.0',
+283 silly addNameRange     '1.5.0',
+283 silly addNameRange     '1.5.1',
+283 silly addNameRange     '1.6.0',
+283 silly addNameRange     '1.7.0',
+283 silly addNameRange     '1.8.0',
+283 silly addNameRange     '1.8.1',
+283 silly addNameRange     '1.8.2',
+283 silly addNameRange     '1.8.3',
+283 silly addNameRange     '1.8.4',
+283 silly addNameRange     '1.8.5',
+283 silly addNameRange     '2.0.0',
+283 silly addNameRange     '2.0.1',
+283 silly addNameRange     '2.0.2',
+283 silly addNameRange     '2.0.3',
+283 silly addNameRange     '2.0.4',
+283 silly addNameRange     '2.1.0',
+283 silly addNameRange     '2.1.1',
+283 silly addNameRange     '2.2.0',
+283 silly addNameRange     '2.2.1',
+283 silly addNameRange     '2.2.2',
+283 silly addNameRange     '2.3.0',
+283 silly addNameRange     '2.3.1',
+283 silly addNameRange     '2.3.2',
+283 silly addNameRange     '3.0.0',
+283 silly addNameRange     '3.0.1',
+283 silly addNameRange     '3.0.2' ] ]
+284 silly addNamed braces@3.0.2
+285 verbose addNamed "3.0.2" is a plain semver version for braces
+286 silly resolveWithNewModule is-glob@4.0.1 checking installable status
+287 silly cache add args [ 'is-glob@~4.0.1', null ]
+288 verbose cache add spec is-glob@~4.0.1
+289 silly cache add parsed spec Result {
+289 silly cache add   raw: 'is-glob@~4.0.1',
+289 silly cache add   scope: null,
+289 silly cache add   name: 'is-glob',
+289 silly cache add   rawSpec: '~4.0.1',
+289 silly cache add   spec: '>=4.0.1 <4.1.0',
+289 silly cache add   type: 'range' }
+290 silly addNamed is-glob@>=4.0.1 <4.1.0
+291 verbose addNamed ">=4.0.1 <4.1.0" is a valid semver range for is-glob
+292 silly addNameRange { name: 'is-glob', range: '>=4.0.1 <4.1.0', hasData: false }
+293 silly mapToRegistry name is-glob
+294 silly mapToRegistry using default registry
+295 silly mapToRegistry registry https://registry.npmjs.org/
+296 silly mapToRegistry uri https://registry.npmjs.org/is-glob
+297 verbose addNameRange registry:https://registry.npmjs.org/is-glob not in flight; fetching
+298 silly resolveWithNewModule readdirp@3.2.0 checking installable status
+299 silly cache add args [ 'readdirp@~3.2.0', null ]
+300 verbose cache add spec readdirp@~3.2.0
+301 silly cache add parsed spec Result {
+301 silly cache add   raw: 'readdirp@~3.2.0',
+301 silly cache add   scope: null,
+301 silly cache add   name: 'readdirp',
+301 silly cache add   rawSpec: '~3.2.0',
+301 silly cache add   spec: '>=3.2.0 <3.3.0',
+301 silly cache add   type: 'range' }
+302 silly addNamed readdirp@>=3.2.0 <3.3.0
+303 verbose addNamed ">=3.2.0 <3.3.0" is a valid semver range for readdirp
+304 silly addNameRange { name: 'readdirp', range: '>=3.2.0 <3.3.0', hasData: false }
+305 silly mapToRegistry name readdirp
+306 silly mapToRegistry using default registry
+307 silly mapToRegistry registry https://registry.npmjs.org/
+308 silly mapToRegistry uri https://registry.npmjs.org/readdirp
+309 verbose addNameRange registry:https://registry.npmjs.org/readdirp not in flight; fetching
+310 silly cache afterAdd is-binary-path@2.1.0
+311 verbose afterAdd /home/aluno/.npm/is-binary-path/2.1.0/package/package.json not in flight; writing
+312 silly cache afterAdd glob-parent@5.1.0
+313 verbose afterAdd /home/aluno/.npm/glob-parent/5.1.0/package/package.json not in flight; writing
+314 silly resolveWithNewModule normalize-path@3.0.0 checking installable status
+315 silly cache add args [ 'normalize-path@~3.0.0', null ]
+316 verbose cache add spec normalize-path@~3.0.0
+317 silly cache add parsed spec Result {
+317 silly cache add   raw: 'normalize-path@~3.0.0',
+317 silly cache add   scope: null,
+317 silly cache add   name: 'normalize-path',
+317 silly cache add   rawSpec: '~3.0.0',
+317 silly cache add   spec: '>=3.0.0 <3.1.0',
+317 silly cache add   type: 'range' }
+318 silly addNamed normalize-path@>=3.0.0 <3.1.0
+319 verbose addNamed ">=3.0.0 <3.1.0" is a valid semver range for normalize-path
+320 silly addNameRange { name: 'normalize-path',
+320 silly addNameRange   range: '>=3.0.0 <3.1.0',
+320 silly addNameRange   hasData: false }
+321 silly mapToRegistry name normalize-path
+322 silly mapToRegistry using default registry
+323 silly mapToRegistry registry https://registry.npmjs.org/
+324 silly mapToRegistry uri https://registry.npmjs.org/normalize-path
+325 verbose addNameRange registry:https://registry.npmjs.org/normalize-path not in flight; fetching
+326 silly cache afterAdd braces@3.0.2
+327 verbose afterAdd /home/aluno/.npm/braces/3.0.2/package/package.json not in flight; writing
+328 http 304 https://registry.npmjs.org/fsevents
+329 verbose headers { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+329 verbose headers   connection: 'keep-alive',
+329 verbose headers   'set-cookie': [ '__cfduid=d968af5546ade7c31e17f5f1f3d8e6f9c1571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+329 verbose headers   'cf-cache-status': 'HIT',
+329 verbose headers   'cache-control': 'max-age=300',
+329 verbose headers   'cf-ray': '529c286aaa7edbc0-GIG',
+329 verbose headers   age: '1926',
+329 verbose headers   etag: '"94b8ac82aeeda1585858ad06e751ee11"',
+329 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+329 verbose headers   'last-modified': 'Mon, 14 Oct 2019 00:14:45 GMT',
+329 verbose headers   vary: 'accept-encoding, accept',
+329 verbose headers   'x-amz-meta-rev': '165-a2b297b1ae8109719aac351bbb43a9dc',
+329 verbose headers   server: 'cloudflare' }
+330 silly get cb [ 304,
+330 silly get   { date: 'Tue, 22 Oct 2019 14:28:27 GMT',
+330 silly get     connection: 'keep-alive',
+330 silly get     'set-cookie': [ '__cfduid=d968af5546ade7c31e17f5f1f3d8e6f9c1571754507; expires=Wed, 21-Oct-20 14:28:27 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+330 silly get     'cf-cache-status': 'HIT',
+330 silly get     'cache-control': 'max-age=300',
+330 silly get     'cf-ray': '529c286aaa7edbc0-GIG',
+330 silly get     age: '1926',
+330 silly get     etag: '"94b8ac82aeeda1585858ad06e751ee11"',
+330 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+330 silly get     'last-modified': 'Mon, 14 Oct 2019 00:14:45 GMT',
+330 silly get     vary: 'accept-encoding, accept',
+330 silly get     'x-amz-meta-rev': '165-a2b297b1ae8109719aac351bbb43a9dc',
+330 silly get     server: 'cloudflare' } ]
+331 verbose etag https://registry.npmjs.org/fsevents from cache
+332 verbose get saving fsevents to /home/aluno/.npm/registry.npmjs.org/fsevents/.cache.json
+333 verbose get https://registry.npmjs.org/is-glob not expired, no request
+334 silly addNameRange number 2 { name: 'is-glob', range: '>=4.0.1 <4.1.0', hasData: true }
+335 silly addNameRange versions [ 'is-glob',
+335 silly addNameRange   [ '0.1.0',
+335 silly addNameRange     '0.2.0',
+335 silly addNameRange     '0.3.0',
+335 silly addNameRange     '1.0.0',
+335 silly addNameRange     '1.1.0',
+335 silly addNameRange     '1.1.1',
+335 silly addNameRange     '1.1.2',
+335 silly addNameRange     '1.1.3',
+335 silly addNameRange     '2.0.0',
+335 silly addNameRange     '2.0.1',
+335 silly addNameRange     '3.0.0',
+335 silly addNameRange     '3.1.0',
+335 silly addNameRange     '4.0.0',
+335 silly addNameRange     '4.0.1' ] ]
+336 silly addNamed is-glob@4.0.1
+337 verbose addNamed "4.0.1" is a plain semver version for is-glob
+338 verbose get https://registry.npmjs.org/readdirp not expired, no request
+339 silly addNameRange number 2 { name: 'readdirp', range: '>=3.2.0 <3.3.0', hasData: true }
+340 silly addNameRange versions [ 'readdirp',
+340 silly addNameRange   [ '0.1.0',
+340 silly addNameRange     '0.1.1',
+340 silly addNameRange     '0.1.2',
+340 silly addNameRange     '0.1.3',
+340 silly addNameRange     '0.1.4',
+340 silly addNameRange     '0.2.0',
+340 silly addNameRange     '0.2.1',
+340 silly addNameRange     '0.2.2',
+340 silly addNameRange     '0.2.3',
+340 silly addNameRange     '0.2.4',
+340 silly addNameRange     '0.2.5',
+340 silly addNameRange     '0.3.0',
+340 silly addNameRange     '0.3.1',
+340 silly addNameRange     '0.3.2',
+340 silly addNameRange     '0.3.3',
+340 silly addNameRange     '0.4.0',
+340 silly addNameRange     '1.0.0',
+340 silly addNameRange     '1.0.1',
+340 silly addNameRange     '1.1.0',
+340 silly addNameRange     '1.2.0',
+340 silly addNameRange     '1.3.0',
+340 silly addNameRange     '1.4.0',
+340 silly addNameRange     '2.0.0',
+340 silly addNameRange     '2.0.1',
+340 silly addNameRange     '2.1.0',
+340 silly addNameRange     '2.2.0',
+340 silly addNameRange     '2.2.1',
+340 silly addNameRange     '3.0.0',
+340 silly addNameRange     '3.0.1',
+340 silly addNameRange     '3.0.2',
+340 silly addNameRange     '3.0.3',
+340 silly addNameRange     '3.1.0',
+340 silly addNameRange     '3.1.1',
+340 silly addNameRange     '3.1.2',
+340 silly addNameRange     '3.1.3',
+340 silly addNameRange     '3.2.0' ] ]
+341 silly addNamed readdirp@3.2.0
+342 verbose addNamed "3.2.0" is a plain semver version for readdirp
+343 verbose afterAdd /home/aluno/.npm/is-binary-path/2.1.0/package/package.json written
+344 verbose afterAdd /home/aluno/.npm/glob-parent/5.1.0/package/package.json written
+345 verbose get https://registry.npmjs.org/normalize-path not expired, no request
+346 silly addNameRange number 2 { name: 'normalize-path',
+346 silly addNameRange   range: '>=3.0.0 <3.1.0',
+346 silly addNameRange   hasData: true }
+347 silly addNameRange versions [ 'normalize-path',
+347 silly addNameRange   [ '0.1.0',
+347 silly addNameRange     '0.1.1',
+347 silly addNameRange     '0.2.0',
+347 silly addNameRange     '0.2.1',
+347 silly addNameRange     '0.3.0',
+347 silly addNameRange     '1.0.0',
+347 silly addNameRange     '2.0.0',
+347 silly addNameRange     '2.0.1',
+347 silly addNameRange     '2.1.0',
+347 silly addNameRange     '2.1.1',
+347 silly addNameRange     '3.0.0' ] ]
+348 silly addNamed normalize-path@3.0.0
+349 verbose addNamed "3.0.0" is a plain semver version for normalize-path
+350 verbose afterAdd /home/aluno/.npm/braces/3.0.2/package/package.json written
+351 silly cache afterAdd is-glob@4.0.1
+352 verbose afterAdd /home/aluno/.npm/is-glob/4.0.1/package/package.json not in flight; writing
+353 silly cache afterAdd readdirp@3.2.0
+354 verbose afterAdd /home/aluno/.npm/readdirp/3.2.0/package/package.json not in flight; writing
+355 silly resolveWithNewModule fsevents@2.1.1 checking installable status
+356 silly cache afterAdd normalize-path@3.0.0
+357 verbose afterAdd /home/aluno/.npm/normalize-path/3.0.0/package/package.json not in flight; writing
+358 verbose afterAdd /home/aluno/.npm/is-glob/4.0.1/package/package.json written
+359 verbose afterAdd /home/aluno/.npm/readdirp/3.2.0/package/package.json written
+360 verbose afterAdd /home/aluno/.npm/normalize-path/3.0.0/package/package.json written
+361 silly fetchNamedPackageData picomatch
+362 silly mapToRegistry name picomatch
+363 silly mapToRegistry using default registry
+364 silly mapToRegistry registry https://registry.npmjs.org/
+365 silly mapToRegistry uri https://registry.npmjs.org/picomatch
+366 verbose request uri https://registry.npmjs.org/picomatch
+367 verbose request no auth needed
+368 info attempt registry request try #1 at 12:28:28
+369 verbose etag W/"b5779e6c92dc62aebc36d88ba4baea7d"
+370 verbose lastModified Tue, 14 May 2019 17:41:27 GMT
+371 http request GET https://registry.npmjs.org/picomatch
+372 http 304 https://registry.npmjs.org/picomatch
+373 verbose headers { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+373 verbose headers   connection: 'keep-alive',
+373 verbose headers   'set-cookie': [ '__cfduid=d65128ee6972ffd3b36cf86f6431809bb1571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+373 verbose headers   'cf-cache-status': 'HIT',
+373 verbose headers   'cache-control': 'max-age=300',
+373 verbose headers   'cf-ray': '529c286b7a15dbbc-GIG',
+373 verbose headers   age: '1503',
+373 verbose headers   etag: '"b5779e6c92dc62aebc36d88ba4baea7d"',
+373 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+373 verbose headers   'last-modified': 'Tue, 14 May 2019 17:41:27 GMT',
+373 verbose headers   vary: 'accept-encoding, accept',
+373 verbose headers   'x-amz-meta-rev': '17-dcd6a21f21866113d22ab103ba83f323',
+373 verbose headers   server: 'cloudflare' }
+374 silly get cb [ 304,
+374 silly get   { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+374 silly get     connection: 'keep-alive',
+374 silly get     'set-cookie': [ '__cfduid=d65128ee6972ffd3b36cf86f6431809bb1571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+374 silly get     'cf-cache-status': 'HIT',
+374 silly get     'cache-control': 'max-age=300',
+374 silly get     'cf-ray': '529c286b7a15dbbc-GIG',
+374 silly get     age: '1503',
+374 silly get     etag: '"b5779e6c92dc62aebc36d88ba4baea7d"',
+374 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+374 silly get     'last-modified': 'Tue, 14 May 2019 17:41:27 GMT',
+374 silly get     vary: 'accept-encoding, accept',
+374 silly get     'x-amz-meta-rev': '17-dcd6a21f21866113d22ab103ba83f323',
+374 silly get     server: 'cloudflare' } ]
+375 verbose etag https://registry.npmjs.org/picomatch from cache
+376 verbose get saving picomatch to /home/aluno/.npm/registry.npmjs.org/picomatch/.cache.json
+377 silly resolveWithNewModule picomatch@2.0.7 checking installable status
+378 silly cache add args [ 'picomatch@^2.0.4', null ]
+379 verbose cache add spec picomatch@^2.0.4
+380 silly cache add parsed spec Result {
+380 silly cache add   raw: 'picomatch@^2.0.4',
+380 silly cache add   scope: null,
+380 silly cache add   name: 'picomatch',
+380 silly cache add   rawSpec: '^2.0.4',
+380 silly cache add   spec: '>=2.0.4 <3.0.0',
+380 silly cache add   type: 'range' }
+381 silly addNamed picomatch@>=2.0.4 <3.0.0
+382 verbose addNamed ">=2.0.4 <3.0.0" is a valid semver range for picomatch
+383 silly addNameRange { name: 'picomatch', range: '>=2.0.4 <3.0.0', hasData: false }
+384 silly mapToRegistry name picomatch
+385 silly mapToRegistry using default registry
+386 silly mapToRegistry registry https://registry.npmjs.org/
+387 silly mapToRegistry uri https://registry.npmjs.org/picomatch
+388 verbose addNameRange registry:https://registry.npmjs.org/picomatch not in flight; fetching
+389 verbose get https://registry.npmjs.org/picomatch not expired, no request
+390 silly addNameRange number 2 { name: 'picomatch', range: '>=2.0.4 <3.0.0', hasData: true }
+391 silly addNameRange versions [ 'picomatch',
+391 silly addNameRange   [ '1.0.0',
+391 silly addNameRange     '1.0.1',
+391 silly addNameRange     '1.0.2',
+391 silly addNameRange     '1.1.0',
+391 silly addNameRange     '1.1.1',
+391 silly addNameRange     '1.1.2',
+391 silly addNameRange     '1.2.0',
+391 silly addNameRange     '2.0.0',
+391 silly addNameRange     '2.0.1',
+391 silly addNameRange     '2.0.2',
+391 silly addNameRange     '2.0.3',
+391 silly addNameRange     '2.0.4',
+391 silly addNameRange     '2.0.5',
+391 silly addNameRange     '2.0.6',
+391 silly addNameRange     '2.0.7' ] ]
+392 silly addNamed picomatch@2.0.7
+393 verbose addNamed "2.0.7" is a plain semver version for picomatch
+394 silly cache afterAdd picomatch@2.0.7
+395 verbose afterAdd /home/aluno/.npm/picomatch/2.0.7/package/package.json not in flight; writing
+396 verbose afterAdd /home/aluno/.npm/picomatch/2.0.7/package/package.json written
+397 silly fetchNamedPackageData fill-range
+398 silly mapToRegistry name fill-range
+399 silly mapToRegistry using default registry
+400 silly mapToRegistry registry https://registry.npmjs.org/
+401 silly mapToRegistry uri https://registry.npmjs.org/fill-range
+402 verbose request uri https://registry.npmjs.org/fill-range
+403 verbose request no auth needed
+404 info attempt registry request try #1 at 12:28:28
+405 verbose etag W/"4eeac3d2c052a828a0fc7deef4bbc99e"
+406 verbose lastModified Mon, 08 Apr 2019 13:42:42 GMT
+407 http request GET https://registry.npmjs.org/fill-range
+408 http 304 https://registry.npmjs.org/fill-range
+409 verbose headers { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+409 verbose headers   connection: 'keep-alive',
+409 verbose headers   'set-cookie': [ '__cfduid=ddc6189b58a98ea82d727b4482945d3541571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+409 verbose headers   'cf-cache-status': 'HIT',
+409 verbose headers   'cache-control': 'max-age=300',
+409 verbose headers   'cf-ray': '529c286c2b31dba8-GIG',
+409 verbose headers   age: '1607',
+409 verbose headers   etag: '"4eeac3d2c052a828a0fc7deef4bbc99e"',
+409 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+409 verbose headers   'last-modified': 'Mon, 08 Apr 2019 13:42:42 GMT',
+409 verbose headers   vary: 'accept-encoding, accept',
+409 verbose headers   'x-amz-meta-rev': '56-148c8e72d880e93bfd2dbebc5276f9bb',
+409 verbose headers   server: 'cloudflare' }
+410 silly get cb [ 304,
+410 silly get   { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+410 silly get     connection: 'keep-alive',
+410 silly get     'set-cookie': [ '__cfduid=ddc6189b58a98ea82d727b4482945d3541571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+410 silly get     'cf-cache-status': 'HIT',
+410 silly get     'cache-control': 'max-age=300',
+410 silly get     'cf-ray': '529c286c2b31dba8-GIG',
+410 silly get     age: '1607',
+410 silly get     etag: '"4eeac3d2c052a828a0fc7deef4bbc99e"',
+410 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+410 silly get     'last-modified': 'Mon, 08 Apr 2019 13:42:42 GMT',
+410 silly get     vary: 'accept-encoding, accept',
+410 silly get     'x-amz-meta-rev': '56-148c8e72d880e93bfd2dbebc5276f9bb',
+410 silly get     server: 'cloudflare' } ]
+411 verbose etag https://registry.npmjs.org/fill-range from cache
+412 verbose get saving fill-range to /home/aluno/.npm/registry.npmjs.org/fill-range/.cache.json
+413 silly resolveWithNewModule fill-range@7.0.1 checking installable status
+414 silly cache add args [ 'fill-range@^7.0.1', null ]
+415 verbose cache add spec fill-range@^7.0.1
+416 silly cache add parsed spec Result {
+416 silly cache add   raw: 'fill-range@^7.0.1',
+416 silly cache add   scope: null,
+416 silly cache add   name: 'fill-range',
+416 silly cache add   rawSpec: '^7.0.1',
+416 silly cache add   spec: '>=7.0.1 <8.0.0',
+416 silly cache add   type: 'range' }
+417 silly addNamed fill-range@>=7.0.1 <8.0.0
+418 verbose addNamed ">=7.0.1 <8.0.0" is a valid semver range for fill-range
+419 silly addNameRange { name: 'fill-range', range: '>=7.0.1 <8.0.0', hasData: false }
+420 silly mapToRegistry name fill-range
+421 silly mapToRegistry using default registry
+422 silly mapToRegistry registry https://registry.npmjs.org/
+423 silly mapToRegistry uri https://registry.npmjs.org/fill-range
+424 verbose addNameRange registry:https://registry.npmjs.org/fill-range not in flight; fetching
+425 verbose get https://registry.npmjs.org/fill-range not expired, no request
+426 silly addNameRange number 2 { name: 'fill-range', range: '>=7.0.1 <8.0.0', hasData: true }
+427 silly addNameRange versions [ 'fill-range',
+427 silly addNameRange   [ '0.1.0',
+427 silly addNameRange     '0.1.1',
+427 silly addNameRange     '0.2.0',
+427 silly addNameRange     '1.0.0',
+427 silly addNameRange     '1.1.0',
+427 silly addNameRange     '1.2.0',
+427 silly addNameRange     '1.3.0',
+427 silly addNameRange     '1.4.0',
+427 silly addNameRange     '1.5.0',
+427 silly addNameRange     '1.6.0',
+427 silly addNameRange     '1.7.0',
+427 silly addNameRange     '1.7.1',
+427 silly addNameRange     '1.8.0',
+427 silly addNameRange     '1.9.0',
+427 silly addNameRange     '2.0.0',
+427 silly addNameRange     '2.1.0',
+427 silly addNameRange     '2.2.0',
+427 silly addNameRange     '2.2.1',
+427 silly addNameRange     '2.2.2',
+427 silly addNameRange     '2.2.3',
+427 silly addNameRange     '3.0.0',
+427 silly addNameRange     '3.0.1',
+427 silly addNameRange     '3.0.2',
+427 silly addNameRange     '3.0.3',
+427 silly addNameRange     '3.1.0',
+427 silly addNameRange     '3.1.1',
+427 silly addNameRange     '4.0.0',
+427 silly addNameRange     '5.0.0',
+427 silly addNameRange     '2.2.4',
+427 silly addNameRange     '6.0.0',
+427 silly addNameRange     '7.0.0',
+427 silly addNameRange     '7.0.1' ] ]
+428 silly addNamed fill-range@7.0.1
+429 verbose addNamed "7.0.1" is a plain semver version for fill-range
+430 silly cache afterAdd fill-range@7.0.1
+431 verbose afterAdd /home/aluno/.npm/fill-range/7.0.1/package/package.json not in flight; writing
+432 verbose afterAdd /home/aluno/.npm/fill-range/7.0.1/package/package.json written
+433 silly fetchNamedPackageData to-regex-range
+434 silly mapToRegistry name to-regex-range
+435 silly mapToRegistry using default registry
+436 silly mapToRegistry registry https://registry.npmjs.org/
+437 silly mapToRegistry uri https://registry.npmjs.org/to-regex-range
+438 verbose request uri https://registry.npmjs.org/to-regex-range
+439 verbose request no auth needed
+440 info attempt registry request try #1 at 12:28:28
+441 verbose etag W/"c16671d126f61886b4fedbad415ca4c2"
+442 verbose lastModified Sun, 07 Apr 2019 06:04:40 GMT
+443 http request GET https://registry.npmjs.org/to-regex-range
+444 http 304 https://registry.npmjs.org/to-regex-range
+445 verbose headers { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+445 verbose headers   connection: 'keep-alive',
+445 verbose headers   'set-cookie': [ '__cfduid=debe2f9fe26493994ed1a25943896bcca1571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+445 verbose headers   'cf-cache-status': 'HIT',
+445 verbose headers   'cache-control': 'max-age=300',
+445 verbose headers   'cf-ray': '529c286caf14db70-GIG',
+445 verbose headers   age: '1601',
+445 verbose headers   etag: '"c16671d126f61886b4fedbad415ca4c2"',
+445 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+445 verbose headers   'last-modified': 'Sun, 07 Apr 2019 06:04:40 GMT',
+445 verbose headers   vary: 'accept-encoding, accept',
+445 verbose headers   'x-amz-meta-rev': '23-cc72116b430152692f40827f9a6b00d3',
+445 verbose headers   server: 'cloudflare' }
+446 silly get cb [ 304,
+446 silly get   { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+446 silly get     connection: 'keep-alive',
+446 silly get     'set-cookie': [ '__cfduid=debe2f9fe26493994ed1a25943896bcca1571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+446 silly get     'cf-cache-status': 'HIT',
+446 silly get     'cache-control': 'max-age=300',
+446 silly get     'cf-ray': '529c286caf14db70-GIG',
+446 silly get     age: '1601',
+446 silly get     etag: '"c16671d126f61886b4fedbad415ca4c2"',
+446 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+446 silly get     'last-modified': 'Sun, 07 Apr 2019 06:04:40 GMT',
+446 silly get     vary: 'accept-encoding, accept',
+446 silly get     'x-amz-meta-rev': '23-cc72116b430152692f40827f9a6b00d3',
+446 silly get     server: 'cloudflare' } ]
+447 verbose etag https://registry.npmjs.org/to-regex-range from cache
+448 verbose get saving to-regex-range to /home/aluno/.npm/registry.npmjs.org/to-regex-range/.cache.json
+449 silly resolveWithNewModule to-regex-range@5.0.1 checking installable status
+450 silly cache add args [ 'to-regex-range@^5.0.1', null ]
+451 verbose cache add spec to-regex-range@^5.0.1
+452 silly cache add parsed spec Result {
+452 silly cache add   raw: 'to-regex-range@^5.0.1',
+452 silly cache add   scope: null,
+452 silly cache add   name: 'to-regex-range',
+452 silly cache add   rawSpec: '^5.0.1',
+452 silly cache add   spec: '>=5.0.1 <6.0.0',
+452 silly cache add   type: 'range' }
+453 silly addNamed to-regex-range@>=5.0.1 <6.0.0
+454 verbose addNamed ">=5.0.1 <6.0.0" is a valid semver range for to-regex-range
+455 silly addNameRange { name: 'to-regex-range',
+455 silly addNameRange   range: '>=5.0.1 <6.0.0',
+455 silly addNameRange   hasData: false }
+456 silly mapToRegistry name to-regex-range
+457 silly mapToRegistry using default registry
+458 silly mapToRegistry registry https://registry.npmjs.org/
+459 silly mapToRegistry uri https://registry.npmjs.org/to-regex-range
+460 verbose addNameRange registry:https://registry.npmjs.org/to-regex-range not in flight; fetching
+461 verbose get https://registry.npmjs.org/to-regex-range not expired, no request
+462 silly addNameRange number 2 { name: 'to-regex-range',
+462 silly addNameRange   range: '>=5.0.1 <6.0.0',
+462 silly addNameRange   hasData: true }
+463 silly addNameRange versions [ 'to-regex-range',
+463 silly addNameRange   [ '0.1.0',
+463 silly addNameRange     '0.1.1',
+463 silly addNameRange     '0.1.2',
+463 silly addNameRange     '0.1.3',
+463 silly addNameRange     '0.2.0',
+463 silly addNameRange     '1.0.0',
+463 silly addNameRange     '1.0.1',
+463 silly addNameRange     '1.0.2',
+463 silly addNameRange     '2.0.0',
+463 silly addNameRange     '2.1.0',
+463 silly addNameRange     '2.1.1',
+463 silly addNameRange     '3.0.0',
+463 silly addNameRange     '4.0.0',
+463 silly addNameRange     '4.0.1',
+463 silly addNameRange     '4.0.2',
+463 silly addNameRange     '4.0.3',
+463 silly addNameRange     '5.0.0',
+463 silly addNameRange     '5.0.1' ] ]
+464 silly addNamed to-regex-range@5.0.1
+465 verbose addNamed "5.0.1" is a plain semver version for to-regex-range
+466 silly cache afterAdd to-regex-range@5.0.1
+467 verbose afterAdd /home/aluno/.npm/to-regex-range/5.0.1/package/package.json not in flight; writing
+468 verbose afterAdd /home/aluno/.npm/to-regex-range/5.0.1/package/package.json written
+469 silly fetchNamedPackageData is-number
+470 silly mapToRegistry name is-number
+471 silly mapToRegistry using default registry
+472 silly mapToRegistry registry https://registry.npmjs.org/
+473 silly mapToRegistry uri https://registry.npmjs.org/is-number
+474 verbose request uri https://registry.npmjs.org/is-number
+475 verbose request no auth needed
+476 info attempt registry request try #1 at 12:28:28
+477 verbose etag W/"1d40f5d36d202ca83b2212f8bf3e4622"
+478 verbose lastModified Wed, 04 Jul 2018 15:09:05 GMT
+479 http request GET https://registry.npmjs.org/is-number
+480 http 304 https://registry.npmjs.org/is-number
+481 verbose headers { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+481 verbose headers   connection: 'keep-alive',
+481 verbose headers   'set-cookie': [ '__cfduid=dd22a7b5835714b28154a6f0295205bce1571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+481 verbose headers   'cf-cache-status': 'HIT',
+481 verbose headers   'cache-control': 'max-age=300',
+481 verbose headers   'cf-ray': '529c286d385ddb80-GIG',
+481 verbose headers   age: '1606',
+481 verbose headers   etag: '"1d40f5d36d202ca83b2212f8bf3e4622"',
+481 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+481 verbose headers   'last-modified': 'Wed, 04 Jul 2018 15:09:05 GMT',
+481 verbose headers   vary: 'accept-encoding, accept',
+481 verbose headers   server: 'cloudflare' }
+482 silly get cb [ 304,
+482 silly get   { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+482 silly get     connection: 'keep-alive',
+482 silly get     'set-cookie': [ '__cfduid=dd22a7b5835714b28154a6f0295205bce1571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+482 silly get     'cf-cache-status': 'HIT',
+482 silly get     'cache-control': 'max-age=300',
+482 silly get     'cf-ray': '529c286d385ddb80-GIG',
+482 silly get     age: '1606',
+482 silly get     etag: '"1d40f5d36d202ca83b2212f8bf3e4622"',
+482 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+482 silly get     'last-modified': 'Wed, 04 Jul 2018 15:09:05 GMT',
+482 silly get     vary: 'accept-encoding, accept',
+482 silly get     server: 'cloudflare' } ]
+483 verbose etag https://registry.npmjs.org/is-number from cache
+484 verbose get saving is-number to /home/aluno/.npm/registry.npmjs.org/is-number/.cache.json
+485 silly resolveWithNewModule is-number@7.0.0 checking installable status
+486 silly cache add args [ 'is-number@^7.0.0', null ]
+487 verbose cache add spec is-number@^7.0.0
+488 silly cache add parsed spec Result {
+488 silly cache add   raw: 'is-number@^7.0.0',
+488 silly cache add   scope: null,
+488 silly cache add   name: 'is-number',
+488 silly cache add   rawSpec: '^7.0.0',
+488 silly cache add   spec: '>=7.0.0 <8.0.0',
+488 silly cache add   type: 'range' }
+489 silly addNamed is-number@>=7.0.0 <8.0.0
+490 verbose addNamed ">=7.0.0 <8.0.0" is a valid semver range for is-number
+491 silly addNameRange { name: 'is-number', range: '>=7.0.0 <8.0.0', hasData: false }
+492 silly mapToRegistry name is-number
+493 silly mapToRegistry using default registry
+494 silly mapToRegistry registry https://registry.npmjs.org/
+495 silly mapToRegistry uri https://registry.npmjs.org/is-number
+496 verbose addNameRange registry:https://registry.npmjs.org/is-number not in flight; fetching
+497 verbose get https://registry.npmjs.org/is-number not expired, no request
+498 silly addNameRange number 2 { name: 'is-number', range: '>=7.0.0 <8.0.0', hasData: true }
+499 silly addNameRange versions [ 'is-number',
+499 silly addNameRange   [ '0.1.0',
+499 silly addNameRange     '0.1.1',
+499 silly addNameRange     '1.0.0',
+499 silly addNameRange     '1.1.0',
+499 silly addNameRange     '1.1.1',
+499 silly addNameRange     '1.1.2',
+499 silly addNameRange     '2.0.0',
+499 silly addNameRange     '2.0.1',
+499 silly addNameRange     '2.0.2',
+499 silly addNameRange     '2.1.0',
+499 silly addNameRange     '3.0.0',
+499 silly addNameRange     '4.0.0',
+499 silly addNameRange     '5.0.0',
+499 silly addNameRange     '6.0.0',
+499 silly addNameRange     '7.0.0' ] ]
+500 silly addNamed is-number@7.0.0
+501 verbose addNamed "7.0.0" is a plain semver version for is-number
+502 silly cache afterAdd is-number@7.0.0
+503 verbose afterAdd /home/aluno/.npm/is-number/7.0.0/package/package.json not in flight; writing
+504 verbose afterAdd /home/aluno/.npm/is-number/7.0.0/package/package.json written
+505 silly fetchNamedPackageData is-extglob
+506 silly mapToRegistry name is-extglob
+507 silly mapToRegistry using default registry
+508 silly mapToRegistry registry https://registry.npmjs.org/
+509 silly mapToRegistry uri https://registry.npmjs.org/is-extglob
+510 verbose request uri https://registry.npmjs.org/is-extglob
+511 verbose request no auth needed
+512 info attempt registry request try #1 at 12:28:28
+513 verbose etag W/"793d1b13bd8d035cd22e5c9ac543fd42"
+514 verbose lastModified Sun, 27 May 2018 04:58:59 GMT
+515 http request GET https://registry.npmjs.org/is-extglob
+516 http 304 https://registry.npmjs.org/is-extglob
+517 verbose headers { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+517 verbose headers   connection: 'keep-alive',
+517 verbose headers   'set-cookie': [ '__cfduid=d4e5e71f5d3a7fd9343dd7b8502b393201571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+517 verbose headers   'cf-cache-status': 'HIT',
+517 verbose headers   'cache-control': 'max-age=300',
+517 verbose headers   'cf-ray': '529c286dbf25dbb4-GIG',
+517 verbose headers   age: '2700',
+517 verbose headers   etag: '"793d1b13bd8d035cd22e5c9ac543fd42"',
+517 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+517 verbose headers   'last-modified': 'Sun, 27 May 2018 04:58:59 GMT',
+517 verbose headers   vary: 'accept-encoding, accept',
+517 verbose headers   server: 'cloudflare' }
+518 silly get cb [ 304,
+518 silly get   { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+518 silly get     connection: 'keep-alive',
+518 silly get     'set-cookie': [ '__cfduid=d4e5e71f5d3a7fd9343dd7b8502b393201571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+518 silly get     'cf-cache-status': 'HIT',
+518 silly get     'cache-control': 'max-age=300',
+518 silly get     'cf-ray': '529c286dbf25dbb4-GIG',
+518 silly get     age: '2700',
+518 silly get     etag: '"793d1b13bd8d035cd22e5c9ac543fd42"',
+518 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+518 silly get     'last-modified': 'Sun, 27 May 2018 04:58:59 GMT',
+518 silly get     vary: 'accept-encoding, accept',
+518 silly get     server: 'cloudflare' } ]
+519 verbose etag https://registry.npmjs.org/is-extglob from cache
+520 verbose get saving is-extglob to /home/aluno/.npm/registry.npmjs.org/is-extglob/.cache.json
+521 silly resolveWithNewModule is-extglob@2.1.1 checking installable status
+522 silly cache add args [ 'is-extglob@^2.1.1', null ]
+523 verbose cache add spec is-extglob@^2.1.1
+524 silly cache add parsed spec Result {
+524 silly cache add   raw: 'is-extglob@^2.1.1',
+524 silly cache add   scope: null,
+524 silly cache add   name: 'is-extglob',
+524 silly cache add   rawSpec: '^2.1.1',
+524 silly cache add   spec: '>=2.1.1 <3.0.0',
+524 silly cache add   type: 'range' }
+525 silly addNamed is-extglob@>=2.1.1 <3.0.0
+526 verbose addNamed ">=2.1.1 <3.0.0" is a valid semver range for is-extglob
+527 silly addNameRange { name: 'is-extglob', range: '>=2.1.1 <3.0.0', hasData: false }
+528 silly mapToRegistry name is-extglob
+529 silly mapToRegistry using default registry
+530 silly mapToRegistry registry https://registry.npmjs.org/
+531 silly mapToRegistry uri https://registry.npmjs.org/is-extglob
+532 verbose addNameRange registry:https://registry.npmjs.org/is-extglob not in flight; fetching
+533 verbose get https://registry.npmjs.org/is-extglob not expired, no request
+534 silly addNameRange number 2 { name: 'is-extglob', range: '>=2.1.1 <3.0.0', hasData: true }
+535 silly addNameRange versions [ 'is-extglob', [ '1.0.0', '2.0.0', '2.1.0', '2.1.1' ] ]
+536 silly addNamed is-extglob@2.1.1
+537 verbose addNamed "2.1.1" is a plain semver version for is-extglob
+538 silly cache afterAdd is-extglob@2.1.1
+539 verbose afterAdd /home/aluno/.npm/is-extglob/2.1.1/package/package.json not in flight; writing
+540 verbose afterAdd /home/aluno/.npm/is-extglob/2.1.1/package/package.json written
+541 silly fetchNamedPackageData binary-extensions
+542 silly mapToRegistry name binary-extensions
+543 silly mapToRegistry using default registry
+544 silly mapToRegistry registry https://registry.npmjs.org/
+545 silly mapToRegistry uri https://registry.npmjs.org/binary-extensions
+546 verbose request uri https://registry.npmjs.org/binary-extensions
+547 verbose request no auth needed
+548 info attempt registry request try #1 at 12:28:28
+549 verbose etag W/"6a05f5b3e8f90f490ec83ad4a3f06aec"
+550 verbose lastModified Thu, 18 Apr 2019 18:50:16 GMT
+551 http request GET https://registry.npmjs.org/binary-extensions
+552 http 304 https://registry.npmjs.org/binary-extensions
+553 verbose headers { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+553 verbose headers   connection: 'keep-alive',
+553 verbose headers   'set-cookie': [ '__cfduid=d4e5e71f5d3a7fd9343dd7b8502b393201571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+553 verbose headers   'cf-cache-status': 'HIT',
+553 verbose headers   'cache-control': 'max-age=300',
+553 verbose headers   'cf-ray': '529c286e38a9dbb4-GIG',
+553 verbose headers   age: '1628',
+553 verbose headers   etag: '"6a05f5b3e8f90f490ec83ad4a3f06aec"',
+553 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+553 verbose headers   'last-modified': 'Thu, 18 Apr 2019 18:50:16 GMT',
+553 verbose headers   vary: 'accept-encoding, accept',
+553 verbose headers   'x-amz-meta-rev': '34-59ce424285bb20a7f0ceff8ca9565f34',
+553 verbose headers   server: 'cloudflare' }
+554 silly get cb [ 304,
+554 silly get   { date: 'Tue, 22 Oct 2019 14:28:28 GMT',
+554 silly get     connection: 'keep-alive',
+554 silly get     'set-cookie': [ '__cfduid=d4e5e71f5d3a7fd9343dd7b8502b393201571754508; expires=Wed, 21-Oct-20 14:28:28 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+554 silly get     'cf-cache-status': 'HIT',
+554 silly get     'cache-control': 'max-age=300',
+554 silly get     'cf-ray': '529c286e38a9dbb4-GIG',
+554 silly get     age: '1628',
+554 silly get     etag: '"6a05f5b3e8f90f490ec83ad4a3f06aec"',
+554 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+554 silly get     'last-modified': 'Thu, 18 Apr 2019 18:50:16 GMT',
+554 silly get     vary: 'accept-encoding, accept',
+554 silly get     'x-amz-meta-rev': '34-59ce424285bb20a7f0ceff8ca9565f34',
+554 silly get     server: 'cloudflare' } ]
+555 verbose etag https://registry.npmjs.org/binary-extensions from cache
+556 verbose get saving binary-extensions to /home/aluno/.npm/registry.npmjs.org/binary-extensions/.cache.json
+557 silly resolveWithNewModule binary-extensions@2.0.0 checking installable status
+558 silly cache add args [ 'binary-extensions@^2.0.0', null ]
+559 verbose cache add spec binary-extensions@^2.0.0
+560 silly cache add parsed spec Result {
+560 silly cache add   raw: 'binary-extensions@^2.0.0',
+560 silly cache add   scope: null,
+560 silly cache add   name: 'binary-extensions',
+560 silly cache add   rawSpec: '^2.0.0',
+560 silly cache add   spec: '>=2.0.0 <3.0.0',
+560 silly cache add   type: 'range' }
+561 silly addNamed binary-extensions@>=2.0.0 <3.0.0
+562 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for binary-extensions
+563 silly addNameRange { name: 'binary-extensions',
+563 silly addNameRange   range: '>=2.0.0 <3.0.0',
+563 silly addNameRange   hasData: false }
+564 silly mapToRegistry name binary-extensions
+565 silly mapToRegistry using default registry
+566 silly mapToRegistry registry https://registry.npmjs.org/
+567 silly mapToRegistry uri https://registry.npmjs.org/binary-extensions
+568 verbose addNameRange registry:https://registry.npmjs.org/binary-extensions not in flight; fetching
+569 verbose get https://registry.npmjs.org/binary-extensions not expired, no request
+570 silly addNameRange number 2 { name: 'binary-extensions',
+570 silly addNameRange   range: '>=2.0.0 <3.0.0',
+570 silly addNameRange   hasData: true }
+571 silly addNameRange versions [ 'binary-extensions',
+571 silly addNameRange   [ '1.0.0',
+571 silly addNameRange     '1.0.1',
+571 silly addNameRange     '1.0.2',
+571 silly addNameRange     '1.1.0',
+571 silly addNameRange     '1.1.1',
+571 silly addNameRange     '1.2.0',
+571 silly addNameRange     '1.3.0',
+571 silly addNameRange     '1.3.1',
+571 silly addNameRange     '1.4.0',
+571 silly addNameRange     '1.4.1',
+571 silly addNameRange     '1.5.0',
+571 silly addNameRange     '1.6.0',
+571 silly addNameRange     '1.7.0',
+571 silly addNameRange     '1.8.0',
+571 silly addNameRange     '1.9.0',
+571 silly addNameRange     '1.10.0',
+571 silly addNameRange     '1.11.0',
+571 silly addNameRange     '1.12.0',
+571 silly addNameRange     '1.13.0',
+571 silly addNameRange     '1.13.1',
+571 silly addNameRange     '2.0.0' ] ]
+572 silly addNamed binary-extensions@2.0.0
+573 verbose addNamed "2.0.0" is a plain semver version for binary-extensions
+574 silly cache afterAdd binary-extensions@2.0.0
+575 verbose afterAdd /home/aluno/.npm/binary-extensions/2.0.0/package/package.json not in flight; writing
+576 verbose afterAdd /home/aluno/.npm/binary-extensions/2.0.0/package/package.json written
+577 silly loadAllDepsIntoIdealTree Finishing
+578 silly idealTree:prePrune lib
+578 silly idealTree:prePrune └─┬ sass@1.23.0
+578 silly idealTree:prePrune   ├── anymatch@3.1.1
+578 silly idealTree:prePrune   ├── binary-extensions@2.0.0
+578 silly idealTree:prePrune   ├── braces@3.0.2
+578 silly idealTree:prePrune   ├── chokidar@3.2.2
+578 silly idealTree:prePrune   ├── fill-range@7.0.1
+578 silly idealTree:prePrune   ├── glob-parent@5.1.0
+578 silly idealTree:prePrune   ├── is-binary-path@2.1.0
+578 silly idealTree:prePrune   ├── is-extglob@2.1.1
+578 silly idealTree:prePrune   ├── is-glob@4.0.1
+578 silly idealTree:prePrune   ├── is-number@7.0.0
+578 silly idealTree:prePrune   ├── normalize-path@3.0.0
+578 silly idealTree:prePrune   ├── picomatch@2.0.7
+578 silly idealTree:prePrune   ├── readdirp@3.2.0
+578 silly idealTree:prePrune   └── to-regex-range@5.0.1
+579 silly loadIdealTree Finishing
+580 silly currentTree lib
+581 silly idealTree lib
+581 silly idealTree └─┬ sass@1.23.0
+581 silly idealTree   ├── anymatch@3.1.1
+581 silly idealTree   ├── binary-extensions@2.0.0
+581 silly idealTree   ├── braces@3.0.2
+581 silly idealTree   ├── chokidar@3.2.2
+581 silly idealTree   ├── fill-range@7.0.1
+581 silly idealTree   ├── glob-parent@5.1.0
+581 silly idealTree   ├── is-binary-path@2.1.0
+581 silly idealTree   ├── is-extglob@2.1.1
+581 silly idealTree   ├── is-glob@4.0.1
+581 silly idealTree   ├── is-number@7.0.0
+581 silly idealTree   ├── normalize-path@3.0.0
+581 silly idealTree   ├── picomatch@2.0.7
+581 silly idealTree   ├── readdirp@3.2.0
+581 silly idealTree   └── to-regex-range@5.0.1
+582 silly generateActionsToTake Starting
+583 silly install generateActionsToTake
+584 warn checkPermissions Missing write access to /usr/local/lib/node_modules
+585 silly rollbackFailedOptional Starting
+586 silly rollbackFailedOptional Finishing
+587 silly runTopLevelLifecycles Starting
+588 silly runTopLevelLifecycles Finishing
+589 silly install printInstalled
+590 warn optional Skipping failed optional dependency /sass/chokidar/fsevents:
+591 warn notsup Not compatible with your operating system or architecture: fsevents@2.1.1
+592 verbose stack Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+592 verbose stack     at Error (native)
+593 verbose cwd /home/aluno/politica
+594 error Linux 4.4.0-53-generic
+595 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "sass"
+596 error node v4.2.6
+597 error npm  v3.5.2
+598 error path /usr/local/lib/node_modules
+599 error code EACCES
+600 error errno -13
+601 error syscall access
+602 error Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+602 error     at Error (native)
+602 error  { [Error: EACCES: permission denied, access '/usr/local/lib/node_modules']
+602 error   errno: -13,
+602 error   code: 'EACCES',
+602 error   syscall: 'access',
+602 error   path: '/usr/local/lib/node_modules' }
+603 error Please try running this command again as root/Administrator.
+604 verbose exit [ -13, true ]

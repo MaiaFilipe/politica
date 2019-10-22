@@ -1,3 +1,5 @@
+<%@page import="util.HibernateUtil"%>
+<%@page import="org.hibernate.Session"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="entidades.*"%>
 <%@page import="java.util.Base64"%>
@@ -26,7 +28,7 @@
             <div id="main">
                 <div class="inner">
                     <header id="header">
-                        <a class="logo"><strong>Perfil</strong> </a>
+                        <a class="logo" href="home.jsp"><strong>Home</strong> </a>
                         <ul class="icons">
                             <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNome()%></span></a></li>
                             <li><a href="notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
@@ -41,9 +43,9 @@
                                 <img src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" style="max-width: 250px; border-radius: 10px;" alt="Foto publicação"/>
                             </div>                            
                             <div style="padding: 10px 10px 10px 10px;">
-                                
+
                                 Nome: <%=usuario.getNome()%> 
-                                
+
                                 <a href="usuarioalterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
 
                                 User: <%=usuario.getUsuario()%><br><br>
@@ -58,85 +60,47 @@
                             </div>
                         </div>
                     </section>
-                    <h1>Publicações</h1>
+                    <h1>Minhas publicações</h1>
+                    <div id="postagens">
+                        <%
+                            Session session1 = HibernateUtil.getSession();
+                            String hql = "from Publicacao where id_usuario='" + usuario.getId() + "'";
+                            //  Post postagem = (Post) session1.createQuery(hql).list();
+                            List<Publicacao> lista = (List) session1.createQuery(hql).list();
+                            request.setAttribute("publicacoes", lista);
+                            System.out.println(lista);
+                            for (Iterator it = lista.iterator(); it.hasNext();) {
+                                Publicacao postagem = (Publicacao) it.next();
+                                String codigo = postagem.getIdp().toString();
+                                byte[] fotoPostagem = postagem.getFoto();
+                                String postagemFoto = Base64.getEncoder().encodeToString(fotoPostagem);
+                                usuario = postagem.getIdUsuario();
+                        %>
+
+                        <div style="display: inline;">
+                            <div class="postagem" style="background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px; max-width: 220px;">
+                                <span id="titulo">
+                                    <h2><%=postagem.getTitulo()%></h2>
+                                </span><br>
+                                <img src="data:image/png;base64,<%=postagemFoto%>" class="padrao" style="max-width: 200px;">
+                                <br><br>
+                                <span id="conteudo">
+                                    <%=postagem.getConteudo()%>
+                                </span>
+                            </div>
+                        </div>
+
+                        <%
+                            }
+                        %>
+                    </div>
                 </div>
             </div>
-
-            <!-- Sidebar -->
-            <div id="sidebar">
-                <div class="inner">
-
-                    <!-- Search -->
-                    <section id="search" class="alt">
-                        <form method="post" action="#">
-                            <input type="text" name="query" id="query" placeholder="Search" />
-                        </form>
-                    </section>
-
-                    <!-- Menu -->
-                    <nav id="menu">
-                        <header class="major">
-                            <h2>Menu</h2>
-                        </header>
-                        <ul>
-                            <li><a href="home.jsp">Página inicial</a></li>
-                            <li><a href="publicacaoinserir.jsp">Publicar</a></li>
-                            <li><a href="publicacaomostrar.jsp">Publicações</a></li>
-                            <li><a href="elements.html">Elements</a></li>
-                            <li>
-                                <span class="opener">Submenu</span>
-                                <ul>
-                                    <li><a href="#">Lorem Dolor</a></li>
-                                    <li><a href="#">Ipsum Adipiscing</a></li>
-                                    <li><a href="#">Tempus Magna</a></li>
-                                    <li><a href="#">Feugiat Veroeros</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Etiam Dolore</a></li>
-                            <li><a href="#">Adipiscing</a></li>
-                            <li>
-                                <span class="opener">Another Submenu</span>
-                                <ul>
-                                    <li><a href="#">Lorem Dolor</a></li>
-                                    <li><a href="#">Ipsum Adipiscing</a></li>
-                                    <li><a href="#">Tempus Magna</a></li>
-                                    <li><a href="#">Feugiat Veroeros</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Maximus Erat</a></li>
-                            <li><a href="#">Sapien Mauris</a></li>
-                            <li><a href="#">Amet Lacinia</a></li>
-                        </ul>
-                    </nav>
-
-                    <!-- Section -->
-
-
-                    <!-- Section -->
-                    <section>
-                        <header class="major">
-                            <h2>Fale conosco!</h2>
-                        </header>
-                        <p>Em caso de surgimento de dúvidas, críticas ou interesse na nossa proposta aqui apresentada, entre em contato.</p>
-                        <ul class="contact">
-                            <li class="fa-envelope-o"><a href="#">lfilipesmaia@gmail.com</a></li>
-                            <li class="fa-envelope-o"><a href="#">luisagomes@gmail.com</a></li>
-                            <li class="fa-phone">(+5522)00000-0000</li>
-                            <li class="fa-home">s/n Quissamã #0000<br />
-                                RJ, Brasil</li>
-                        </ul>
-                    </section>
-                    <footer id="footer">
-                        <p class="copyright"> <a href="https://unsplash.com">Unsplash</a>. Design: <a href="#"></a>.</p>
-                    </footer>
-                </div>
-            </div>
-        </div>
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
 
     </body>
 </html>
