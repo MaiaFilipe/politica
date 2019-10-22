@@ -20,11 +20,11 @@
     String estado = "";
     String cpf = "";
     String cell = "";
+    String tipo = "";
     Double cpfD = Double.MAX_VALUE;
     Double cellD = Double.MIN_VALUE;
     //Captura id (se alteração)
     String idUsuario = request.getParameter("pid");
-
 
     //Localiza usuario (se alteração)
     if (!idUsuario.isEmpty()) {
@@ -44,6 +44,7 @@
         descricao = usuario.getDescricao();
         nascimento = usuario.getNascimento();
         estado = usuario.getEstado();
+        tipo = usuario.getTipo();
     } else {
         idUsuario = "";
     }
@@ -101,44 +102,47 @@
                 <input type="text" name="descricao" value="<%=descricao%>"><br><br>
 
                 </div>
-                Data de nascimento: <input type="date" name="nascimento" value="<%=nascimento%>"><br><br>
+                <div hidden>
+                    Data de nascimento: <input type="date" name="nascimento" value="<%=nascimento%>"><br><br>
+                </div>
+                <div hidden>
+                    Estado:<br>
+                    <select name="estado" value="<%=estado%>">
+                        <option value="AC">Acre (AC)</option>
+                        <option value="AL">Alagoas (AL)</option>
+                        <option value="AP">Amapá (AP)</option>
+                        <option value="AM">Amazonas (AM)</option>
+                        <option value="BA">Bahia (BA)</option>
+                        <option value="CE">Ceará (CE)</option>
+                        <option value="DF">Distrito Federal (DF)</option>
+                        <option value="ES">Espírito Santo (ES)</option>
+                        <option value="GO">Goiás (GO)</option>
+                        <option value="MA">Maranhão (MA)</option>
+                        <option value="MT">Mato Grosso (MT)</option>
+                        <option value="MS">Mato Grosso do Sul (MS)</option>
+                        <option value="MG">Minas Gerais (MG)</option>
+                        <option value="PA">Pará (PA)</option>
+                        <option value="PB">Paraíba (PB)</option>
+                        <option value="PR">Paraná (PR)</option>
+                        <option value="PE">Pernambuco (PE)</option>
+                        <option value="PI">Piauí (PI)</option>
+                        <option value="RJ">Rio de Janeiro (RJ)</option>
+                        <option value="RN">Rio Grande do Norte (RN)</option>
+                        <option value="RS">Rio Grande do Sul (RS)</option>
+                        <option value="RO">Rondônia (RO)</option>
+                        <option value="RR">Roraima (RR)</option>
+                        <option value="SC">Santa Catarina (SC)</option>
+                        <option value="SP">São Paulo (SP)</option>
+                        <option value="SE">Sergipe (SE)</option>
+                        <option value="TO">Tocantins (TO)</option>
+                    </select><br><br>
 
-                Estado:<br>
-                <select name="estado" value="<%=estado%>">
-                    <option value="AC">Acre (AC)</option>
-                    <option value="AL">Alagoas (AL)</option>
-                    <option value="AP">Amapá (AP)</option>
-                    <option value="AM">Amazonas (AM)</option>
-                    <option value="BA">Bahia (BA)</option>
-                    <option value="CE">Ceará (CE)</option>
-                    <option value="DF">Distrito Federal (DF)</option>
-                    <option value="ES">Espírito Santo (ES)</option>
-                    <option value="GO">Goiás (GO)</option>
-                    <option value="MA">Maranhão (MA)</option>
-                    <option value="MT">Mato Grosso (MT)</option>
-                    <option value="MS">Mato Grosso do Sul (MS)</option>
-                    <option value="MG">Minas Gerais (MG)</option>
-                    <option value="PA">Pará (PA)</option>
-                    <option value="PB">Paraíba (PB)</option>
-                    <option value="PR">Paraná (PR)</option>
-                    <option value="PE">Pernambuco (PE)</option>
-                    <option value="PI">Piauí (PI)</option>
-                    <option value="RJ">Rio de Janeiro (RJ)</option>
-                    <option value="RN">Rio Grande do Norte (RN)</option>
-                    <option value="RS">Rio Grande do Sul (RS)</option>
-                    <option value="RO">Rondônia (RO)</option>
-                    <option value="RR">Roraima (RR)</option>
-                    <option value="SC">Santa Catarina (SC)</option>
-                    <option value="SP">São Paulo (SP)</option>
-                    <option value="SE">Sergipe (SE)</option>
-                    <option value="TO">Tocantins (TO)</option>
-                </select><br><br>
-                
-                Tipo de usuário:<br>
-                <select name="tipo">
-                    <option value="Eleitor">Eleitor</option>
-                    <option value="Político">Político</option>
-                </select><br><br>
+                    Tipo de usuário:<br>
+                    <select name="tipo" value="<%=tipo%>">
+                        <option value="Eleitor">Eleitor</option>
+                        <option value="Político">Político</option>
+                    </select><br><br>
+                </div>
 
                 Posição política:<br>
                 <select name="posicao" value="<%=posicao%>">
@@ -148,7 +152,7 @@
                     <option value="nulo">Prefiro não responder</option>
                 </select><br><br>
 
-                <h2>Escolher imagem:</h2>
+                Escolher imagem:
                 <input type="file" name="foto" accept="image/png, image/jpeg" value=""><br><br>
 
                 <input type="submit" value="Confirmar">

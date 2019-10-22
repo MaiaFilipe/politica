@@ -19,9 +19,9 @@
         %>
 
         <title><%=usuario.getUsuario()%></title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="assets/css/main.css">
     </head>
     <body class="is-preload">
         <div id="wrapper">
@@ -56,7 +56,9 @@
 
                                 Bio: <%=usuario.getDescricao()%><br><br>
 
-                                Seguidores: X   Seguindo: Y<br>
+                                Seguidores: X<br>
+                                
+                                Seguindo: Y<br>
                             </div>
                         </div>
                     </section>
@@ -78,15 +80,11 @@
                         %>
 
                         <div style="display: inline;">
-                            <div class="postagem" style="background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px; max-width: 220px;">
+                            <div class="postagem" style="background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px;">
                                 <span id="titulo">
                                     <h2><%=postagem.getTitulo()%></h2>
                                 </span><br>
-                                <img src="data:image/png;base64,<%=postagemFoto%>" class="padrao" style="max-width: 200px;">
-                                <br><br>
-                                <span id="conteudo">
-                                    <%=postagem.getConteudo()%>
-                                </span>
+                                <img src="data:image/png;base64,<%=postagemFoto%>" class="padrao" style="max-width: 200px;"><%=postagem.getConteudo()%>
                             </div>
                         </div>
 
