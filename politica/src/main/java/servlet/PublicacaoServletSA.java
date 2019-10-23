@@ -43,8 +43,6 @@ public class PublicacaoServletSA extends HttpServlet {
         publicacao.setConteudo(conteudo);
         publicacao.setTitulo(titulo);
         publicacao.setIdUsuario(usuario);
-        
-        publicacao.setAutor(autor);
                 
         Date agora = new Date();
         publicacao.setHorario(agora);

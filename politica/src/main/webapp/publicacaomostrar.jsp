@@ -36,7 +36,7 @@
         <img src="data:image/png;image/jpg;base64,<%=publicacaoFoto%>" style="max-width: 500px; max-height: 500px;" alt="Foto publicação"/>
         <h3><%=publicacao.getConteudo()%></h3>
         <%=publicacao.getHorario()%><br><br>
-        <%=publicacao.getAutor()%>
+        <%=publicacao.getIdUsuario().getNome()%>
         <%}%>
     </body>
 </html>

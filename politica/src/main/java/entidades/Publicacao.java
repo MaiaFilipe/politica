@@ -39,8 +39,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Publicacao.findByTitulo", query = "SELECT p FROM Publicacao p WHERE p.titulo = :titulo")
     , @NamedQuery(name = "Publicacao.findByIdp", query = "SELECT p FROM Publicacao p WHERE p.idp = :idp")
     , @NamedQuery(name = "Publicacao.findByExtensao", query = "SELECT p FROM Publicacao p WHERE p.extensao = :extensao")
-    , @NamedQuery(name = "Publicacao.findByHorario", query = "SELECT p FROM Publicacao p WHERE p.horario = :horario")
-    , @NamedQuery(name = "Publicacao.findByAutor", query = "SELECT p FROM Publicacao p WHERE p.autor = :autor")})
+    , @NamedQuery(name = "Publicacao.findByHorario", query = "SELECT p FROM Publicacao p WHERE p.horario = :horario")})
 public class Publicacao implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -71,10 +70,6 @@ public class Publicacao implements Serializable {
     @Column(name = "horario")
     @Temporal(TemporalType.TIMESTAMP)
     private Date horario;
-    
-    @Size(max = 2147483647)
-    @Column(name = "autor")
-    private String autor;
     
     @JoinColumn(name = "id_usuario", referencedColumnName = "id")
     @ManyToOne
@@ -133,14 +128,6 @@ public class Publicacao implements Serializable {
 
     public void setHorario(Date horario) {
         this.horario = horario;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
     }
 
     public Usuario getIdUsuario() {
