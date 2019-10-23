@@ -35,6 +35,6 @@
             <display:setProperty name="basic.msg.empty_list" value="Sem usuarios" />
         </display:table>
         <br><br>
-        <a href="alterar.jsp?pid=" >Criar novo usuario</a>
+        <a href="usuariocadastro.html" >Criar novo usuario</a>
     </body>
 </html>
