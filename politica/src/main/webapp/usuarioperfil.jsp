@@ -8,6 +8,8 @@
 <%@page import="java.io.BufferedOutputStream"%>
 <%@page import="java.util.List"%>
 <%@page import="controle.*"%>
+<%@page import="servlet.*"%>
+<jsp:directive.page import="servlet.*" />
 <!DOCTYPE HTML>
 
 <html>
@@ -86,8 +88,9 @@
 
                             <div class="postagem" style="background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px; max-width: 220px;">
                                 <span id="titulo">
-                                    <h2><a href="publicacaoalterar.jsp?pid=<%=postagem.getIdp()%>"><%=postagem.getTitulo()%></a></h2>
-                                    
+                                    <h2><a href="publicacaocompleta.jsp?pid=<%=postagem.getIdp()%>"><%=postagem.getTitulo()%></a></h2>
+                                    <a href="PublicacaoServletD?pid=<%=postagem.getIdp()%>" autolink="true" type="text" name="pid">Deletar</a>
+                                    <br><br>
                                 </span>
                                 <img src="data:image/png;base64,<%=postagemFoto%>" class="padrao" style="max-width: 200px;">
                                 <br><%=postagem.getConteudo()%>

@@ -7,6 +7,7 @@
 <jsp:directive.page import="controle.*" />
 <jsp:directive.page import="servlet.*" />
 
+
 <%
     //Criar variaveis
     Usuario usuario = new Usuario();
@@ -30,11 +31,8 @@
         nome = usuario.getNome();
         senha = usuario.getSenha();
         email = usuario.getEmail();
-
         cpf = usuario.getCPFformatado();
-
         cell = usuario.getCELLformatado();
-
         user = usuario.getUsuario();
         posicao = usuario.getPosicao();
         descricao = usuario.getDescricao();
