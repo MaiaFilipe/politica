@@ -55,5 +55,4 @@ public class UsuarioServletLogout extends HttpServlet {
             response.sendRedirect("home.html");
         }
     }
-     
 }
