@@ -19,6 +19,11 @@
         %>
 
         <title><%=usuario.getUsuario()%></title>
+
+        <link rel="icon" type="image/ico" href="data:image/png;image/jpg;base64,<%=usuarioFoto%>" />
+
+        <link rel="icon" src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" type="image/icon type">
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <link rel="stylesheet" href="assets/css/main.css">
@@ -44,21 +49,21 @@
                             </div>                            
                             <div style="padding: 10px 10px 10px 10px;">
 
-                                Nome: <%=usuario.getNome()%> 
+                                <strong> Nome: </strong> <%=usuario.getNome()%> 
 
                                 <a href="usuarioalterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
 
-                                User: <%=usuario.getUsuario()%><br><br>
+                                <strong> User: </strong> <%=usuario.getUsuario()%><br><br>
 
-                                E-mail: <%=usuario.getEmail()%><br><br>
+                                <strong> E-mail: </strong> <%=usuario.getEmail()%><br><br>
 
-                                Posição política: <%=usuario.getPosicao()%><br><br>
+                                <strong> Posição política: </strong> <%=usuario.getPosicao()%><br><br>
 
-                                Bio: <%=usuario.getDescricao()%><br><br>
+                                <strong> Bio: </strong> <%=usuario.getDescricao()%><br><br>
 
-                                Seguidores: X<br>
-                                
-                                Seguindo: Y<br>
+                                <strong> Seguidores: </strong> X<br>
+
+                                <strong> Seguindo: </strong> Y<br>
                             </div>
                         </div>
                     </section>
@@ -79,14 +84,14 @@
                                 usuario = postagem.getIdUsuario();
                         %>
 
-                        <div style="display: inline;">
-                            <div class="postagem" style="background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px;">
+                            <div class="postagem" style="background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px; max-width: 220px;">
                                 <span id="titulo">
-                                    <h2><%=postagem.getTitulo()%></h2>
-                                </span><br>
-                                <img src="data:image/png;base64,<%=postagemFoto%>" class="padrao" style="max-width: 200px;"><%=postagem.getConteudo()%>
+                                    <h2><a href="publicacaoalterar.jsp?pid=<%=postagem.getIdp()%>"><%=postagem.getTitulo()%></a></h2>
+                                    
+                                </span>
+                                <img src="data:image/png;base64,<%=postagemFoto%>" class="padrao" style="max-width: 200px;">
+                                <br><%=postagem.getConteudo()%>
                             </div>
-                        </div>
 
                         <%
                             }

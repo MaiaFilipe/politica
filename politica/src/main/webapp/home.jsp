@@ -29,6 +29,7 @@
                             <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNome()%></span></a></li>
                             <li><a href="Notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
+                            <li><a href="UsuarioServletLogout" class="label">Sair</a></li>
                         </ul>
                     </header>
 
