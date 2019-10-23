@@ -6,7 +6,11 @@
 package entidades;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
 import java.util.Collection;
+import java.util.Locale;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -50,56 +54,54 @@ public class Usuario implements Serializable {
 
     @Column(name = "cpf")
     private Double cpf;
-    
+
     @Column(name = "cell")
     private Double cell;
-    
+
     //@Lob
     @Column(name = "foto")
     private byte[] foto;
-    
+
     @OneToMany(mappedBy = "idUsuario")
     private Collection<Publicacao> publicacaoCollection;
 
     private static final long serialVersionUID = 1L;
-    
+
     @Column(name = "senha")
     private String senha;
-    
+
     @Column(name = "posicao")
     private String posicao;
-    
+
     @Column(name = "email")
     private String email;
-    
+
     @Column(name = "descricao")
     private String descricao;
-    
+
     @Column(name = "nome")
     private String nome;
-    
+
     @Column(name = "nascimento")
     private String nascimento;
-    
+
     @Column(name = "estado")
     private String estado;
-    
+
     @Id
     @Basic(optional = false)
     @NotNull
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "meugerador")
-    @SequenceGenerator(name="meugerador", sequenceName = "sq_usuario")
+    @SequenceGenerator(name = "meugerador", sequenceName = "sq_usuario")
     @Column(name = "id")
     private Integer id;
-    
-    
+
     @Column(name = "usuario")
     private String usuario;
-    
+
     @Column(name = "extensao")
     private String extensao;
-    
-    
+
     @Column(name = "tipo")
     private String tipo;
 
@@ -109,7 +111,6 @@ public class Usuario implements Serializable {
     public Usuario(Integer id) {
         this.id = id;
     }
-
 
     public Double getCell() {
         return cell;
@@ -199,7 +200,6 @@ public class Usuario implements Serializable {
         this.extensao = extensao;
     }
 
-
     public String getTipo() {
         return tipo;
     }
@@ -237,6 +237,27 @@ public class Usuario implements Serializable {
         return cpf;
     }
 
+    public String getCPFformatado() {
+        DecimalFormatSymbols hackCPF = new DecimalFormatSymbols();
+        hackCPF.setDecimalSeparator('-');
+        hackCPF.setGroupingSeparator('.');
+
+        DecimalFormat df = new DecimalFormat("#,###.##", hackCPF);
+        return df.format(cpf);
+    }
+
+    public String getCELLformatado() {
+        DecimalFormatSymbols hackCELL = new DecimalFormatSymbols();
+        hackCELL.setDecimalSeparator('-');
+        hackCELL.setGroupingSeparator('.');
+
+        DecimalFormat df = new DecimalFormat("#", hackCELL);
+        DecimalFormat weirdFormatter = new DecimalFormat();
+        weirdFormatter.setGroupingSize(13);
+
+        return df.format(cell);
+    }
+
     public void setCpf(Double cpf) {
         this.cpf = cpf;
     }
@@ -257,5 +278,5 @@ public class Usuario implements Serializable {
     public void setPublicacaoCollection(Collection<Publicacao> publicacaoCollection) {
         this.publicacaoCollection = publicacaoCollection;
     }
-    
+
 }

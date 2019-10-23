@@ -21,8 +21,6 @@
     String cpf = "";
     String cell = "";
     String tipo = "";
-    Double cpfD = Double.MAX_VALUE;
-    Double cellD = Double.MIN_VALUE;
     //Captura id (se alteração)
     String idUsuario = request.getParameter("pid");
 
@@ -33,11 +31,9 @@
         senha = usuario.getSenha();
         email = usuario.getEmail();
 
-        cpfD = usuario.getCpf();
-        cpf = Double.toString(cpfD);
+        cpf = usuario.getCPFformatado();
 
-        cellD = usuario.getCell();
-        cell = Double.toString(cellD);
+        cell = usuario.getCELLformatado();
 
         user = usuario.getUsuario();
         posicao = usuario.getPosicao();
@@ -92,19 +88,22 @@
                 Senha:<br>
                 <input type="password" name="senha" value="<%=senha%>"><br><br>
 
-                Cpf:<br>
-                <input type="text" name="cpf" id="CPF" placeholder="Ex.: 000.000.000-00" maxlength="15" value="<%=cpf%>"><br><br>
+                <div hidden>
+                    Cpf:<br>
+                    <input type="text" name="cpf" id="CPF" placeholder="Ex.: 000.000.000-00" maxlength="15" value="<%=cpf%>"><br><br>
+                </div>
 
                 Número:<br>
                 <input type="text" name="telefone" maxlength="13" value="<%=cell%>"><br><br>
 
+                </div>
                 Descrição:<br>
                 <input type="text" name="descricao" value="<%=descricao%>"><br><br>
 
-                </div>
                 <div hidden>
                     Data de nascimento: <input type="date" name="nascimento" value="<%=nascimento%>"><br><br>
                 </div>
+
                 <div hidden>
                     Estado:<br>
                     <select name="estado" value="<%=estado%>">
