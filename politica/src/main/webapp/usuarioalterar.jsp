@@ -95,7 +95,7 @@
                 <input type="text" name="telefone" maxlength="13" value="<%=cell%>"><br><br>
 
                 Descrição:<br>
-                <input type="text" name="descricao" value="<%=descricao%>" style="size: 30px;"><br><br>
+                <input type="text" name="descricao" value="<%=descricao%>" ><br><br>
 
                 </div>
                 <div hidden>
