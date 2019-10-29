@@ -47,7 +47,7 @@
                         <div style="height: 100%;maxwidth: 100%; background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px;">
 
                             <div id="left" style="padding: 10px 10px 10px 10px;  width: 300px;">
-                                <img src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" style="max-width: 250px; border-radius: 10px;" alt="Foto publicação"/>
+                                <img src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" style="max-width: 250px; border-radius: 10px;" alt="Foto usuário"/>
                             </div>                            
                             <div style="padding: 10px 10px 10px 10px;">
 
@@ -89,7 +89,7 @@
                             <div class="postagem" style="background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px; max-width: 220px;">
                                 <span id="titulo">
                                     <h2><a href="publicacaocompleta.jsp?pid=<%=postagem.getIdp()%>"><%=postagem.getTitulo()%></a></h2>
-                                    <a href="PublicacaoServletD?pid=<%=postagem.getIdp()%>" autolink="true" type="text" name="pid">Deletar</a>
+                                    <a href="PublicacaoServletD?pid=<%=postagem.getIdp()%>" type="text" name="pid" value="<%=postagem.getIdp()%>">Deletar</a>
                                     <br><br>
                                 </span>
                                 <img src="data:image/png;base64,<%=postagemFoto%>" class="padrao" style="max-width: 200px;">

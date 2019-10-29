@@ -66,7 +66,7 @@
 </head>
 <body>
     <div id = block>
-        <center><h1>Cadastro usuário Comum</h1></center>
+        <center><h1>Alterar dados</h1></center>
 
         <div class="left">
             <form method = "POST" action = "UsuarioServletSA" enctype="multipart/form-data">
@@ -94,10 +94,10 @@
                 Número:<br>
                 <input type="text" name="telefone" maxlength="13" value="<%=cell%>"><br><br>
 
-                </div>
                 Descrição:<br>
-                <input type="text" name="descricao" value="<%=descricao%>"><br><br>
+                <input type="text" name="descricao" value="<%=descricao%>" style="size: 30px;"><br><br>
 
+                </div>
                 <div hidden>
                     Data de nascimento: <input type="date" name="nascimento" value="<%=nascimento%>"><br><br>
                 </div>
