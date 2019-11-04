@@ -1,4 +1,4 @@
-<%@page import="entidades.Usuarioc"%>
+<%@page import="entidades.Usuario"%>
 <!DOCTYPE HTML>
 
 <html>
@@ -23,12 +23,13 @@
                         <ul class="icons">
 
                             <%
-                                Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
+                                Usuario usuario = (Usuario) session.getAttribute("UsuarioLogado");
                             %>
 
-                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
+                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNome()%></span></a></li>
                             <li><a href="Notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
+                            <li><a href="UsuarioServletLogout" class="label">Sair</a></li>
                         </ul>
                     </header>
 
@@ -166,31 +167,14 @@
                             <h2>Menu</h2>
                         </header>
                         <ul>
-                            <li><a href="index.html">Página Inicial</a></li>
-                            <li><a href="publicacaoinserir.jsp">Publicação</a></li>
-                            <li><a href="elements.html">Elements</a></li>
+                            <li><a href="home.jsp">Página Inicial</a></li>
                             <li>
-                                <span class="opener">Submenu</span>
+                                <span class="opener">Postagens</span>
                                 <ul>
-                                    <li><a href="#">Lorem Dolor</a></li>
-                                    <li><a href="#">Ipsum Adipiscing</a></li>
-                                    <li><a href="#">Tempus Magna</a></li>
-                                    <li><a href="#">Feugiat Veroeros</a></li>
+                                    <li><a href="publicacaoinserir.jsp">Publicar</a></li>
+                                    <li><a href="publicacaomostrar.jsp">Publicações</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Adipiscing</a></li>
-                            <li>
-                                <span class="opener">Another Submenu</span>
-                                <ul>
-                                    <li><a href="#">Lorem Dolor</a></li>
-                                    <li><a href="#">Ipsum Adipiscing</a></li>
-                                    <li><a href="#">Tempus Magna</a></li>
-                                    <li><a href="#">Feugiat Veroeros</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Maximus Erat</a></li>
-                            <li><a href="#">Sapien Mauris</a></li>
-                            <li><a href="#">Amet Lacinia</a></li>
                         </ul>
                     </nav>
 

@@ -1,137 +1,112 @@
+<%@page import="util.HibernateUtil"%>
+<%@page import="org.hibernate.Session"%>
+<%@page import="java.util.Iterator"%>
 <%@page import="entidades.*"%>
-
 <%@page import="java.util.Base64"%>
 <%@page import="java.io.IOException"%>
 <%@page import="java.io.ByteArrayInputStream"%>
 <%@page import="java.io.BufferedOutputStream"%>
 <%@page import="java.util.List"%>
 <%@page import="controle.*"%>
+<%@page import="servlet.*"%>
+<jsp:directive.page import="servlet.*" />
 <!DOCTYPE HTML>
 
 <html>
     <head>
         <%
-            Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
+            Usuario usuario = (Usuario) session.getAttribute("UsuarioLogado");
+            byte[] imagem = usuario.getFoto();
+            String usuarioFoto = Base64.getEncoder().encodeToString(imagem);
         %>
 
-        <title><%=usuario.getUsuarioc()%></title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <title><%=usuario.getUsuario()%></title>
+
+        <link rel="icon" type="image/ico" href="data:image/png;image/jpg;base64,<%=usuarioFoto%>" />
+
+        <link rel="icon" src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" type="image/icon type">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="assets/css/main.css">
     </head>
     <body class="is-preload">
         <div id="wrapper">
             <div id="main">
                 <div class="inner">
                     <header id="header">
-                        <a class="logo"><strong>Perfil</strong> </a>
+                        <a class="logo" href="home.jsp"><strong>Home</strong> </a>
                         <ul class="icons">
-                            <li><a href="perfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
+                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNome()%></span></a></li>
                             <li><a href="notificação.html" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
-                            <li><a href="home.html" class="label">Sair</a></li>
+                            <li><a href="UsuarioServletLogout" class="label">Sair</a></li>
                         </ul>
                     </header>
                     <section>
-                        <div id="block" style="padding-left: 20px;">
+                        <div style="height: 100%;maxwidth: 100%; background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px;">
 
-                            <div id="left">
-                                <img src="" width="90%" style="border-radius: 10000px;">
+                            <div id="left" style="padding: 10px 10px 10px 10px;  width: 300px;">
+                                <img src="data:image/png;image/jpg;base64,<%=usuarioFoto%>" style="max-width: 250px; border-radius: 10px;" alt="Foto usuário"/>
                             </div>                            
+                            <div style="padding: 10px 10px 10px 10px;">
 
-                            Nome: <%=usuario.getNomec()%>
-                            <a href="alterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
+                                <strong> Nome: </strong> <%=usuario.getNome()%> 
 
-                            User: <%=usuario.getUsuarioc()%><br><br>
+                                <a href="usuarioalterar.jsp?pid=<%=usuario.getId()%>" style="float: right; text-decoration: none;">Editar Perfil</a><br><br>
 
-                            E-mail: <%=usuario.getEmailc()%><br><br>
+                                <strong> User: </strong> <%=usuario.getUsuario()%><br><br>
 
-                            Posição política: <%=usuario.getPosicaoc()%><br><br>
+                                <strong> E-mail: </strong> <%=usuario.getEmail()%><br><br>
 
-                            Bio: <%=usuario.getDescricaoc()%><br><br>
+                                <strong> Posição política: </strong> <%=usuario.getPosicao()%><br><br>
 
-                            Seguidores: X<br><br>Seguindo: Y<br>
+                                <strong> Bio: </strong> <%=usuario.getDescricao()%><br><br>
 
+                                <strong> Seguidores: </strong> X<br>
+
+                                <strong> Seguindo: </strong> Y<br>
+                            </div>
                         </div>
                     </section>
-                    <h2>Publicações</h2>
+                    <h1>Minhas publicações</h1>
+                    <div id="postagens">
+                        <%
+                            Session session1 = HibernateUtil.getSession();
+                            String hql = "from Publicacao where id_usuario='" + usuario.getId() + "'";
+                            //  Post postagem = (Post) session1.createQuery(hql).list();
+                            List<Publicacao> lista = (List) session1.createQuery(hql).list();
+                            request.setAttribute("publicacoes", lista);
+                            System.out.println(lista);
+                            for (Iterator it = lista.iterator(); it.hasNext();) {
+                                Publicacao postagem = (Publicacao) it.next();
+                                String codigo = postagem.getIdp().toString();
+                                byte[] fotoPostagem = postagem.getFoto();
+                                String postagemFoto = Base64.getEncoder().encodeToString(fotoPostagem);
+                                usuario = postagem.getIdUsuario();
+                        %>
+
+                            <div class="postagem" style="background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px; max-width: 220px;">
+                                <span id="titulo">
+                                    <h2><a href="publicacaocompleta.jsp?pid=<%=postagem.getIdp()%>"><%=postagem.getTitulo()%></a></h2>
+                                    <a href="PublicacaoServletD?pid=<%=postagem.getIdp()%>" type="text" name="pid" value="<%=postagem.getIdp()%>">Deletar</a>
+                                    <br><br>
+                                </span>
+                                <img src="data:image/png;base64,<%=postagemFoto%>" class="padrao" style="max-width: 200px;">
+                                <br><%=postagem.getConteudo()%>
+                            </div>
+
+                        <%
+                            }
+                        %>
+                    </div>
                 </div>
             </div>
-
-            <!-- Sidebar -->
-            <div id="sidebar">
-                <div class="inner">
-
-                    <!-- Search -->
-                    <section id="search" class="alt">
-                        <form method="post" action="#">
-                            <input type="text" name="query" id="query" placeholder="Search" />
-                        </form>
-                    </section>
-
-                    <!-- Menu -->
-                    <nav id="menu">
-                        <header class="major">
-                            <h2>Menu</h2>
-                        </header>
-                        <ul>
-                            <li><a href="home.jsp">Página inicial</a></li>
-                            <li><a href="publicacaoinserir.jsp">Publicação</a></li>
-                            <li><a href="elements.html">Elements</a></li>
-                            <li>
-                                <span class="opener">Submenu</span>
-                                <ul>
-                                    <li><a href="#">Lorem Dolor</a></li>
-                                    <li><a href="#">Ipsum Adipiscing</a></li>
-                                    <li><a href="#">Tempus Magna</a></li>
-                                    <li><a href="#">Feugiat Veroeros</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Etiam Dolore</a></li>
-                            <li><a href="#">Adipiscing</a></li>
-                            <li>
-                                <span class="opener">Another Submenu</span>
-                                <ul>
-                                    <li><a href="#">Lorem Dolor</a></li>
-                                    <li><a href="#">Ipsum Adipiscing</a></li>
-                                    <li><a href="#">Tempus Magna</a></li>
-                                    <li><a href="#">Feugiat Veroeros</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Maximus Erat</a></li>
-                            <li><a href="#">Sapien Mauris</a></li>
-                            <li><a href="#">Amet Lacinia</a></li>
-                        </ul>
-                    </nav>
-
-                    <!-- Section -->
-
-
-                    <!-- Section -->
-                    <section>
-                        <header class="major">
-                            <h2>Fale conosco!</h2>
-                        </header>
-                        <p>Em caso de surgimento de dúvidas, críticas ou interesse na nossa proposta aqui apresentada, entre em contato.</p>
-                        <ul class="contact">
-                            <li class="fa-envelope-o"><a href="#">lfilipesmaia@gmail.com</a></li>
-                            <li class="fa-envelope-o"><a href="#">luisagomes@gmail.com</a></li>
-                            <li class="fa-phone">(+5522)00000-0000</li>
-                            <li class="fa-home">s/n Quissamã #0000<br />
-                                RJ, Brasil</li>
-                        </ul>
-                    </section>
-                    <footer id="footer">
-                        <p class="copyright"> <a href="https://unsplash.com">Unsplash</a>. Design: <a href="#"></a>.</p>
-                    </footer>
-                </div>
-            </div>
-        </div>
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
 
     </body>
 </html>

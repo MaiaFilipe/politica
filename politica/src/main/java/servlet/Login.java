@@ -2,10 +2,11 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ * armando é lindo
  */
 package servlet;
 
-import entidades.Usuarioc;
+import entidades.Usuario;
 import util.HibernateUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -76,11 +77,11 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         
         String idtext = request.getParameter("pid");
-        String email = request.getParameter("emailc");
-        String senha = request.getParameter("senhac");
+        String email = request.getParameter("email");
+        String senha = request.getParameter("senha");
         
         Session session = HibernateUtil.getSession();
-        Usuarioc usuario = (Usuarioc) session.createQuery("from Usuarioc where emailc=? and senhac=?").setString(0, email).setString(1, senha).uniqueResult();
+        Usuario usuario = (Usuario) session.createQuery("from Usuario where email=? and senha=?").setString(0, email).setString(1, senha).uniqueResult();
         session.close();
 
         if (usuario == null) {
@@ -89,7 +90,6 @@ public class Login extends HttpServlet {
             HttpSession httpSession = request.getSession();
             httpSession.setAttribute("UsuarioLogado", usuario);
             response.sendRedirect("home.jsp");
-
         }
         
         processRequest(request, response);

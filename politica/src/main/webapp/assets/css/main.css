@@ -9,14 +9,15 @@
 	background-color: #eff1f2;
 	padding: 10px 10px 10px 10px ;
 	height: 300px;
-	width: 950px;
+	width: 1000px;
+        padding-left: 20px;
 }
 
 #left{
     float: left;
     width: 25%;
     margin: auto;
-    padding: 0px 0px;
+    padding: 10px 10px;
 }
 
 #notify_first{

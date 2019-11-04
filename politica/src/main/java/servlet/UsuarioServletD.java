@@ -1,7 +1,7 @@
 package servlet;
 
 import controle.UsuarioControle;
-import entidades.Usuarioc;
+import entidades.Usuario;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +16,7 @@ public class UsuarioServletD extends HttpServlet {
         String idtext = request.getParameter("pid");
         
         //Cria instancia do usuario com id informado
-        Usuarioc usuario = new Usuarioc();
+        Usuario usuario = new Usuario();
         usuario.setId(Integer.parseInt(idtext));
         
         //Chama de funcao para apagar usuario

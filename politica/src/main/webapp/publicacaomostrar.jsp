@@ -7,6 +7,7 @@
 <jsp:directive.page import="java.util.*" />
 <jsp:directive.page import="entidades.*" />
 
+
 <%@page import="controle.PublicacaoControle"%>
 <%@page import="entidades.*"%>
 <%@taglib uri="http://displaytag.sf.net" prefix="display"%>
@@ -15,7 +16,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <%
+            
             List<Publicacao> lista = PublicacaoControle.listar();
             request.setAttribute("publicacoes", lista);
 
@@ -32,6 +35,8 @@
         <h1><%=publicacao.getTitulo()%></h1>
         <img src="data:image/png;image/jpg;base64,<%=publicacaoFoto%>" style="max-width: 500px; max-height: 500px;" alt="Foto publicação"/>
         <h3><%=publicacao.getConteudo()%></h3>
+        <%=publicacao.getHorario()%><br><br>
+        <%=publicacao.getIdUsuario().getNome()%>
         <%}%>
     </body>
 </html>

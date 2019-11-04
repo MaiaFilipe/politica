@@ -3,6 +3,11 @@
     <servlet>
         <servlet-name>UsuarioServletSA</servlet-name>
         <servlet-class>servlet.UsuarioServletSA</servlet-class>
+        <multipart-config>
+            <max-file-size>418018841</max-file-size>
+            <max-request-size>418018841</max-request-size>
+            <file-size-threshold>418018841</file-size-threshold>
+        </multipart-config>
     </servlet>
     <servlet>
         <servlet-name>Login</servlet-name>
@@ -11,10 +16,23 @@
     <servlet>
         <servlet-name>PublicacaoServletSA</servlet-name>
         <servlet-class>servlet.PublicacaoServletSA</servlet-class>
+        <multipart-config>
+            <max-file-size>418018841</max-file-size>
+            <max-request-size>418018841</max-request-size>
+            <file-size-threshold>418018841</file-size-threshold>
+        </multipart-config>
     </servlet>
     <servlet>
         <servlet-name>UsuarioServletD</servlet-name>
         <servlet-class>servlet.UsuarioServletD</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UsuarioServletLogout</servlet-name>
+        <servlet-class>servlet.UsuarioServletLogout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PublicacaoServletD</servlet-name>
+        <servlet-class>servlet.PublicacaoServletD</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -31,6 +49,14 @@
     <servlet-mapping>
         <servlet-name>UsuarioServletSA</servlet-name>
         <url-pattern>/UsuarioServletSA</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsuarioServletLogout</servlet-name>
+        <url-pattern>/UsuarioServletLogout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PublicacaoServletD</servlet-name>
+        <url-pattern>/PublicacaoServletD</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

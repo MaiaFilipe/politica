@@ -4,7 +4,7 @@
     Author     : aluno
 --%>
 
-<%@page import="entidades.Usuarioc"%>
+<%@page import="entidades.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 
@@ -20,15 +20,15 @@
             <div id="main">
                 <div class="inner">
                     <header id="header">
-                        <a href="index.html" class="logo"><strong>Publicação completa</strong></a>
+                        <a  class="logo"><strong>Publicação completa</strong></a>
                         <%
-                                Usuarioc usuario = (Usuarioc) session.getAttribute("UsuarioLogado");
-                            %>
+                            Usuario usuario = (Usuario) session.getAttribute("UsuarioLogado");
+                        %>
                         <ul class="icons">
-                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNomec()%></span></a></li>
+                            <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNome()%></span></a></li>
                             <li><a href="#" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
-                            <li><a href="home.html" class="icon fa fa-ellipsis-v">Sair</a></li>
+                            <li><a href="UsuarioServletLogout" class="icon fa fa-ellipsis-v">Sair</a></li>
                         </ul>
                     </header>
                     <section>
@@ -40,15 +40,18 @@
                                 <div hidden>
                                     ID Usuário <input type="text" name="pid" value="<%=usuario.getId()%>">
                                 </div>
+                                <div hidden>
+                                    ID Usuário <input type="text" name="autor" value="<%=usuario.getNome()%>">
+                                </div>
                                 <h2> Título: </h2>
                                 <input type="text" name="titulo">
                                 <br><br>
-                                
+
                                 <div class="left">
                                     <h2>Escolher imagem:</h2>
                                     <input type="file" id="" name="foto" accept="image/png, image/jpeg">
                                 </div>
-                                
+
                                 <br><br>
                                 <div class="left">
                                     <h2> Texto: </h2>
@@ -73,7 +76,8 @@
                             <h2>Menu</h2>
                         </header>
                         <ul>
-                            <li><a href="home.jsp">Homepage</a></li>
+                            <li><a href="home.jsp">Página inicial</a></li>
+                            <li><a href="publicacaomostrar.jsp">Publicações</a></li>
                             <li><a href="generic.html">Generic</a></li>
                             <li><a href="elements.html">Elements</a></li>
                             <li>

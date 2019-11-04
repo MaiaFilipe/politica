@@ -1,60 +1,64 @@
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="login.css">
-<div class="container">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Black+Ops+One');
-    </style>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Black+Ops+One")
+        </style>
 
-    <form method="POST" action="Login">
+        <form method="POST" action="Login">
+            <div class="row">
+                <h2 style="text-align:center">Login</h2>
+                <div class="vl">
+                    <span class="vl-innertext"></span>
+                </div>
+
+                <div class="col">
+                    <a href="" target="_blinck" class="fb btn">
+                        <i class="fa fa-facebook fa-fw"></i> <center>Login pelo Facebook</center>
+                    </a>
+
+                    <a href="" target="_blinck" class="twitter btn">
+                        <i class="fa fa-twitter fa-fw"></i> <center>Login pelo Twitter</center>
+                    </a>
+
+                    <a href="" target="_blinck" class="google btn">
+                        <i class="fa fa-google fa-fw"></i> <center>Login pelo Google+</center>
+                    </a>
+                    <br><br>
+
+                </div>
+
+                <div class="col">
+                    <div class="hide-md-lg">
+                        <p>Or sign in manually:</p>
+                    </div>
+                    <div hidden>
+                        <input name="pid" value="">
+                    </div>
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="submit" value="Confirmar">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="bottom-container">
         <div class="row">
-            <h2 style="text-align:center">Login</h2>
-            <div class="vl">
-                <span class="vl-innertext"></span>
-            </div>
-
-            <div class="col">
-                <a href="" target="_blinck" class="fb btn">
-                    <i class="fa fa-facebook fa-fw"></i> <center>Login pelo Facebook</center>
-                </a>
-
-                <a href="" target="_blinck" class="twitter btn">
-                    <i class="fa fa-twitter fa-fw"></i> <center>Login pelo Twitter</center>
-                </a>
-
-                <a href="" target="_blinck" class="google btn">
-                    <i class="fa fa-google fa-fw"></i> <center>Login pelo Google+</center>
-                </a>
-                <br><br>
-
-            </div>
-
-            <div class="col">
-                <div class="hide-md-lg">
-                    <p>Or sign in manually:</p>
-                </div>
-                <div hidden>
-                    <input name="pid" value="">
-                </div>
-                <input type="text" name="emailc" placeholder="Email">
-                <input type="password" name="senhac" placeholder="Senha">
-                <input type="submit" value="Confirmar">
-            </div>
+            <center>
+                <a href="file:///C:/Users/teste/Desktop/site_da_politica/Pagina_recuperacao_senha.html" style="color:white" class="btn">Esqueceu a senha?</a>
+            </center>
         </div>
-    </form>
-</div>
-
-<div class="bottom-container">
-    <div class="row">
-        <center>
-            <a href="file:///C:/Users/teste/Desktop/site_da_politica/Pagina_recuperacao_senha.html" style="color:white" class="btn">Esqueceu a senha?</a>
-        </center>
     </div>
-</div>
-<div class="bottom-container">
-    <div class="row2">
-        <p> </p>
-        <center>
-            <a href="cadastro.html" style="color:white" class="btn" value="pid">Não tem uma conta? Cadastre-se. </a>
-        </center>
+    <div class="bottom-container">
+        <div class="row2">
+            <p> </p>
+            <center>
+                <a href="usuariocadastro.html" style="color:white" class="btn" value="pid">Não tem uma conta? Cadastre-se. </a>
+            </center>
+        </div>
     </div>
-</div>
+</body>

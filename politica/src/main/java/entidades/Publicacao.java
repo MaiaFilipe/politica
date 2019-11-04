@@ -6,6 +6,7 @@
 package entidades;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,11 +14,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -34,7 +38,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Publicacao.findByConteudo", query = "SELECT p FROM Publicacao p WHERE p.conteudo = :conteudo")
     , @NamedQuery(name = "Publicacao.findByTitulo", query = "SELECT p FROM Publicacao p WHERE p.titulo = :titulo")
     , @NamedQuery(name = "Publicacao.findByIdp", query = "SELECT p FROM Publicacao p WHERE p.idp = :idp")
-    , @NamedQuery(name = "Publicacao.findByExtensao", query = "SELECT p FROM Publicacao p WHERE p.extensao = :extensao")})
+    , @NamedQuery(name = "Publicacao.findByExtensao", query = "SELECT p FROM Publicacao p WHERE p.extensao = :extensao")
+    , @NamedQuery(name = "Publicacao.findByHorario", query = "SELECT p FROM Publicacao p WHERE p.horario = :horario")})
 public class Publicacao implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -62,9 +67,13 @@ public class Publicacao implements Serializable {
     @Column(name = "extensao")
     private String extensao;
     
+    @Column(name = "horario")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date horario;
+    
     @JoinColumn(name = "id_usuario", referencedColumnName = "id")
     @ManyToOne
-    private Usuarioc idUsuario;
+    private Usuario idUsuario;
 
     public Publicacao() {
     }
@@ -100,7 +109,6 @@ public class Publicacao implements Serializable {
     public byte[] getFoto() {
         return foto;
     }
-    
 
     public void setFoto(byte[] foto) {
         this.foto = foto;
@@ -114,11 +122,19 @@ public class Publicacao implements Serializable {
         this.extensao = extensao;
     }
 
-    public Usuarioc getIdUsuario() {
+    public Date getHorario() {
+        return horario;
+    }
+
+    public void setHorario(Date horario) {
+        this.horario = horario;
+    }
+
+    public Usuario getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuarioc idUsuario) {
+    public void setIdUsuario(Usuario idUsuario) {
         this.idUsuario = idUsuario;
     }
 

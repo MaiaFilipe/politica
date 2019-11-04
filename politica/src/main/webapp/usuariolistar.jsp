@@ -1,11 +1,11 @@
 <%@page import="java.util.List"%>
-<%@page import="iff.politica.usuarios.Usuarioc"%>
-<%@page import="iff.politica.servlet.UsuarioControle"%>
+<%@page import="entidades.Usuario"%>
+<%@page import="controle.UsuarioControle"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://displaytag.sf.net" prefix="display"%>
-<jsp:directive.page import="iff.politica.usuarios.*" />
-<jsp:directive.page import="iff.politica.utilidades.*" />
-<jsp:directive.page import="iff.politica.servlet.*" />
+<jsp:directive.page import="entidades.*" />
+<jsp:directive.page import="util.*" />
+<jsp:directive.page import="servlet.*" />
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,26 +15,26 @@
     <body>
         <h1>Lista dos usuários</h1>
         <%
-            List<Usuarioc> lista = UsuarioControle.listar();
+            List<Usuario> lista = UsuarioControle.listar();
             request.setAttribute( "usuarios", lista );
         %>
         <display:table name="usuarios">
-            <display:column property="id" title="ID" paramProperty="checkbox"/>
-            <display:column property="nomec" title="Nome Completo"/>
-            <display:column property="emailc" title="Email"/>
-            <display:column property="senhac" title="Senha"/>
-            <display:column property="cpfc" title="Cpf"/>
-            <display:column property="cellc" title="Telefone"/>
-            <display:column property="usuarioc" title="Usuário"/>
-            <display:column property="posicaoc" title="Posição"/>
-            <display:column property="descricaoc" title="Descrição"/>
-            <display:column property="nascimentoc" title="Nascimento"/>
-            <display:column property="estadoc" title="Estado"/>
-            <display:column value="alterar" title="Alterar" href="alterar.jsp" paramId="pid" paramProperty="id" />             
+            <display:column property="nome" title="Nome Completo"/>
+            <display:column property="email" title="Email"/>
+            <display:column property="senha" title="Senha"/>
+            <display:column property="cpf" title="Cpf"/>
+            <display:column property="cell" title="Telefone"/>
+            <display:column property="usuario" title="Usuário"/>
+            <display:column property="posicao" title="Posição"/>
+            <display:column property="descricao" title="Descrição"/>
+            <display:column property="nascimento" title="Nascimento"/>
+            <display:column property="estado" title="Estado"/>
+            <display:column property="tipo" title="Tipo"/>
+            <display:column value="alterar" title="Alterar" href="usuarioalterar.jsp" paramId="pid" paramProperty="id" />             
             <display:column value="deletar" title="Deletar" autolink="true"  paramId="pid" paramProperty="id" href="${pageContext.request.contextPath}/UsuarioServletD"/>
             <display:setProperty name="basic.msg.empty_list" value="Sem usuarios" />
         </display:table>
         <br><br>
-        <a href="alterar.jsp?pid=" >Criar novo usuario</a>
+        <a href="usuariocadastro.html" >Criar novo usuario</a>
     </body>
 </html>
