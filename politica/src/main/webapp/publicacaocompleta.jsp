@@ -47,7 +47,7 @@
 
                     <!-- Header -->
                     <header id="header">
-                        <a href="index.html" class="logo"><strong>Publicação completa</strong></a>
+                        <a class="logo"><strong>Publicação completa</strong></a>
                         <ul class="icons">
 
                             <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNome()%></span></a></li>

@@ -76,57 +76,38 @@
                             <h2>Menu</h2>
                         </header>
                         <ul>
-                            <li><a href="home.jsp">Página inicial</a></li>
-                            <li><a href="publicacaomostrar.jsp">Publicações</a></li>
-                            <li><a href="generic.html">Generic</a></li>
-                            <li><a href="elements.html">Elements</a></li>
+                            <li><a href="home.jsp">Página Inicial</a></li>
                             <li>
-                                <span class="opener">Submenu</span>
+                                <span class="opener">Postagens</span>
                                 <ul>
-                                    <li><a href="#">Lorem Dolor</a></li>
-                                    <li><a href="#">Ipsum Adipiscing</a></li>
-                                    <li><a href="#">Tempus Magna</a></li>
-                                    <li><a href="#">Feugiat Veroeros</a></li>
+                                    <li><a href="publicacaoinserir.jsp">Publicar</a></li>
+                                    <li><a href="publicacaomostrar.jsp">Publicações</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Etiam Dolore</a></li>
-                            <li><a href="#">Adipiscing</a></li>
-                            <li>
-                                <span class="opener">Another Submenu</span>
-                                <ul>
-                                    <li><a href="#">Lorem Dolor</a></li>
-                                    <li><a href="#">Ipsum Adipiscing</a></li>
-                                    <li><a href="#">Tempus Magna</a></li>
-                                    <li><a href="#">Feugiat Veroeros</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Maximus Erat</a></li>
-                            <li><a href="#">Sapien Mauris</a></li>
-                            <li><a href="#">Amet Lacinia</a></li>
                         </ul>
                     </nav>
                     <section>
                         <header class="major">
-                            <h2>Ante interdum</h2>
+                            <h2>Fique por dentro:</h2>
                         </header>
                         <div class="mini-posts">
                             <article>
-                                <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                                <a href="https://g1.globo.com/politica/noticia/2018/12/09/ministro-do-supremo-tribunal-federal-nega-liberdade-a-pezao.ghtml"target="_blank" class="image"><img src="Imagens/pezao.jpg" alt=""  /></a>
+                                <p>O ministro do STF negou o pedido de habeas corpus apresentado pela defesa de Pezão.</p>
                             </article>
                             <article>
-                                <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                                <a href="https://g1.globo.com/politica/blog/valdo-cruz/noticia/2018/12/07/paulo-guedes-pode-ter-tucano-e-assessor-da-casa-civil-em-sua-equipe-no-ministerio-da-economia.ghtml" target="_blank" class="image"><img src="Imagens/paulo_guedes.jpg" alt="" /></a>
+                                <p>Paulo Guedes pode ter tucano e assessor da Casa Civil em sua equipe no Ministério da Economia.</p>
                             </article>
                             <article>
-                                <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-                                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                                <a href="https://g1.globo.com/politica/noticia/2018/12/06/temer-afirma-que-tentaram-desgracar-a-vida-dele-e-diz-nao-se-preocupar-com-investigacoes.ghtml" target="_blank"  class="image"><img src="Imagens/temer.jpg" alt="" /></a>
+                                <p>Temer afirma que tentaram 'desgraçar' a vida dele e diz não se preocupar com investigações.</p>
                             </article>
                         </div>
-                        <ul class="actions">
-                            <li><a href="#" class="button">More</a></li>
-                        </ul>
+
                     </section>
+
+                    <!-- Section -->
                     <section>
                         <header class="major">
                             <h2>Fale conosco!</h2>
@@ -139,7 +120,10 @@
                                 RJ, Brasil</li>
                         </ul>
                     </section>
+
+                    <!-- Footer -->
                     <footer id="footer">
+                        <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
                     </footer>
                 </div>
             </div>
