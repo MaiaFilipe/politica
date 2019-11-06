@@ -61,13 +61,29 @@
                     <section>
                         <header class="main">
                             <h1><%=publicacao.getTitulo()%></h1>
+                            <%
+                                Usuario publicador = publicacao.getUsuario();
+
+                                System.out.println(publicador.getId());
+                                System.out.println(usuario.getId());
+
+                                if (publicador.getId() + 1 == usuario.getId() + 1) {
+                                    System.out.println("É igual brow");
+                            %>
+                            <a href="publicacaoalterar.jsp?pidp=<%=publicacao.getIdp()%>" type="text" name="pidp" value="<%=publicacao.getIdp()%>">Alterar publicação</a>
+                            <%
+                                } else {
+                                    System.out.println("É difirente brow");
+                                }
+                            %>
+
                         </header>
                         <artilcle>
                             <span class="image main"><img rel="icon" src="data:image/png;image/jpg;base64,<%=publicacaoFoto%>" type="image/icon type"></span>
                         </artilcle>
                         <p> <%=publicacao.getConteudo()%> </p>
 
-                        <h3>Autor da publicação:</h3><h4><%=publicacao.getIdUsuario().getNome()%></h4>
+                        <h3>Autor da publicação:</h3><h4><%=publicacao.getUsuario().getNome()%></h4>
                         <h3>Data e horário da publicação:</h3><h4><%=publicacao.getHorario()%></h4>
 
                         <hr class="major" />

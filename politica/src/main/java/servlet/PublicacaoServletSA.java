@@ -21,19 +21,19 @@ public class PublicacaoServletSA extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //Captura parametros da tela
-        String idtext = request.getParameter("pidp");
+        String idPublicacao = request.getParameter("pidp");
+        System.out.println(idPublicacao);
         String conteudo = request.getParameter("conteudo");
         String titulo = request.getParameter("titulo");
 
         //Definição e conversão do id do usuário, usado como fk
         String idUser = request.getParameter("pid");
-        String autor = request.getParameter("autor");
         Integer idUsuario = Integer.parseInt(idUser);
 
         Publicacao publicacao = new Publicacao();
         //Detecta se é usuario novo ou antigo
-        if (idtext == null) {
-            Integer id = Integer.parseInt(idtext);
+        if (!idPublicacao.isEmpty()) {
+            Integer id = Integer.parseInt(idPublicacao);
             publicacao.setIdp(id);
         }
         //Insere informações no objeto
@@ -42,7 +42,7 @@ public class PublicacaoServletSA extends HttpServlet {
 
         publicacao.setConteudo(conteudo);
         publicacao.setTitulo(titulo);
-        publicacao.setIdUsuario(usuario);
+        publicacao.setUsuario(usuario);
                 
         Date agora = new Date();
         publicacao.setHorario(agora);

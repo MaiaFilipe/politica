@@ -147,81 +147,9 @@
 
                 </div>
             </div>
-
+                            
             <!-- Sidebar -->
-            <div id="sidebar">
-
-                <div class="inner">
-
-
-                    <!-- Search -->
-                    <section id="search" class="alt">
-                        <form method="post" action="#">
-                            <input type="text" name="query" id="query" placeholder="Pesquisa" />
-                        </form>
-                    </section>
-
-                    <!-- Menu -->
-                    <nav id="menu">
-                        <header class="major">
-                            <h2>Menu</h2>
-                        </header>
-                        <ul>
-                            <li><a href="home.jsp">Página Inicial</a></li>
-                            <li>
-                                <span class="opener">Postagens</span>
-                                <ul>
-                                    <li><a href="publicacaoinserir.jsp">Publicar</a></li>
-                                    <li><a href="publicacaomostrar.jsp">Publicações</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-
-                    <!-- Section -->
-                    <section>
-                        <header class="major">
-                            <h2>Fique por dentro:</h2>
-                        </header>
-                        <div class="mini-posts">
-                            <article>
-                                <a href="https://g1.globo.com/politica/noticia/2018/12/09/ministro-do-supremo-tribunal-federal-nega-liberdade-a-pezao.ghtml"target="_blank" class="image"><img src="Imagens/pezao.jpg" alt=""  /></a>
-                                <p>O ministro do STF negou o pedido de habeas corpus apresentado pela defesa de Pezão.</p>
-                            </article>
-                            <article>
-                                <a href="https://g1.globo.com/politica/blog/valdo-cruz/noticia/2018/12/07/paulo-guedes-pode-ter-tucano-e-assessor-da-casa-civil-em-sua-equipe-no-ministerio-da-economia.ghtml" target="_blank" class="image"><img src="Imagens/paulo_guedes.jpg" alt="" /></a>
-                                <p>Paulo Guedes pode ter tucano e assessor da Casa Civil em sua equipe no Ministério da Economia.</p>
-                            </article>
-                            <article>
-                                <a href="https://g1.globo.com/politica/noticia/2018/12/06/temer-afirma-que-tentaram-desgracar-a-vida-dele-e-diz-nao-se-preocupar-com-investigacoes.ghtml" target="_blank"  class="image"><img src="Imagens/temer.jpg" alt="" /></a>
-                                <p>Temer afirma que tentaram 'desgraçar' a vida dele e diz não se preocupar com investigações.</p>
-                            </article>
-                        </div>
-
-                    </section>
-
-                    <!-- Section -->
-                    <section>
-                        <header class="major">
-                            <h2>Fale conosco!</h2>
-                        </header>
-                        <p>Em caso de surgimento de dúvidas, críticas ou interesse na nossa proposta aqui apresentada, entre em contato.</p>
-                        <ul class="contact">
-                            <li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
-                            <li class="fa-phone">(+5522)00000-0000</li>
-                            <li class="fa-home">s/n Quissamã #0000<br />
-                                RJ, Brasil</li>
-                        </ul>
-                    </section>
-
-                    <!-- Footer -->
-                    <footer id="footer">
-
-                    </footer>
-
-                </div>
-            </div>
-
+            <%@include file="menulateral.jspf"%> 
         </div>
 
         <!-- Scripts -->
@@ -230,6 +158,5 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
     </body>
 </html>

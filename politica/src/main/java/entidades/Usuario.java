@@ -62,7 +62,7 @@ public class Usuario implements Serializable {
     @Column(name = "foto")
     private byte[] foto;
 
-    @OneToMany(mappedBy = "idUsuario")
+    @OneToMany(mappedBy = "usuario")
     private Collection<Publicacao> publicacaoCollection;
 
     private static final long serialVersionUID = 1L;

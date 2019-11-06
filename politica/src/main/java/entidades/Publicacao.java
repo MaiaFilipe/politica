@@ -71,9 +71,9 @@ public class Publicacao implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date horario;
     
-    @JoinColumn(name = "id_usuario", referencedColumnName = "id")
+    @JoinColumn(name = "usuario", referencedColumnName = "id")
     @ManyToOne
-    private Usuario idUsuario;
+    private Usuario usuario;
 
     public Publicacao() {
     }
@@ -130,12 +130,12 @@ public class Publicacao implements Serializable {
         this.horario = horario;
     }
 
-    public Usuario getIdUsuario() {
-        return idUsuario;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     @Override

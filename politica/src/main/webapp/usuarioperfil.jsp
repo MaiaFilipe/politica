@@ -73,7 +73,7 @@
                     <div id="postagens">
                         <%
                             Session session1 = HibernateUtil.getSession();
-                            String hql = "from Publicacao where id_usuario='" + usuario.getId() + "'";
+                            String hql = "from Publicacao where usuario='" + usuario.getId() + "'";
                             //  Post postagem = (Post) session1.createQuery(hql).list();
                             List<Publicacao> lista = (List) session1.createQuery(hql).list();
                             request.setAttribute("publicacoes", lista);
@@ -83,7 +83,7 @@
                                 String codigo = postagem.getIdp().toString();
                                 byte[] fotoPostagem = postagem.getFoto();
                                 String postagemFoto = Base64.getEncoder().encodeToString(fotoPostagem);
-                                usuario = postagem.getIdUsuario();
+                                usuario = postagem.getUsuario();
                         %>
 
                             <div class="postagem" style="background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px; max-width: 220px;">
@@ -107,6 +107,5 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
-
     </body>
 </html>
