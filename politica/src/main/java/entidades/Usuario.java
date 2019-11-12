@@ -59,8 +59,12 @@ public class Usuario implements Serializable {
     private Double cell;
 
     //@Lob
+    @Lob()
     @Column(name = "foto")
     private byte[] foto;
+    
+    @OneToMany(mappedBy = "comentador")
+    private Collection<Comentario> comentarioCollection;
 
     @OneToMany(mappedBy = "usuario")
     private Collection<Publicacao> publicacaoCollection;
@@ -112,13 +116,6 @@ public class Usuario implements Serializable {
         this.id = id;
     }
 
-    public Double getCell() {
-        return cell;
-    }
-
-    public void setCell(Double cell) {
-        this.cell = cell;
-    }
 
     public String getSenha() {
         return senha;
@@ -233,9 +230,6 @@ public class Usuario implements Serializable {
         return "entidades.Usuario[ id=" + id + " ]";
     }
 
-    public Double getCpf() {
-        return cpf;
-    }
 
     public String getCPFformatado() {
         DecimalFormatSymbols hackCPF = new DecimalFormatSymbols();
@@ -258,8 +252,30 @@ public class Usuario implements Serializable {
         return df.format(cell);
     }
 
+
+    @XmlTransient
+    public Collection<Publicacao> getPublicacaoCollection() {
+        return publicacaoCollection;
+    }
+
+    public void setPublicacaoCollection(Collection<Publicacao> publicacaoCollection) {
+        this.publicacaoCollection = publicacaoCollection;
+    }
+
+    public Double getCpf() {
+        return cpf;
+    }
+
     public void setCpf(Double cpf) {
         this.cpf = cpf;
+    }
+
+    public Double getCell() {
+        return cell;
+    }
+
+    public void setCell(Double cell) {
+        this.cell = cell;
     }
 
     public byte[] getFoto() {
@@ -271,12 +287,12 @@ public class Usuario implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Publicacao> getPublicacaoCollection() {
-        return publicacaoCollection;
+    public Collection<Comentario> getComentarioCollection() {
+        return comentarioCollection;
     }
 
-    public void setPublicacaoCollection(Collection<Publicacao> publicacaoCollection) {
-        this.publicacaoCollection = publicacaoCollection;
+    public void setComentarioCollection(Collection<Comentario> comentarioCollection) {
+        this.comentarioCollection = comentarioCollection;
     }
 
 }

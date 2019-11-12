@@ -43,6 +43,14 @@
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>ComentarioServletSA</servlet-name>
+        <servlet-class>servlet.ComentarioServletSA</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ComentarioServletD</servlet-name>
+        <servlet-class>servlet.ComentarioServletD</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -70,6 +78,14 @@
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ComentarioServletSA</servlet-name>
+        <url-pattern>/ComentarioServletSA</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ComentarioServletD</servlet-name>
+        <url-pattern>/ComentarioServletD</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

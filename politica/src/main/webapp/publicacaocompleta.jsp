@@ -131,6 +131,7 @@
                         </ul>
                     </nav>
 
+                    p
                     <!-- Section -->
                     <section>
                         <header class="major">
