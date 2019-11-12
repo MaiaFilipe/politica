@@ -51,7 +51,6 @@
                         <ul class="icons">
 
                             <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNome()%></span></a></li>
-                            <li><a href="usuarioperfil.jsp" class="icon fa fa-user-circle-o"><span class="label">Perfil</span></a></li>
                             <li><a href="#" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
                         </ul>

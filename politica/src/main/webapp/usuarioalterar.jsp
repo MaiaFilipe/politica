@@ -150,7 +150,7 @@
                 </select><br><br>
 
                 Escolher imagem:
-                <input type="file" name="foto" accept="image/png, image/jpeg" value=""><br><br>
+                <input type="file" name="foto" accept="image/png, image/jpeg" value="<%=usuario.getFoto()%>"><br><br>
                 
                 <input type="submit" value="Confirmar">
             </form>
