@@ -84,8 +84,10 @@
 
                         <h3>Autor da publicação:</h3><h4><%=publicacao.getUsuario().getNome()%></h4>
                         <h3>Data e horário da publicação:</h3><h4><%=publicacao.getHorario()%></h4>
-
-                        <hr class="major" />
+                        <h4>Comentário</h4>
+                        <div class="col-12">
+                            <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                        </div>
 
                         <header id="header">
                             <a href="index.html" class="logo"><strong></strong> </a>

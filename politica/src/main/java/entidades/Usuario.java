@@ -59,7 +59,6 @@ public class Usuario implements Serializable {
     private Double cell;
 
     //@Lob
-    @Lob()
     @Column(name = "foto")
     private byte[] foto;
     

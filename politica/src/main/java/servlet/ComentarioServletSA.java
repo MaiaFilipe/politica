@@ -72,6 +72,7 @@ public class ComentarioServletSA extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         String idtext = request.getParameter("pid");
         String conteudo = request.getParameter("comentario");
         String idComentador = request.getParameter("comentador");
@@ -88,6 +89,7 @@ public class ComentarioServletSA extends HttpServlet {
 
         publicacao.setIdp(Integer.parseInt(idPublicacao));
         usuario.setId(Integer.parseInt(idComentador));
+        
         comentario.setComentario(conteudo);
         comentario.setComentador(usuario);
         comentario.setPublicacao(publicacao);
