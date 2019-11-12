@@ -6,6 +6,7 @@
 package entidades;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -18,6 +19,7 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -25,6 +27,7 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -41,6 +44,13 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Publicacao.findByExtensao", query = "SELECT p FROM Publicacao p WHERE p.extensao = :extensao")
     , @NamedQuery(name = "Publicacao.findByHorario", query = "SELECT p FROM Publicacao p WHERE p.horario = :horario")})
 public class Publicacao implements Serializable {
+
+    //@Lob
+    @Column(name = "foto")
+    private byte[] foto;
+    
+    @OneToMany(mappedBy = "publicacao")
+    private Collection<Comentario> comentarioCollection;
 
     private static final long serialVersionUID = 1L;
     @Size(max = 2147483647)
@@ -59,9 +69,6 @@ public class Publicacao implements Serializable {
     @Column(name = "idp")
     private Integer idp;
     
-    //@Lob
-    @Column(name = "foto")
-    private byte[] foto;
     
     @Size(max = 2147483647)
     @Column(name = "extensao")
@@ -106,13 +113,6 @@ public class Publicacao implements Serializable {
         this.idp = idp;
     }
 
-    public byte[] getFoto() {
-        return foto;
-    }
-
-    public void setFoto(byte[] foto) {
-        this.foto = foto;
-    }
 
     public String getExtensao() {
         return extensao;
@@ -161,6 +161,23 @@ public class Publicacao implements Serializable {
     @Override
     public String toString() {
         return "entidades.Publicacao[ idp=" + idp + " ]";
+    }
+
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
+    }
+
+    @XmlTransient
+    public Collection<Comentario> getComentarioCollection() {
+        return comentarioCollection;
+    }
+
+    public void setComentarioCollection(Collection<Comentario> comentarioCollection) {
+        this.comentarioCollection = comentarioCollection;
     }
     
 }
