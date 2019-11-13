@@ -107,7 +107,7 @@
                                 %>
                                 <tr>
                                     <td><%=comentador.getNome()%></td>
-                                    <td><%=comentario.getComentario()%></td>
+                                    <td style="max-width: 100px;"><%=comentario.getComentario()%></td>
                                     <%
                                         if (usuario.getId() + 1 == comentador.getId() + 1) {
                                             System.out.println(usuario.getId() + " e " + comentador.getId() + " são iguais.");
