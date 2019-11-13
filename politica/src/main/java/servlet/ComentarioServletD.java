@@ -20,15 +20,16 @@ public class ComentarioServletD extends HttpServlet {
             throws ServletException, IOException {
         //Captura id da tela
         String idtext = request.getParameter("pid");
+        String idPage = request.getParameter("page");
         
-        //Cria instancia do usuario com id informado
+        //Cria instancia do comentário com id informado
         Comentario comentario = new Comentario();
         comentario.setId(Integer.parseInt(idtext));
         
-        //Chama de funcao para apagar usuario
+        //Chama de funcao para apagar comentário
         ComentarioControle.deletar(comentario);
         
         //Redireciona pagina
-        response.sendRedirect("home.jsp");
+        response.sendRedirect("publicacaocompleta.jsp?pid=" + idPage);
     }
 }

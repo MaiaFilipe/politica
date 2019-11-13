@@ -4,6 +4,8 @@
     Author     : aluno
 --%>
 
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
 <%@page import="java.util.Base64"%>
 <%@page import="servlet.*"%>
 <%@page import="org.hibernate.Session"%>
@@ -53,6 +55,7 @@
                             <li><a href="usuarioperfil.jsp" ><span class="label"><%=usuario.getNome()%></span></a></li>
                             <li><a href="#" class="icon fa fa-bell-o"><span class="label">Notificações</span></a></li>
                             <li><a href="#" class="icon fa fa-ellipsis-v"><span class="label">Mais</span></a></li>
+                            <li><a href="UsuarioServletLogout" class="label">Sair</a></li>
                         </ul>
                     </header>
 
@@ -75,7 +78,6 @@
                                     System.out.println("É difirente brow");
                                 }
                             %>
-
                         </header>
                         <artilcle>
                             <span class="image main"><img rel="icon" src="data:image/png;image/jpg;base64,<%=publicacaoFoto%>" type="image/icon type"></span>
@@ -84,10 +86,54 @@
 
                         <h3>Autor da publicação:</h3><h4><%=publicacao.getUsuario().getNome()%></h4>
                         <h3>Data e horário da publicação:</h3><h4><%=publicacao.getHorario()%></h4>
-                        <h4>Comentário</h4>
+                        <h1>Comentários</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Autor</th>
+                                    <th>Comentário</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%
+
+                                    List<Comentario> lista = ComentarioControle.listar();
+                                    request.setAttribute("comentario", lista);
+
+                                    for (Iterator it = lista.iterator(); it.hasNext();) {
+                                        Comentario comentario = (Comentario) it.next();
+                                        comentario.setPublicacao(publicacao);
+                                        Usuario comentador = comentario.getComentador();
+                                %>
+                                <tr>
+                                    <td><%=comentador.getNome()%></td>
+                                    <td><%=comentario.getComentario()%></td>
+                                    <%
+                                        if (usuario.getId() + 1 == comentador.getId() + 1) {
+                                            System.out.println(usuario.getId() + " e " + comentador.getId() + " são iguais.");
+                                    %>
+                                    <td>
+                                        <div>
+                                            <form method="get" action="ComentarioServletD">
+                                                <input type="text" name="page" value="<%=publicacao.getIdp()%>" style="display: none;">
+                                                <input type="text" name="pid" value="<%=comentario.getId()%>" style="display: none;">
+                                                <input type="submit" value="Deletar">
+                                            </form>
+                                        </div>
+                                        </a>
+                                    </td>
+                                    <%
+                                        }
+                                    %>
+                                </tr>
+                                <%
+                                    }
+                                %>
+                            </tbody>
+                        </table>
                         <form method="POST" action="ComentarioServletSA">
                             <div class="col-12">
-                                <textarea name="comentario" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                                <textarea name="comentario" id="demo-message" placeholder="Digite seu comentário" rows="6"></textarea>
                             </div>
                             <div hidden>
                                 <input type="text" name="comentador" value="<%=usuario.getId()%>">
@@ -113,77 +159,7 @@
             </div>
 
             <!-- Sidebar -->
-            <div id="sidebar">
-                <div class="inner">
-
-                    <!-- Search -->
-                    <section id="search" class="alt">
-                        <form method="post" action="#">
-                            <input type="text" name="query" id="query" placeholder="Search" />
-                        </form>
-                    </section>
-
-                    <!-- Menu -->
-                    <nav id="menu">
-                        <header class="major">
-                            <h2>Menu</h2>
-                        </header>
-                        <ul>
-                            <li><a href="home.jsp">Página Inicial</a></li>
-                            <li>
-                                <span class="opener">Postagens</span>
-                                <ul>
-                                    <li><a href="publicacaoinserir.jsp">Publicar</a></li>
-                                    <li><a href="publicacaomostrar.jsp">Publicações</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-
-                    p
-                    <!-- Section -->
-                    <section>
-                        <header class="major">
-                            <h2>Fique por dentro:</h2>
-                        </header>
-                        <div class="mini-posts">
-                            <article>
-                                <a href="https://g1.globo.com/politica/noticia/2018/12/09/ministro-do-supremo-tribunal-federal-nega-liberdade-a-pezao.ghtml"target="_blank" class="image"><img src="Imagens/pezao.jpg" alt=""  /></a>
-                                <p>O ministro do STF negou o pedido de habeas corpus apresentado pela defesa de Pezão.</p>
-                            </article>
-                            <article>
-                                <a href="https://g1.globo.com/politica/blog/valdo-cruz/noticia/2018/12/07/paulo-guedes-pode-ter-tucano-e-assessor-da-casa-civil-em-sua-equipe-no-ministerio-da-economia.ghtml" target="_blank" class="image"><img src="Imagens/paulo_guedes.jpg" alt="" /></a>
-                                <p>Paulo Guedes pode ter tucano e assessor da Casa Civil em sua equipe no Ministério da Economia.</p>
-                            </article>
-                            <article>
-                                <a href="https://g1.globo.com/politica/noticia/2018/12/06/temer-afirma-que-tentaram-desgracar-a-vida-dele-e-diz-nao-se-preocupar-com-investigacoes.ghtml" target="_blank"  class="image"><img src="Imagens/temer.jpg" alt="" /></a>
-                                <p>Temer afirma que tentaram 'desgraçar' a vida dele e diz não se preocupar com investigações.</p>
-                            </article>
-                        </div>
-
-                    </section>
-
-                    <!-- Section -->
-                    <section>
-                        <header class="major">
-                            <h2>Fale conosco!</h2>
-                        </header>
-                        <p>Em caso de surgimento de dúvidas, críticas ou interesse na nossa proposta aqui apresentada, entre em contato.</p>
-                        <ul class="contact">
-                            <li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
-                            <li class="fa-phone">(+5522)00000-0000</li>
-                            <li class="fa-home">s/n Quissamã #0000<br />
-                                RJ, Brasil</li>
-                        </ul>
-                    </section>
-
-                    <!-- Footer -->
-                    <footer id="footer">
-                        <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-                    </footer>
-
-                </div>
-            </div>
+            <%@include file="menulateral.jspf"%> 
 
         </div>
 

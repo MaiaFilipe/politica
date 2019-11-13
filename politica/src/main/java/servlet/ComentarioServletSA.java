@@ -95,7 +95,7 @@ public class ComentarioServletSA extends HttpServlet {
         comentario.setPublicacao(publicacao);
         
         ComentarioControle.salvar(comentario);
-        response.sendRedirect("home.jsp");
+        response.sendRedirect("publicacaocompleta.jsp?pid=" + idPublicacao);
     }
 
     /**

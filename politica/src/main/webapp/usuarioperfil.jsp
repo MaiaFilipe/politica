@@ -71,37 +71,37 @@
                     </section>
                     <h1>Minhas publicações</h1>
                     <div id="postagens">
-                        <%
-                            Session session1 = HibernateUtil.getSession();
-                            String hql = "from Publicacao where usuario='" + usuario.getId() + "'";
-                            //  Post postagem = (Post) session1.createQuery(hql).list();
-                            List<Publicacao> lista = (List) session1.createQuery(hql).list();
-                            request.setAttribute("publicacoes", lista);
-                            System.out.println(lista);
-                            for (Iterator it = lista.iterator(); it.hasNext();) {
-                                Publicacao postagem = (Publicacao) it.next();
-                                String codigo = postagem.getIdp().toString();
-                                byte[] fotoPostagem = postagem.getFoto();
-                                String postagemFoto = Base64.getEncoder().encodeToString(fotoPostagem);
-                                usuario = postagem.getUsuario();
-                        %>
-
-                            <div class="postagem" style="background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px; max-width: 220px;">
-                                <span id="titulo">
-                                    <h2><a href="publicacaocompleta.jsp?pid=<%=postagem.getIdp()%>"><%=postagem.getTitulo()%></a></h2>
-                                    <a href="PublicacaoServletD?pid=<%=postagem.getIdp()%>" type="text" name="pid" value="<%=postagem.getIdp()%>">Deletar</a>
-                                    <br><br>
-                                </span>
-                                <img src="data:image/png;base64,<%=postagemFoto%>" class="padrao" style="max-width: 200px;">
-                                <br><%=postagem.getConteudo()%>
-                            </div>
-
-                        <%
-                            }
-                        %>
+                        <div class="postagem" style="background-color: #eff1f2; padding: 10px 10px 10px 10px; border-radius: 10px; max-width: 220px;">
+                            <span id="titulo">
+                                <%
+                                    Session session1 = HibernateUtil.getSession();
+                                    String hql = "from Publicacao where usuario='" + usuario.getId() + "'";
+                                    //  Post postagem = (Post) session1.createQuery(hql).list();
+                                    List<Publicacao> lista = (List) session1.createQuery(hql).list();
+                                    request.setAttribute("publicacoes", lista);
+                                    System.out.println(lista);
+                                    for (Iterator it = lista.iterator(); it.hasNext();) {
+                                        Publicacao postagem = (Publicacao) it.next();
+                                        String codigo = postagem.getIdp().toString();
+                                        byte[] fotoPostagem = postagem.getFoto();
+                                        String postagemFoto = Base64.getEncoder().encodeToString(fotoPostagem);
+                                        usuario = postagem.getUsuario();
+                                %>
+                                <h2><a href="publicacaocompleta.jsp?pid=<%=postagem.getIdp()%>"><%=postagem.getTitulo()%></a></h2>
+                                <a href="PublicacaoServletD?pid=<%=postagem.getIdp()%>" type="text" name="pid" value="<%=postagem.getIdp()%>">Deletar</a>
+                                <br><br>
+                            </span>
+                            <img src="data:image/png;base64,<%=postagemFoto%>" class="padrao" style="max-width: 200px;">
+                            <br><%=postagem.getConteudo()%>
+                            <%
+                                }
+                            %>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Sidebar -->
+            <%@include file="menulateral.jspf"%> 
             <script src="assets/js/jquery.min.js"></script>
             <script src="assets/js/browser.min.js"></script>
             <script src="assets/js/breakpoints.min.js"></script>
