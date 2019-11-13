@@ -85,10 +85,18 @@
                         <h3>Autor da publicação:</h3><h4><%=publicacao.getUsuario().getNome()%></h4>
                         <h3>Data e horário da publicação:</h3><h4><%=publicacao.getHorario()%></h4>
                         <h4>Comentário</h4>
-                        <div class="col-12">
-                            <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-                        </div>
-
+                        <form method="POST" action="ComentarioServletSA">
+                            <div class="col-12">
+                                <textarea name="comentario" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                            </div>
+                            <div hidden>
+                                <input type="text" name="comentador" value="<%=usuario.getId()%>">
+                                <input type="text" name="publicacao" value="<%=publicacao.getIdp()%>">
+                                <input type="text" name="pid" value="">
+                            </div>
+                            <br>
+                            <input type="submit" class="button" value="Comentar">
+                        </form>
                         <header id="header">
                             <a href="index.html" class="logo"><strong></strong> </a>
                             <ul class="icons">
