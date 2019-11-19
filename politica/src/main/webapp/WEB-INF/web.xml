@@ -51,6 +51,10 @@
         <servlet-name>ComentarioServletD</servlet-name>
         <servlet-class>servlet.ComentarioServletD</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UsuarioServletBuscar</servlet-name>
+        <servlet-class>servlet.UsuarioServletBuscar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -86,6 +90,10 @@
     <servlet-mapping>
         <servlet-name>ComentarioServletD</servlet-name>
         <url-pattern>/ComentarioServletD</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsuarioServletBuscar</servlet-name>
+        <url-pattern>/UsuarioServletBuscar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
