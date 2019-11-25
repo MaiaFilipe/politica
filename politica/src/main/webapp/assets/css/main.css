@@ -3433,16 +3433,11 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		padding: 6em 0 4em 0 ;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 	}
-
-		#banner h1 {
-			margin-top: -0.125em;
-		}
 
 		#banner .content {
 			-moz-flex-grow: 1;

@@ -1,0 +1,30 @@
+.Postagem{
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+	margin: auto;
+	border-bottom: 5px solid #f56a6a;;
+}
+
+.Postagem h1, .Postagem h3, .Postagem h4, .Postagem h5{
+	font-family: 'Black Ops One', cursive;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+    vertical-align: baseline;
+}
+
+.Postagem h1{
+	color: #3d4449;
+	font-size: 3em;
+}
+
+.Postagem img{
+	max-width: 90%; 
+	max-height: 320px;
+}
+
+.Postagem h4{
+ 	font-size: 1.2em;
+	color: #7f888f;
+}
