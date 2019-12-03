@@ -55,6 +55,10 @@
         <servlet-name>UsuarioServletBuscar</servlet-name>
         <servlet-class>servlet.UsuarioServletBuscar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AvaliacaoServletS</servlet-name>
+        <servlet-class>servlet.AvaliacaoServletS</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -94,6 +98,10 @@
     <servlet-mapping>
         <servlet-name>UsuarioServletBuscar</servlet-name>
         <url-pattern>/UsuarioServletBuscar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AvaliacaoServletS</servlet-name>
+        <url-pattern>/AvaliacaoServletS</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

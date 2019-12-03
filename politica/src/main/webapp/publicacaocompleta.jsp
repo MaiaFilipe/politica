@@ -143,6 +143,16 @@
                             <br>
                             <input type="submit" class="button" value="Comentar">
                         </form>
+                        <form method="POST" action="AvaliacaoServletS">
+                            <div hidden>
+                                <input type="text" name="avaliador" value="<%=usuario.getId()%>">
+                                <input type="text" name="publicacao" value="<%=publicacao.getIdp()%>">
+                                <input type="text" name="pid" value="">
+                            </div>
+                            <br>
+                            <input type="submit" class="button" value="Like">
+                        </form>
+
                         <header id="header">
                             <a href="index.html" class="logo"><strong></strong> </a>
                             <ul class="icons">
