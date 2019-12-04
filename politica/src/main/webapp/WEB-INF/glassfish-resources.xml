@@ -13,4 +13,6 @@
     <jdbc-resource enabled="true" jndi-name="java:app/politica" object-type="user" pool-name="post-gre-sql_politica_postgresPool"/>
     <jdbc-resource enabled="true" jndi-name="java:app/politica" object-type="user" pool-name="post-gre-sql_politica_postgresPool"/>
     <jdbc-resource enabled="true" jndi-name="java:app/politica" object-type="user" pool-name="post-gre-sql_politica_postgresPool"/>
+    <jdbc-resource enabled="true" jndi-name="java:app/isa" object-type="user" pool-name="post-gre-sql_politica_postgresPool"/>
+    <jdbc-resource enabled="true" jndi-name="java:app/politica2" object-type="user" pool-name="post-gre-sql_politica_postgresPool"/>
 </resources>

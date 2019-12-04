@@ -41,6 +41,9 @@ public class Avaliacao implements Serializable {
     @SequenceGenerator(name = "meugerador", sequenceName = "sq_avaliacao")
     @Column(name = "id")
     private Integer id;
+    
+    @Column(name = "valor")
+    private Integer valor;
 
     @JoinColumn(name = "publicacao", referencedColumnName = "idp")
     @ManyToOne
@@ -104,6 +107,20 @@ public class Avaliacao implements Serializable {
     @Override
     public String toString() {
         return "entidades.Avaliacao[ id=" + id + " ]";
+    }
+
+    /**
+     * @return the valor
+     */
+    public Integer getValor() {
+        return valor;
+    }
+
+    /**
+     * @param valor the valor to set
+     */
+    public void setValor(Integer valor) {
+        this.valor = valor;
     }
 
 }

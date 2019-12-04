@@ -157,7 +157,10 @@
                             <a href="index.html" class="logo"><strong></strong> </a>
                             <ul class="icons">
                                 <li><a href="#" class="icon  fa fa-thumbs-o-up"><span class="label">Curtir</span></a></li>
+                                <li><a href="#" class="icon  fa fa-thumbs-up"><span class="label">Curtido</span></a></li>
                                 <li><a href="#" class="icon  fa fa-thumbs-o-down"><span class="label">Descurtir</span></a></li>
+                                <li><a href="#" class="icon  fa fa-thumbs-down"><span class="label">Descurtido</span></a></li>
+                                
                                 <li><a href="#" class="icon  fa fa-flag-o"><span class="label">Denunciar</span></a></li>
                                 <li><a href="#" class="icon fa fa-comments-o"><span class="label">Comentar</span></a></li>
                                 <li><a href="#" class="icon fa fa-share"><span class="label">Compatilhar</span></a></li>
