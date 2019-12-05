@@ -59,6 +59,10 @@
         <servlet-name>AvaliacaoServletS</servlet-name>
         <servlet-class>servlet.AvaliacaoServletS</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>curtida</servlet-name>
+        <servlet-class>servlet.curtida</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -102,6 +106,10 @@
     <servlet-mapping>
         <servlet-name>AvaliacaoServletS</servlet-name>
         <url-pattern>/AvaliacaoServletS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>curtida</servlet-name>
+        <url-pattern>/curtida</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
