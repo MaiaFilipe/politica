@@ -43,12 +43,18 @@ public class curtida extends HttpServlet {
         String idtext = request.getParameter("pid");
         String idAvaliador = request.getParameter("avaliador");
         String idPublicacao = request.getParameter("publicacao");
+        System.out.println("valor: "+num);
+        System.out.println("pid:  "+idtext);
+        System.out.println("avaliador:  "+idAvaliador);
+        System.out.println("publicacao:  "+idPublicacao);
 
+       
+        
         Avaliacao avaliacao = new Avaliacao();
         Publicacao publicacao = new Publicacao();
         Usuario usuario = new Usuario();
 
-        if (!idtext.isEmpty()) {
+        if (idtext != null && !idtext.isEmpty()) {
             Integer id = Integer.parseInt(idtext);
             avaliacao.setId(id);
         }
@@ -56,11 +62,17 @@ public class curtida extends HttpServlet {
         publicacao.setIdp(Integer.parseInt(idPublicacao));
         usuario.setId(Integer.parseInt(idAvaliador));
 
-        avaliacao.setAvaliador(usuario);
-        avaliacao.setPublicacao(publicacao);
-
         Session sessionRecheio;
         sessionRecheio = HibernateUtil.getSession();
+        Avaliacao avBD = (Avaliacao) sessionRecheio.createQuery("from Avaliacao where avaliador=? and publicacao=?").setEntity(0, usuario).setEntity(1, publicacao).uniqueResult();
+        
+        if (avBD != null) {
+            avaliacao = avBD;
+        }
+        avaliacao.setAvaliador(usuario);
+        avaliacao.setPublicacao(publicacao);
+        avaliacao.setValor(num);
+
         Transaction tr = sessionRecheio.beginTransaction();
         sessionRecheio.saveOrUpdate(avaliacao);
         tr.commit();

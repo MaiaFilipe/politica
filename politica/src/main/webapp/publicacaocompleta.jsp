@@ -156,7 +156,7 @@
                         <header id="header">
                             <a href="index.html" class="logo"><strong></strong> </a>
                             <ul class="icons">
-                                <li><a href="curtida?valor=1&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>"" class="icon  fa fa-thumbs-o-up"><span class="label">Curtir</span></a></li>
+                                <li><a href="curtida?valor=1&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>&pid=" class="icon  fa fa-thumbs-o-up"><span class="label">Curtir</span></a></li>
                                 <li><a href="curtida?valor=0&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>" class="icon  fa fa-thumbs-up"><span class="label">Curtido</span></a></li>
                                 <li><a href="curtida?valor=-1&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>" class="icon  fa fa-thumbs-o-down"><span class="label">Descurtir</span></a></li>
                                 <li><a href="curtida?valor=0&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>" class="icon  fa fa-thumbs-down"><span class="label">Descurtido</span></a></li>
