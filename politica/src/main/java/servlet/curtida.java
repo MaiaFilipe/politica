@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.HibernateUtil;
@@ -69,6 +70,9 @@ public class curtida extends HttpServlet {
         if (avBD != null) {
             avaliacao = avBD;
         }
+        
+           
+        
         avaliacao.setAvaliador(usuario);
         avaliacao.setPublicacao(publicacao);
         avaliacao.setValor(num);
@@ -76,6 +80,9 @@ public class curtida extends HttpServlet {
         Transaction tr = sessionRecheio.beginTransaction();
         sessionRecheio.saveOrUpdate(avaliacao);
         tr.commit();
+        
+        HttpSession httpSession = request.getSession();
+        httpSession.setAttribute("AvaliacaoCurtida", avaliacao);
         
         response.sendRedirect("publicacaocompleta.jsp?pid=" + idPublicacao);
 

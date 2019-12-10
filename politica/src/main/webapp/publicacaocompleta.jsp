@@ -29,7 +29,11 @@
     publicacao = PublicacaoControle.buscar(Integer.parseInt(ID));
     byte[] imagem = publicacao.getFoto();
     String publicacaoFoto = Base64.getEncoder().encodeToString(imagem);
+    
+Avaliacao avaliacao = (Avaliacao) session.getAttribute("AvaliacaoCurtida");
+   
 
+    
 %>
 <html>
     <head>
@@ -150,16 +154,32 @@
                                 <input type="text" name="pid" value="">
                             </div>
                             <br>
-                            <input type="submit" class="button" value="Like">
+                           
                         </form>
 
                         <header id="header">
                             <a href="index.html" class="logo"><strong></strong> </a>
                             <ul class="icons">
-                                <li><a href="curtida?valor=1&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>&pid=" class="icon  fa fa-thumbs-o-up"><span class="label">Curtir</span></a></li>
-                                <li><a href="curtida?valor=0&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>" class="icon  fa fa-thumbs-up"><span class="label">Curtido</span></a></li>
-                                <li><a href="curtida?valor=-1&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>" class="icon  fa fa-thumbs-o-down"><span class="label">Descurtir</span></a></li>
-                                <li><a href="curtida?valor=0&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>" class="icon  fa fa-thumbs-down"><span class="label">Descurtido</span></a></li>
+                                <% 
+                                    
+                                        if(avaliacao == null){
+                                        %>
+                                        <li><a href="curtida?valor=1&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>&pid=" class="icon  fa fa-thumbs-o-up"><span class="label">Curtir</span></a></li>
+                                        <li><a href="curtida?valor=-1&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>" class="icon  fa fa-thumbs-o-down"><span class="label">Descurtir</span></a></li>
+                                        <%
+                                        } else if(avaliacao.getValor() == 1 ){
+                                        %>
+                                        <li><a href="curtida?valor=0&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>" class="icon  fa fa-thumbs-up"><span class="label">Curtido</span></a></li>
+                                         <li><a href="curtida?valor=-1&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>" class="icon  fa fa-thumbs-o-down"><span class="label">Descurtir</span></a></li>
+                                        <%    
+                                        } else {
+                                          %>
+                                        <li><a href="curtida?valor=1&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>&pid=" class="icon  fa fa-thumbs-o-up"><span class="label">Curtir</span></a></li>
+                                        <li><a href="curtida?valor=0&avaliador=<%=usuario.getId()%>&publicacao=<%=publicacao.getIdp()%>" class="icon  fa fa-thumbs-down"><span class="label">Descurtido</span></a></li>
+                                        <%  
+                                        }
+
+                                %>
                                 
                                 <li><a href="#" class="icon  fa fa-flag-o"><span class="label">Denunciar</span></a></li>
                                 <li><a href="#" class="icon fa fa-comments-o"><span class="label">Comentar</span></a></li>
